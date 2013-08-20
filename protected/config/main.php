@@ -37,18 +37,18 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>false,
 		),
-		// uncomment the following to enable URLs in path-format
-		/*
+		// enable URLs in path-format
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			'showScriptName'=>false,
 			'rules'=>array(
+				'about' => 'site/about',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		*/
-		// uncomment the following to use a MySQL database
+		// use a MySQL database
 		'db'=>array(
 			'connectionString' => 'mysql:host='.DB_SERVER.';dbname='.DB_NAME,
 			'emulatePrepare' => true,
@@ -82,5 +82,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'an@owomoyela.net',
+		'bio_pictures_directory'=>dirname(__FILE__).'/../images/site/250_bio/',
 	),
 );
