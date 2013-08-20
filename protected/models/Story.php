@@ -122,4 +122,19 @@ class Story extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function get_catalog_block() {
+		$block = "<div class='story_catalog_block'>\r\n";
+		if ( $this->link != '' && !is_null($this->link) && $this->link_active == 1 ) {
+			$display_title = '<a href="'.$this->link.'">'.$this->title.'</a>';
+		} else {
+			$display_title = $this->title;
+		}
+		$display_date = date( 'F, Y', strtotime($this->publication_date) );
+		$block.= "<h2>".$display_title." - ".$display_date."</h2>\r\n";
+		$block.= "<blockquote class='story_catalog_pullquote'>".$this->pullquote."</blockquote>\r\n";
+		$block.= "</div><!--END div.story -->\r\n\r\n";
+		// Return.
+		return $block;
+	}
 }

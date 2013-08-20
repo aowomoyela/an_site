@@ -8,10 +8,10 @@
 		public static function get_main_nav_array() {
 			return array(
 				'items'=>array(
-					array('label'=>'Home', 'url'=>array('/site/index')),
-					array('label'=>'Web', 'url'=>array('/web/index')),
-					array('label'=>'Fiction', 'url'=>array('/fiction/index')),
-					array('label'=>'Free Serial Fiction', 'url'=>array('/fiction/index')),
+					array('label'=>'Home', 'url'=>array('/home')),
+					array('label'=>'Web', 'url'=>array('/web')),
+					array('label'=>'Fiction', 'url'=>array('/fiction')),
+					array('label'=>'Free Serial Fiction', 'url'=>array('/fiction/crowd')),
 					array('label'=>'Blog', 'url'=>'http://magistrate.dreamwidth.org/'),
 					array('label'=>'About', 'url'=>array('/site/about',)),
 					array('label'=>'Resume', 'url'=>array('/web/resume')),

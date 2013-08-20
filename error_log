@@ -42,3 +42,5 @@
 [20-Aug-2013 14:53:16] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/SiteController.php on line 29
 [20-Aug-2013 14:53:17] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/SiteController.php on line 29
 [20-Aug-2013 14:53:18] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/SiteController.php on line 29
+[20-Aug-2013 17:04:58] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home1/owomoyel/public_html/subdomain_ano/protected/models/Story.php on line 128
+[20-Aug-2013 17:05:00] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home1/owomoyel/public_html/subdomain_ano/protected/models/Story.php on line 128
