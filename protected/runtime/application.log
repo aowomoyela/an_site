@@ -1389,3 +1389,19 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2013/08/20 22:21:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/21 12:01:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

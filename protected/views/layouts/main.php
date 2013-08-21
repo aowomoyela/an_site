@@ -23,6 +23,14 @@
 		<?php $this->widget('zii.widgets.CMenu', SiteElement::get_main_nav_array()); ?>
 	</div><!-- mainmenu -->
 
+	<?php
+		if ( isset($secondary_navigation) ) {
+			echo '<div id="submenu">'."\r\n";
+			$this->widget('zii.widgets.CMenu', $secondary_navigation);
+			echo '</div>'."\r\n";
+		}
+	?>
+
 	<?php echo $content; ?>
 
 	<div class="clear"></div>
