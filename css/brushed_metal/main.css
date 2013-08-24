@@ -91,6 +91,40 @@ div.pull_right {
 	border-bottom: 1px solid #06C;
 }
 
+div.story_catalog_block {
+	margin: 0;
+}
+
+	div.story_catalog_block + div.story_catalog_block {  
+		margin: 2em 0 0 0;    
+	}
+
+	div.story_catalog_block h2 {
+		font-size:1.25em;
+		border:0;
+	}
+
+	div.story_catalog_block h2 a {
+		color:#06C;
+	}
+
+	div.story_catalog_block blockquote.story_catalog_pullquote {
+		font-style:normal;
+		color:#3E3E3E;
+		line-height: 1.5em;
+		margin:0 0 1em 2.5em;
+	}
+
+	div.story_catalog_block div.story_link {
+		margin:0 0 1em 2.5em;
+		padding: 0 0 0 20px;
+		font-style:italic;
+		background-image:url('../../images/layout/brushed_metal/pixel/external_arrow.gif');
+		background-position:left center;
+		background-repeat:no-repeat;
+	}
+
+
 h2 {
 	border-top:1px solid #06C;
 	padding: .25em 0 0 0 ;
@@ -107,21 +141,6 @@ h2 {
 
 	h2.right_header {
 		text-align:right;
-	}
-
-	div.story_catalog_block h2 {
-		font-size:1.25em;
-		border:0;
-	}
-
-	div.story_catalog_block h2 a {
-		color:#06C;
-	}
-
-	div.story_catalog_block blockquote.story_catalog_pullquote {
-		font-style:normal;
-		color:#3E3E3E;
-		margin:0 0 1em 2.5em;
 	}
 
 div.flash-error, div.flash-notice, div.flash-success {

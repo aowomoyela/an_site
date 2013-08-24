@@ -52,6 +52,8 @@ class Story extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'story_market' => array(self::BELONGS_TO, 'StoryMarket', 'publication_market_id'),
+			'story_link' => array(self::HAS_MANY, 'StoryLink', 'story_id'),
 		);
 	}
 
@@ -123,16 +125,32 @@ class Story extends CActiveRecord
 		return parent::model($className);
 	}
 
+	public function afterFind() {
+		
+	}
+
 	public function get_catalog_block() {
 		$block = "<div class='story_catalog_block'>\r\n";
+		// If the story has an active link set, link the title. If not, see if it's available in the archives and link that. Else, just display.
 		if ( $this->link != '' && !is_null($this->link) && $this->link_active == 1 ) {
 			$display_title = '<a href="'.$this->link.'">'.$this->title.'</a>';
 		} else {
 			$display_title = $this->title;
 		}
-		$display_date = date( 'F, Y', strtotime($this->publication_date) );
-		$block.= "<h2>".$display_title." - ".$display_date."</h2>\r\n";
+		// We're only interested in the month and year of publication.
+		$display_date = date( 'F Y', strtotime($this->publication_date) );
+		if ( isset($this->story_market) ) { $display_market = $this->story_market->title.', '; } else { $display_market = ''; }
+		// Display the actual header.
+		$block.= "<h2>".$display_title." - ".$display_market.' '.$display_date."</h2>\r\n";
+		// Pullquote.
 		$block.= "<blockquote class='story_catalog_pullquote'>".$this->pullquote."</blockquote>\r\n";
+		// Any additional links, such as interviews and anthologies.
+		if (count($this->story_link) > 0) {
+			foreach ( $this->story_link as $story_link ) {
+				$block.= "<div class='story_link'>".$story_link->link_text."</div>\r\n";
+			}
+		}
+		// End the div.
 		$block.= "</div><!--END div.story -->\r\n\r\n";
 		// Return.
 		return $block;

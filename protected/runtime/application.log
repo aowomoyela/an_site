@@ -1405,3 +1405,309 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2013/08/21 15:30:04 [error] [exception.CDbException] exception 'CDbException' with message 'The relation "story_market" in active record class "Story" is specified with an invalid foreign key "publication_market_id". There is no such column in the table "story_market".' in /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php:1096
+Stack trace:
+#0 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(1067): CJoinElement->joinOneMany(Object(CJoinElement), Array, Object(CJoinElement), Object(CJoinElement))
+#1 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(1295): CJoinElement->getJoinCondition()
+#2 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(790): CJoinQuery->join(Object(CJoinElement))
+#3 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(435): CJoinElement->buildQuery(Object(CJoinQuery))
+#4 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#5 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1356): CActiveFinder->query(Object(CDbCriteria), true)
+#6 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#7 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FictionController.php(25): CActiveRecord->findAll(Array)
+#8 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FictionController->actionIndex()
+#9 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home1/owomoyel/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /home1/owomoyel/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/index')
+#14 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/fiction
+---
+2013/08/21 15:30:28 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'title' in order clause is ambiguous. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`wordcount` AS `t0_c2`, `t`.`link` AS `t0_c3`, `t`.`link_active` AS `t0_c4`, `t`.`pullquote` AS `t0_c5`, story_market.title as publication_market, `t`.`publication_date` AS `t0_c7`, `t`.`available_in_archive` AS `t0_c8`, `t`.`archive_url_title` AS `t0_c9`, `t`.`story_id` AS `t0_c0`, `story_market`.`market_id` AS `t1_c0`, `story_market`.`title` AS `t1_c1`, `story_market`.`market_type_id` AS `t1_c2`, `story_market`.`notes` AS `t1_c3`, `story_market`.`created` AS `t1_c4`, `story_market`.`modified` AS `t1_c5`, `story_market`.`active` AS `t1_c6` FROM `story` `t`  LEFT OUTER JOIN `story_market` `story_market` ON (`story_market`.`market_id`=`t`.`story_id`)  ORDER BY title.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FictionController.php (25)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/08/21 15:30:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'title' in order clause is ambiguous. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`wordcount` AS `t0_c2`, `t`.`link` AS `t0_c3`, `t`.`link_active` AS `t0_c4`, `t`.`pullquote` AS `t0_c5`, story_market.title as publication_market, `t`.`publication_date` AS `t0_c7`, `t`.`available_in_archive` AS `t0_c8`, `t`.`archive_url_title` AS `t0_c9`, `t`.`story_id` AS `t0_c0`, `story_market`.`market_id` AS `t1_c0`, `story_market`.`title` AS `t1_c1`, `story_market`.`market_type_id` AS `t1_c2`, `story_market`.`notes` AS `t1_c3`, `story_market`.`created` AS `t1_c4`, `story_market`.`modified` AS `t1_c5`, `story_market`.`active` AS `t1_c6` FROM `story` `t`  LEFT OUTER JOIN `story_market` `story_market` ON (`story_market`.`market_id`=`t`.`story_id`)  ORDER BY title' in /home1/owomoyel/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home1/owomoyel/yii/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(803): CDbCommand->queryAll()
+#2 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(437): CJoinElement->runQuery(Object(CJoinQuery))
+#3 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1356): CActiveFinder->query(Object(CDbCriteria), true)
+#5 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#6 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FictionController.php(25): CActiveRecord->findAll(Array)
+#7 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FictionController->actionIndex()
+#8 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home1/owomoyel/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home1/owomoyel/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/index')
+#13 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/fiction
+---
+2013/08/21 15:31:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'story.title' in 'order clause'. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`wordcount` AS `t0_c2`, `t`.`link` AS `t0_c3`, `t`.`link_active` AS `t0_c4`, `t`.`pullquote` AS `t0_c5`, story_market.title as publication_market, `t`.`publication_date` AS `t0_c7`, `t`.`available_in_archive` AS `t0_c8`, `t`.`archive_url_title` AS `t0_c9`, `t`.`story_id` AS `t0_c0`, `story_market`.`market_id` AS `t1_c0`, `story_market`.`title` AS `t1_c1`, `story_market`.`market_type_id` AS `t1_c2`, `story_market`.`notes` AS `t1_c3`, `story_market`.`created` AS `t1_c4`, `story_market`.`modified` AS `t1_c5`, `story_market`.`active` AS `t1_c6` FROM `story` `t`  LEFT OUTER JOIN `story_market` `story_market` ON (`story_market`.`market_id`=`t`.`story_id`)  ORDER BY story.title.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FictionController.php (25)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/08/21 15:31:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'story.title' in 'order clause'. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`wordcount` AS `t0_c2`, `t`.`link` AS `t0_c3`, `t`.`link_active` AS `t0_c4`, `t`.`pullquote` AS `t0_c5`, story_market.title as publication_market, `t`.`publication_date` AS `t0_c7`, `t`.`available_in_archive` AS `t0_c8`, `t`.`archive_url_title` AS `t0_c9`, `t`.`story_id` AS `t0_c0`, `story_market`.`market_id` AS `t1_c0`, `story_market`.`title` AS `t1_c1`, `story_market`.`market_type_id` AS `t1_c2`, `story_market`.`notes` AS `t1_c3`, `story_market`.`created` AS `t1_c4`, `story_market`.`modified` AS `t1_c5`, `story_market`.`active` AS `t1_c6` FROM `story` `t`  LEFT OUTER JOIN `story_market` `story_market` ON (`story_market`.`market_id`=`t`.`story_id`)  ORDER BY story.title' in /home1/owomoyel/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home1/owomoyel/yii/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(803): CDbCommand->queryAll()
+#2 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(437): CJoinElement->runQuery(Object(CJoinQuery))
+#3 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1356): CActiveFinder->query(Object(CDbCriteria), true)
+#5 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#6 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FictionController.php(25): CActiveRecord->findAll(Array)
+#7 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FictionController->actionIndex()
+#8 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home1/owomoyel/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home1/owomoyel/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/index')
+#13 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/fiction
+---
+2013/08/21 15:54:35 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '==1) ORDER BY t.title' at line 1. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`wordcount` AS `t0_c2`, `t`.`link` AS `t0_c3`, `t`.`link_active` AS `t0_c4`, `t`.`pullquote` AS `t0_c5`, `t`.`title` AS `t0_c1`, `t`.`publication_date` AS `t0_c8`, `t`.`available_in_archive` AS `t0_c9`, `t`.`archive_url_title` AS `t0_c10`, `t`.`story_id` AS `t0_c0`, `story_market`.`market_id` AS `t1_c0`, `story_market`.`title` AS `t1_c1`, `story_market`.`market_type_id` AS `t1_c2`, `story_market`.`notes` AS `t1_c3`, `story_market`.`created` AS `t1_c4`, `story_market`.`modified` AS `t1_c5`, `story_market`.`active` AS `t1_c6` FROM `story` `t`  LEFT OUTER JOIN `story_market` `story_market` ON (`t`.`publication_market_id`=`story_market`.`market_id`)  WHERE (published_in_market==1) ORDER BY t.title.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FictionController.php (26)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/08/21 15:54:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '==1) ORDER BY t.title' at line 1. The SQL statement executed was: SELECT `t`.`title` AS `t0_c1`, `t`.`wordcount` AS `t0_c2`, `t`.`link` AS `t0_c3`, `t`.`link_active` AS `t0_c4`, `t`.`pullquote` AS `t0_c5`, `t`.`title` AS `t0_c1`, `t`.`publication_date` AS `t0_c8`, `t`.`available_in_archive` AS `t0_c9`, `t`.`archive_url_title` AS `t0_c10`, `t`.`story_id` AS `t0_c0`, `story_market`.`market_id` AS `t1_c0`, `story_market`.`title` AS `t1_c1`, `story_market`.`market_type_id` AS `t1_c2`, `story_market`.`notes` AS `t1_c3`, `story_market`.`created` AS `t1_c4`, `story_market`.`modified` AS `t1_c5`, `story_market`.`active` AS `t1_c6` FROM `story` `t`  LEFT OUTER JOIN `story_market` `story_market` ON (`t`.`publication_market_id`=`story_market`.`market_id`)  WHERE (published_in_market==1) ORDER BY t.title' in /home1/owomoyel/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home1/owomoyel/yii/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(803): CDbCommand->queryAll()
+#2 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(437): CJoinElement->runQuery(Object(CJoinQuery))
+#3 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1356): CActiveFinder->query(Object(CDbCriteria), true)
+#5 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#6 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FictionController.php(26): CActiveRecord->findAll(Array)
+#7 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FictionController->actionIndex()
+#8 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home1/owomoyel/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home1/owomoyel/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/index')
+#13 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/fiction
+---
+2013/08/22 01:32:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/22 02:35:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "web/index".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('web/index')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/web
+HTTP_REFERER=http://ano.owomoyela.net/fiction
+---
+2013/08/22 11:25:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/22 18:28:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/23 11:20:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/23 11:20:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/24 11:28:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/24 11:30:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/24 11:33:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/24 11:37:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crowd".' in /home1/owomoyel/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(270): CController->missingAction('crowd')
+#1 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('crowd')
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/crowd')
+#3 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fiction/crowd
+HTTP_REFERER=http://ano.owomoyela.net/
+---
+2013/08/24 11:37:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/24 11:48:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/24 11:55:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/24 12:00:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/24 12:00:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/24 12:00:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/24 13:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/08/24 13:43:36 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "story_market, story_link" is not defined in active record class "Story".' in /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php:226
+Stack trace:
+#0 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(296): CActiveFinder->buildJoinTree(Object(CJoinElement), 'story_market, s...')
+#1 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(909): CActiveFinder->__construct(Object(Story), Array)
+#3 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1355): CActiveRecord->getActiveFinder(Array)
+#4 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#5 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FictionController.php(26): CActiveRecord->findAll(Array)
+#6 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FictionController->actionIndex()
+#7 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /home1/owomoyel/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /home1/owomoyel/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#11 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/index')
+#12 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/fiction
+---
+2013/08/24 13:43:36 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "story_market, story_link" is not defined in active record class "Story".' in /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php:226
+Stack trace:
+#0 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(296): CActiveFinder->buildJoinTree(Object(CJoinElement), 'story_market, s...')
+#1 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(909): CActiveFinder->__construct(Object(Story), Array)
+#3 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1355): CActiveRecord->getActiveFinder(Array)
+#4 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#5 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FictionController.php(26): CActiveRecord->findAll(Array)
+#6 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FictionController->actionIndex()
+#7 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /home1/owomoyel/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /home1/owomoyel/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#11 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/index')
+#12 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/fiction
+---
+2013/08/24 13:57:04 [error] [exception.CDbException] exception 'CDbException' with message 'Active record "Story" is trying to select an invalid column "story_link.link_text". Note, the column must exist in the table or be an expression with alias.' in /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php:960
+Stack trace:
+#0 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(1261): CJoinElement->getColumnSelect('t.title, wordco...')
+#1 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(433): CJoinQuery->__construct(Object(CJoinElement), Object(CDbCriteria))
+#2 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#3 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1356): CActiveFinder->query(Object(CDbCriteria), true)
+#4 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#5 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FictionController.php(26): CActiveRecord->findAll(Array)
+#6 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FictionController->actionIndex()
+#7 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /home1/owomoyel/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /home1/owomoyel/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#11 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/index')
+#12 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/fiction
+---
+2013/08/24 13:57:28 [error] [exception.CDbException] exception 'CDbException' with message 'Active record "Story" is trying to select an invalid column "story_link.link_text". Note, the column must exist in the table or be an expression with alias.' in /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php:960
+Stack trace:
+#0 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(1261): CJoinElement->getColumnSelect('t.title, wordco...')
+#1 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(433): CJoinQuery->__construct(Object(CJoinElement), Object(CDbCriteria))
+#2 /home1/owomoyel/yii/framework/db/ar/CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#3 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1356): CActiveFinder->query(Object(CDbCriteria), true)
+#4 /home1/owomoyel/yii/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#5 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FictionController.php(26): CActiveRecord->findAll(Array)
+#6 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FictionController->actionIndex()
+#7 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /home1/owomoyel/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /home1/owomoyel/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#11 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/index')
+#12 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/fiction
+---

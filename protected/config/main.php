@@ -19,6 +19,7 @@ return array(
 		'application.models.*',
 		'application.models_static.*',
 		'application.components.*',
+		'ext.dBug.*',
 	),
 
 	'modules'=>array(

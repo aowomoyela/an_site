@@ -1,24 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "story_market".
+ * This is the model class for table "story_link".
  *
- * The followings are the available columns in table 'story_market':
- * @property integer $market_id
- * @property string $title
- * @property integer $market_type_id
- * @property string $notes
- * @property string $created
- * @property string $modified
+ * The followings are the available columns in table 'story_link':
+ * @property integer $link_id
+ * @property integer $story_id
+ * @property string $link_text
  */
-class StoryMarket extends CActiveRecord
+class StoryLink extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'story_market';
+		return 'story_link';
 	}
 
 	/**
@@ -29,12 +26,12 @@ class StoryMarket extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('market_type_id', 'numerical', 'integerOnly'=>true),
-			array('title', 'length', 'max'=>100),
-			array('notes, created, modified', 'safe'),
+			array('story_id', 'required'),
+			array('story_id', 'numerical', 'integerOnly'=>true),
+			array('link_text', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('market_id, title, market_type_id, notes, created, modified', 'safe', 'on'=>'search'),
+			array('link_id, story_id, link_text', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -46,7 +43,7 @@ class StoryMarket extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'story' => array(self::HAS_MANY, 'Story', 'publiation_market_id'),
+			'story' => array(self::BELONGS_TO, 'Story', 'story_id'),
 		);
 	}
 
@@ -56,12 +53,9 @@ class StoryMarket extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'market_id' => 'Market',
-			'title' => 'Title',
-			'market_type_id' => 'Market Type',
-			'notes' => 'Notes',
-			'created' => 'Created',
-			'modified' => 'Modified',
+			'link_id' => 'Link',
+			'story_id' => 'Story',
+			'link_text' => 'Link Text',
 		);
 	}
 
@@ -83,12 +77,9 @@ class StoryMarket extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('market_id',$this->market_id);
-		$criteria->compare('title',$this->title,true);
-		$criteria->compare('market_type_id',$this->market_type_id);
-		$criteria->compare('notes',$this->notes,true);
-		$criteria->compare('created',$this->created,true);
-		$criteria->compare('modified',$this->modified,true);
+		$criteria->compare('link_id',$this->link_id);
+		$criteria->compare('story_id',$this->story_id);
+		$criteria->compare('link_text',$this->link_text,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -99,7 +90,7 @@ class StoryMarket extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return StoryMarket the static model class
+	 * @return StoryLink the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
