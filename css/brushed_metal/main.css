@@ -116,7 +116,7 @@ div.story_catalog_block {
 	}
 
 	div.story_catalog_block div.story_link {
-		margin:0 0 1em 2.5em;
+		margin:0 0 .5em 2.5em;
 		padding: 0 0 0 20px;
 		font-style:italic;
 		background-image:url('../../images/layout/brushed_metal/pixel/external_arrow.gif');
@@ -141,6 +141,13 @@ h2 {
 
 	h2.right_header {
 		text-align:right;
+	}
+
+	h2.story_archive_title {
+		border-top:0;
+		border-bottom: 1px solid #06C;
+		text-align:center;
+		padding-bottom:1em;
 	}
 
 div.flash-error, div.flash-notice, div.flash-success {

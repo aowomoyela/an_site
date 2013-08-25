@@ -45,6 +45,7 @@ return array(
 			'rules'=>array(
 				'about' => 'site/about',
 				'fiction' => 'fiction/index',
+				'fiction/archive/<archive_url_title:\w+>'=>'fiction/archive',
 				'home' => 'site/index',
 				'web' => 'web/index',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',

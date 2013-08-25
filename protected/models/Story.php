@@ -19,6 +19,14 @@
  */
 class Story extends CActiveRecord
 {
+	public function get($var) {
+		if ( in_array($var, array('title', 'wordcount', 'link', 'link_active', 'pullquote', 'available_in_archive')) ) {
+			return $this->$var;
+		} else {
+			return NULL;
+		}
+	}
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -134,6 +142,9 @@ class Story extends CActiveRecord
 		// If the story has an active link set, link the title. If not, see if it's available in the archives and link that. Else, just display.
 		if ( $this->link != '' && !is_null($this->link) && $this->link_active == 1 ) {
 			$display_title = '<a href="'.$this->link.'">'.$this->title.'</a>';
+		} elseif ($this->available_in_archive == 1) {
+			$archive_link = Yii::app()->createUrl('fiction/archive/'.$this->archive_url_title);
+			$display_title = '<a href="'.$archive_link.'">'.$this->title.'</a>';
 		} else {
 			$display_title = $this->title;
 		}
@@ -154,5 +165,13 @@ class Story extends CActiveRecord
 		$block.= "</div><!--END div.story -->\r\n\r\n";
 		// Return.
 		return $block;
+	}
+
+	public function get_archive_story_text() {
+		if ($this->available_in_archive == 1 && $this->story_text != '' && !is_null($this->story_text)) {
+			return $this->story_text;
+		} else {
+			return 'The text of this story is not available.';
+		}
 	}
 }
