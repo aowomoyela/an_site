@@ -1789,3 +1789,54 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2013/08/26 12:09:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "web/index".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('web/index')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/web
+HTTP_REFERER=http://ano.owomoyela.net/fiction
+---
+2013/08/26 12:09:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "web/index".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('web/index')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/web
+HTTP_REFERER=http://ano.owomoyela.net/web
+---
+2013/08/26 13:46:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "pixel".' in /home1/owomoyel/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(270): CController->missingAction('pixel')
+#1 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('pixel')
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/pixel')
+#3 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fiction/pixel
+HTTP_REFERER=http://ano.owomoyela.net/fiction/web_original
+---
+2013/08/26 13:46:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "pixel".' in /home1/owomoyel/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(270): CController->missingAction('pixel')
+#1 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('pixel')
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/pixel')
+#3 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fiction/pixel
+HTTP_REFERER=http://ano.owomoyela.net/fiction/web_original
+---
+2013/08/26 13:47:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "pixel".' in /home1/owomoyel/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(270): CController->missingAction('pixel')
+#1 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('pixel')
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/pixel')
+#3 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fiction/pixel
+HTTP_REFERER=http://ano.owomoyela.net/fiction/web_original
+---

@@ -59,8 +59,8 @@ body {
 }
 
 	#mainmenu ul {
-		padding:6px 20px 5px 20px;
-		margin:0px;
+		padding:.5em 2em .5em 2em;
+		margin:0;
 	}
 
 	#mainmenu ul li {
@@ -70,13 +70,51 @@ body {
 	#mainmenu ul li a {
 		color: #06C;
 		background-color:#EFF4FA;
-		font-size:12px;
+		font-size:.9em;
 		font-weight:bold;
 		text-decoration:none;
-		padding:5px 8px;
+		padding:.3em .8em;
 	}
 
 	#mainmenu ul li a:hover, #mainmenu ul li.active a {
+		color: #FEFEFF;
+		background-color:#06C;
+		text-decoration:none;
+	}
+
+#submenu {
+	padding: 0 .5em 0 0;
+	margin: 0 .5em .5em 0;
+	float:left;
+	clear:left;
+	border-right:2px solid #3E3E3E;
+	background-color:#FFF;
+}
+
+	#submenu ul {
+		padding:0 0 0 .5em;
+		margin:0;
+		list-style-type:none;
+	}
+
+	#submenu ul li {
+		/* display: inline; */
+	}
+
+	#submenu ul li + li {
+		margin-top:.5em;
+	}
+
+	#submenu ul li a {
+		color:#06C;
+		background-color:#EFF4FA;
+		font-size:.9em;
+		font-weight: bold;
+		text-decoration:none;
+		padding:.3em .8em;
+	}
+
+	#submenu ul li a:hover, #submenu ul li.active a {
 		color: #FEFEFF;
 		background-color:#06C;
 		text-decoration:none;
@@ -148,6 +186,11 @@ h2 {
 		border-bottom: 1px solid #06C;
 		text-align:center;
 		padding-bottom:1em;
+	}
+
+	h2.error {
+		border-top:0;
+		border-bottom:1px solid #F00;
 	}
 
 div.flash-error, div.flash-notice, div.flash-success {

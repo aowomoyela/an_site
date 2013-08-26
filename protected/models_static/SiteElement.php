@@ -9,15 +9,29 @@
 			return array(
 				'items'=>array(
 					array('label'=>'Home', 'url'=>array('/home')),
-					array('label'=>'Web', 'url'=>array('/web')),
-					array('label'=>'Fiction', 'url'=>array('/fiction')),
-					array('label'=>'Free Serial Fiction', 'url'=>array('/fiction/crowd')),
+					array('label'=>'Web', 'url'=>array('/web/index')),
+					array('label'=>'Fiction', 'url'=>array('/fiction/index')),
+					array('label'=>'Web Original Fiction', 'url'=>array('/fiction/web_original')),
 					array('label'=>'Blog', 'url'=>'http://magistrate.dreamwidth.org/'),
 					array('label'=>'About', 'url'=>array('/site/about',)),
 					array('label'=>'Resume', 'url'=>array('/web/resume')),
 				),
 			);
-		} // END public static function get_nav_array()
+		} // END public static function get_main_nav_array()
+
+
+		public static function get_secondary_nav_array($section) {
+			switch ($section) {
+				case 'web_original_fiction':
+					return array(
+						'items'=>array(
+							array( 'label'=>'Demonology', 'url'=>array('/fiction/demonology') ),
+							array( 'label'=>'Pixel-Stained', 'url'=>array('/fiction/pixel') ),
+						),
+					);
+				break;
+			}
+		} //END public static function get_secondary_nav_array()
 
 
 		/*********************/
@@ -46,6 +60,7 @@
 			} else { $return_value = 'No anecdotes found. The database must not be feeling chatty.'; }
 			return $return_value;
 		}
+
 
 		public static function get_random_bio_picture() {
 			$pictures = glob( 'images/site/250_bio/*.*' );

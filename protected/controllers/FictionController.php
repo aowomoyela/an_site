@@ -19,6 +19,7 @@ class FictionController extends Controller
 
 
 	public function actionIndex() {
+		$this->pageTitle = Yii::app()->name.' - Fiction';
 		$stories = Story::model()->with('story_market', 'story_link')->findAll( array(
 			'select'=>'t.title, wordcount, link, link_active, pullquote, story_market.title, publication_date, available_in_archive, archive_url_title',
 			'order'=>'t.title',
@@ -29,6 +30,7 @@ class FictionController extends Controller
 
 
 	public function actionArchive() {
+		$this->pageTitle = Yii::app()->name.' - Fiction Archive';
 		if ( isset($_GET['archive_url_title']) ) {
 			// A title was specified; try to find it in the database.
 			$story = Story::model()->find( array(
@@ -46,6 +48,28 @@ class FictionController extends Controller
 			));
 			$this->render('index', array('stories'=>$stories));
 		}
+	}
+
+
+	public function actionWeb_original() {
+		$this->pageTitle = Yii::app()->name.' - Web Original Fiction';
+		$secondary_navigation = SiteElement::get_secondary_nav_array('web_original_fiction');
+		$this->render('web_original', array('secondary_navigation'=>$secondary_navigation));
+	}
+
+
+	public function actionDemonology() {
+		$this->pageTitle = Yii::app()->name.' - Demonology';
+		$secondary_navigation = SiteElement::get_secondary_nav_array('web_original_fiction');
+		$this->render('demonology', array('secondary_navigation'=>$secondary_navigation));
+	}
+
+
+
+	public function actionPixel() {
+		$this->pageTitle = Yii::app()->name.' - Pixel-Stained Works';
+		$secondary_navigation = SiteElement::get_secondary_nav_array('web_original_fiction');
+		$this->render('pixel_stained', array('secondary_navigation'=>$secondary_navigation));
 	}
 
 }

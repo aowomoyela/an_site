@@ -57,3 +57,5 @@
 [26-Aug-2013 11:46:40] PHP Fatal error:  Class 'SiteUtility' not found in /home1/owomoyel/public_html/subdomain_ano/protected/models/Story.php on line 161
 [26-Aug-2013 11:46:57] PHP Fatal error:  Class 'SiteUtility' not found in /home1/owomoyel/public_html/subdomain_ano/protected/models/Story.php on line 161
 [26-Aug-2013 11:46:58] PHP Fatal error:  Class 'SiteUtility' not found in /home1/owomoyel/public_html/subdomain_ano/protected/models/Story.php on line 161
+[26-Aug-2013 12:29:53] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/views/layouts/main.php on line 28
+[26-Aug-2013 12:30:07] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/views/layouts/main.php on line 28
