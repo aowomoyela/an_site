@@ -157,6 +157,9 @@ class Story extends CActiveRecord
 		$block.= "<blockquote class='story_catalog_pullquote'>".$this->pullquote."</blockquote>\r\n";
 		// Any additional links, such as interviews and anthologies.
 		if (count($this->story_link) > 0) {
+			// Sort the links.
+			#$sorted_links = SiteUtility::sort_all_found_by_property($this->story_link, 'link_text');
+			// Add the links to the display list.
 			foreach ( $this->story_link as $story_link ) {
 				$block.= "<div class='story_link'>".$story_link->link_text."</div>\r\n";
 			}
