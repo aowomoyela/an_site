@@ -4,4 +4,32 @@
 	echo '</div>'."\r\n";
 ?>
 
-<em>Under construction.</em>
+<h2 class="right_header">Short Stories</h2>
+<?php
+	if ( count($short_stories)>0 ) {
+		foreach($short_stories as $story) { echo $story->get_catalog_block(); }
+	} else {
+		echo "<p>No stories found in category.</p>";
+	}
+?>
+
+
+<h2 class="right_header">Novels and Novellas</h2>
+<?php
+	if ( count($long_stories)>0 ) {
+		foreach($long_stories as $story) { echo $story->get_catalog_block(); }
+	} else {
+		echo "<p>No stories found in category.</p>";
+	}
+?>
+
+
+<h2 class="right_header">Prompt Responses</h2>
+<?php
+	if ( count($prompt_stories)>0 ) {
+		foreach($prompt_stories as $story) { echo $story->get_catalog_block(); }
+	} else {
+		echo "<p>No stories found in category.</p>";
+	}
+?>
+

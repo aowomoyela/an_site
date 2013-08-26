@@ -152,7 +152,7 @@ class Story extends CActiveRecord
 		$display_date = date( 'F Y', strtotime($this->publication_date) );
 		if ( isset($this->story_market) ) { $display_market = $this->story_market->title.', '; } else { $display_market = ''; }
 		// Display the actual header.
-		$block.= "<h2>".$display_title." - ".$display_market.' '.$display_date."</h2>\r\n";
+		$block.= "<h2>".$display_title.' - '.$display_market.' '.$display_date."</h2>\r\n";
 		// Pullquote.
 		$block.= "<blockquote class='story_catalog_pullquote'>".$this->pullquote."</blockquote>\r\n";
 		// Any additional links, such as interviews and anthologies.

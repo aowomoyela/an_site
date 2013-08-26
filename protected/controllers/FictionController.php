@@ -44,7 +44,7 @@ class FictionController extends Controller
 			$stories = Story::model()->with('story_market', 'story_link')->findAll( array(
 				'select'=>'t.title, wordcount, link, link_active, pullquote, story_market.title, publication_date, available_in_archive, archive_url_title',
 				'order'=>'t.title',
-				'condition'=>'published = 1 && publication_category_id = 1 && available_in_archive = 1'
+				'condition'=>'published = 1 && publication_category_id = 1 && available_in_archive = 1',
 			));
 			$this->render('index', array('stories'=>$stories));
 		}
@@ -61,7 +61,28 @@ class FictionController extends Controller
 	public function actionDemonology() {
 		$this->pageTitle = Yii::app()->name.' - Demonology';
 		$secondary_navigation = SiteElement::get_secondary_nav_array('web_original_fiction');
-		$this->render('demonology', array('secondary_navigation'=>$secondary_navigation));
+		// Get the story lists for various types of fiction.
+		$short_stories = Story::model()->findAll(array(
+			'select'=>'t.title, wordcount, link, link_active, pullquote, publication_date, available_in_archive, archive_url_title',
+			'order'=>'t.title',
+			'condition'=>'published = 1 && publication_category_id = 5 && available_in_archive = 1',
+		));
+		$long_stories = Story::model()->findAll(array(
+			'select'=>'t.title, wordcount, link, link_active, pullquote, publication_date, available_in_archive, archive_url_title',
+			'order'=>'t.title',
+			'condition'=>'published = 1 && publication_category_id = 6 && available_in_archive = 1',
+		));
+		$prompt_stories = Story::model()->findAll(array(
+			'select'=>'t.title, wordcount, link, link_active, pullquote, publication_date, available_in_archive, archive_url_title',
+			'order'=>'t.title',
+			'condition'=>'published = 1 && publication_category_id = 7 && available_in_archive = 1',
+		));
+		// Render the view.
+		$this->render('demonology', array(
+			'secondary_navigation'=>$secondary_navigation,
+			'short_stories'=>$short_stories,
+			'prompt_stories'=>$prompt_stories,
+		));
 	}
 
 
