@@ -20,7 +20,9 @@ return array(
 		'application.models_static.*',
 		'application.components.*',
 		'ext.dBug.*',
+		'ext.SiteSecurity.*',
 		'ext.SiteUtility.*',
+		'ext.UserIdentity.*',
 	),
 
 	'modules'=>array(

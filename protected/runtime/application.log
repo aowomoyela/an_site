@@ -1856,3 +1856,45 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2013/08/26 20:24:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://ano.owomoyela.net/
+---
+2013/09/04 18:41:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/09/04 19:25:47 [error] [php] include(SiteSecurity.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home1/owomoyel/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /home1/owomoyel/public_html/subdomain_ano/protected/extensions/UserIdentity/UserIdentity.php(19): spl_autoload_call()
+#1 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/SiteController.php(40): UserIdentity->authenticate()
+#2 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#3 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /home1/owomoyel/yii/framework/web/CController.php(286): SiteController->runAction()
+#5 /home1/owomoyel/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#7 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/site/login
+in /home1/owomoyel/public_html/subdomain_ano/protected/extensions/UserIdentity/UserIdentity.php (19)
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/SiteController.php (40)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/04 19:27:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "game/predicament".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('game/predicamen...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/game/predicament
+HTTP_REFERER=http://ano.owomoyela.net/site/login
+---
