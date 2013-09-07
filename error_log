@@ -77,3 +77,5 @@
 [06-Sep-2013 20:07:22] PHP Fatal error:  Class declarations may not be nested in /home1/owomoyel/yii/framework/collections/CListIterator.php on line 20
 [06-Sep-2013 20:07:43] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 71
 [06-Sep-2013 20:09:14] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 71
+[07-Sep-2013 11:31:46] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 87
+[07-Sep-2013 11:41:06] PHP Parse error:  syntax error, unexpected T_LNUMBER in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 85

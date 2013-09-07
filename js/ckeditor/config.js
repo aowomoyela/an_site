@@ -8,3 +8,12 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
 };
+
+CKEDITOR.plugins.add( 'wordcount',
+{
+	init: function( editor )
+	{
+		showWordCount: true,
+		showCharCount: false
+	}
+} );

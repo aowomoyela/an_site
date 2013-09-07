@@ -56,7 +56,6 @@ class SiteController extends Controller
 			}
 		} else {
 			// Display the login form.
-			$this->layout = 'enter_blankface';
 			$this->render('login');
 		}
 	} catch (Exception $e) {

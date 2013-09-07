@@ -20,7 +20,7 @@
 class Story extends CActiveRecord
 {
 	public function get($var) {
-		if ( in_array($var, array('title', 'wordcount', 'link', 'link_active', 'pullquote', 'available_in_archive')) ) {
+		if ( in_array($var, array('title', 'wordcount', 'link', 'link_active', 'pullquote', 'available_in_archive','publication_category_id', 'publication_market_id')) ) {
 			return $this->$var;
 		} else {
 			return NULL;

@@ -63,7 +63,7 @@ class AdminController extends Controller {
 		if ( Yii::app()->request->isPostRequest ) {
 			// We're being asked to update a fiction record.
 		} elseif ( isset($_GET['story_id']) ) {
-			// Load the editor for this particular story.
+			// Find the story in the database.
 			$story_id = (int)$_GET['story_id'];
 			$story = Story::model()->find(array(
 				'select'=>'*',
@@ -75,8 +75,19 @@ class AdminController extends Controller {
 			if ( is_null($story) ) {
 				throw new Exception('That story was not found in the database.');
 			} else {
-				$this->render('edit_story', array('story'=>$story));
-			} 
+				// Get publication categories for dropdown list.
+				$publication_categories = StoryPublicationCategory::model()->findAll( array(
+					'order'=>'title',
+				) );
+				$publication_categories = CHtml::listData( $publication_categories, 'publication_category_id', 'title' );
+				// Get publication markets for dropdown list.
+				$story_markets_query = 'select sm.market_id, sm.title, smt.type from story_market sm, story_market_type smt ';
+				$story_markets_query.= 'where sm.market_type_id = smt.type_id order by smt.type, sm.title';
+				$story_markets = StoryMarket::model()->findAllBySql($story_markets_query);
+				$story_markets = CHtml::listData( $story_markets, 'market_id', 'title', 'type' );
+				// Render the view with all the appropriate resources.
+				$this->render('edit_story', array('story'=>$story, 'publication_categories'=>$publication_categories, 'story_markets'=>$story_markets));
+			}
 		} else {
 			// Load up a list of stories.
 		}

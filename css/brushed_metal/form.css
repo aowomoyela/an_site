@@ -24,3 +24,19 @@ label {
 	display:inline-block;
 	clear:none;
 }
+
+.inline_sans_label {
+	margin-left:16.5em;
+}
+
+.form_submit {
+	border:1px solid #06C;
+	background-color:#EFF4FA;
+	color:#06C;
+	font-weight:bold;
+}
+
+.form_submit:hover {
+	background-color:#06C;
+	color:#EFF4FA;
+}

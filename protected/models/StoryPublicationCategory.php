@@ -1,23 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "story_category".
+ * This is the model class for table "story_publication_category".
  *
- * The followings are the available columns in table 'story_category':
- * @property integer $category_id
+ * The followings are the available columns in table 'story_publication_category':
+ * @property integer $publication_category_id
  * @property string $title
  * @property string $notes
  * @property string $created
  * @property string $modified
  */
-class StoryCategory extends CActiveRecord
+class StoryPublicationCategory extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'story_category';
+		return 'story_publication_category';
 	}
 
 	/**
@@ -32,7 +32,7 @@ class StoryCategory extends CActiveRecord
 			array('notes, created, modified', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('category_id, title, notes, created, modified', 'safe', 'on'=>'search'),
+			array('publication_category_id, title, notes, created, modified', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -44,6 +44,7 @@ class StoryCategory extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			
 		);
 	}
 
@@ -53,7 +54,7 @@ class StoryCategory extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'category_id' => 'Category',
+			'publication_category_id' => 'Publication Category',
 			'title' => 'Title',
 			'notes' => 'Notes',
 			'created' => 'Created',
@@ -79,7 +80,7 @@ class StoryCategory extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('category_id',$this->category_id);
+		$criteria->compare('publication_category_id',$this->publication_category_id);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('notes',$this->notes,true);
 		$criteria->compare('created',$this->created,true);
@@ -94,7 +95,7 @@ class StoryCategory extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return StoryCategory the static model class
+	 * @return StoryPublicationCategory the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

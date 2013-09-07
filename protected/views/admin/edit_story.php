@@ -6,7 +6,8 @@
 	$baseUrl = Yii::app()->baseUrl; 
 	$cs = Yii::app()->getClientScript();
 	$cs->registerCssFile($baseUrl.'/css/brushed_metal/form.css');
-	#$cs->registerScriptFile($baseUrl.'/js/tinymce/tinymce.min.js');
+	$cs->registerCssFile('http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/base/jquery-ui.css');
+	$cs->registerScriptFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js');
 	$cs->registerScriptFile($baseUrl.'/js/ckeditor/ckeditor.js');
 	$cs->registerScriptFile($baseUrl.'/js/admin/edit_story.js');
 	
@@ -78,17 +79,26 @@
 
 	<div class="form_row">
 		<?php echo CHtml::activeLabel($story, 'publication_category_id'); ?>
-		<?php echo CHtml::activeTextField($story, 'publication_category_id'); ?>
+		<?php echo CHtml::activeDropDownList($story, 'publication_category_id', $publication_categories, array(
+			'options'=>array(
+				#$story->get('publication_category_id') => array('selected'=>true),
+			),
+		)); ?>
 	</div>
 
 	<div class="form_row">
 		<?php echo CHtml::activeLabel($story, 'publication_market_id'); ?>
-		<?php echo CHtml::activeTextField($story, 'publication_market_id'); ?>
+		<?php echo CHtml::activeDropDownList($story, 'publication_market_id', $story_markets, array(
+			'options' => array(
+				 #$story->get('publication_market_id') => array('selected'=>true),
+			),
+			'empty' => '(none)',
+		)); ?>
 	</div>
 
 	<div class="form_row">
 		<?php echo CHtml::activeLabel($story, 'publication_date'); ?>
-		<?php echo CHtml::activeTextField($story, 'publication_date'); ?>
+		<?php echo CHtml::activeTextField($story, 'publication_date', array("readonly"=>"readonly", "class"=>"datepicker")); ?>
 	</div>
 
 	<div class="form_row">
@@ -101,6 +111,11 @@
 		<?php echo CHtml::activeTextField($story, 'archive_url_title'); ?>
 	</div>
 
+	<div class="form_row">
+		<input type="submit" value="log in &raquo;" class="inline_sans_label form_submit">
+	</div>
+
+
 <?php
 		echo CHtml::endForm();
 	}
@@ -110,11 +125,26 @@
 	CKEDITOR.replace( 'pullquote', {
 		toolbar :
 		[
-			{ name: 'basicstyles', items : [ 'Source','-','Bold','Italic' ] },
-			{ name: 'paragraph', items : [ 'NumberedList','BulletedList' ] },
-			{ name: 'tools', items : [ 'Maximize','-','About' ] }
+			{ name: 'document', items : [ 'Source' ] },
+			{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','-','Subscript','Superscript','-','Blockquote' ] },
+			//{ name: 'paragraph', items : [ 'NumberedList','BulletedList' ] },
+			{ name: 'tools', items : [ 'Maximize' ] }
 		]
-	});
+	} );
 
-	CKEDITOR.replace( 'story_text' );
+	CKEDITOR.replace( 'story_text', {
+		toolbar :
+		[
+			{ name: 'document', items : [ 'Source','-','Preview' ] },
+			{ name: 'clipboard', items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
+			{ name: 'editing', items : [ 'Find','Replace','-','SelectAll','-','SpellChecker' ] },
+			'/',
+			{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
+			{ name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ] },
+			{ name: 'insert', items : [ 'Image','HorizontalRule','SpecialChar' ] },
+			{ name: 'styles', items : [ 'Format','Font','FontSize' ] },
+			{ name: 'colors', items : [ 'TextColor','BGColor' ] },
+			{ name: 'tools', items : [ 'Maximize' ] }
+		]
+	} );
 </script>

@@ -2077,3 +2077,53 @@ Stack trace:
 REQUEST_URI=/js/tinymce/themes/advanced/theme.min.js
 HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
 ---
+2013/09/06 22:20:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/09/06 22:22:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "resume".' in /home1/owomoyel/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(270): CController->missingAction('resume')
+#1 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('resume')
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('web/resume')
+#3 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/web/resume
+HTTP_REFERER=http://ano.owomoyela.net/home
+---
+2013/09/07 10:09:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/09/07 11:34:47 [error] [php] Object of class Story could not be converted to string (/home1/owomoyel/yii/framework/web/helpers/CHtml.php:2155)
+Stack trace:
+#0 /home1/owomoyel/public_html/subdomain_ano/protected/views/admin/edit_story.php(96): dropDownList()
+#1 /home1/owomoyel/yii/framework/web/CBaseController.php(126): require()
+#2 /home1/owomoyel/yii/framework/web/CBaseController.php(95): AdminController->renderInternal()
+#3 /home1/owomoyel/yii/framework/web/CController.php(869): AdminController->renderFile()
+#4 /home1/owomoyel/yii/framework/web/CController.php(782): AdminController->renderPartial()
+#5 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php(89): AdminController->render()
+#6 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): AdminController->actionEdit_story()
+#7 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#9 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#11 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#13 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#14 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/edit_story?story_id=22
+in /home1/owomoyel/public_html/subdomain_ano/protected/views/admin/edit_story.php (96)
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (89)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
