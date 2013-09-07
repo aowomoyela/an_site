@@ -24,6 +24,7 @@ class AdminController extends Controller {
 				'actions' => array(
 					'index',
 					'debug',
+					'edit_story',
 				),
 				'users' => array('@'),
 			),
@@ -40,6 +41,8 @@ class AdminController extends Controller {
 	/* Actions, at long last. */
 	/**************************/
 	
+	/* General actions. */
+
 	public function actionIndex() {
 		// Landing page.
 		#$this->layout = 'admin_default';
@@ -51,6 +54,35 @@ class AdminController extends Controller {
 		#$this->layout = 'admin_default';
 		$this->render('debug');
 	}
+
+	/* Editing and management. */
+
+	public function actionEdit_story() {
+	try {
+		// Switch behavior based on whether or not this is a form submission.
+		if ( Yii::app()->request->isPostRequest ) {
+			// We're being asked to update a fiction record.
+		} elseif ( isset($_GET['story_id']) ) {
+			// Load the editor for this particular story.
+			$story_id = (int)$_GET['story_id'];
+			$story = Story::model()->find(array(
+				'select'=>'*',
+				'condition'=>'story_id=:story_id',
+				'params'=>array(':story_id'=>$story_id),
+			));
+		
+			// If the story is found, allow editing.
+			if ( is_null($story) ) {
+				throw new Exception('That story was not found in the database.');
+			} else {
+				$this->render('edit_story', array('story'=>$story));
+			} 
+		} else {
+			// Load up a list of stories.
+		}
+	} catch (Exception $e) {
+		// Exception handling.
+	} }
 	
 }
 ?>

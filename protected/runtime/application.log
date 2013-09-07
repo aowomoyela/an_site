@@ -1898,3 +1898,182 @@ Stack trace:
 REQUEST_URI=/game/predicament
 HTTP_REFERER=http://ano.owomoyela.net/site/login
 ---
+2013/09/05 22:21:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/09/06 20:06:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "edit_story".' in /home1/owomoyel/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(270): CController->missingAction('edit_story')
+#1 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('edit_story')
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/edit_stor...')
+#3 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/edit_story?story_id=1
+---
+2013/09/06 20:06:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "edit_story".' in /home1/owomoyel/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(270): CController->missingAction('edit_story')
+#1 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('edit_story')
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/edit_stor...')
+#3 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/edit_story?story_id=1
+---
+2013/09/06 20:17:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/brushedmetal/form.css".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/brushedmeta...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/brushedmetal/form.css
+HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
+---
+2013/09/06 20:17:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/brushedmetal/form.css".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/brushedmeta...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/brushedmetal/form.css
+HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
+---
+2013/09/06 20:17:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/brushedmetal/form.css".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/brushedmeta...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/brushedmetal/form.css
+HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
+---
+2013/09/06 20:17:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/brushedmetal/form.css".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/brushedmeta...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/brushedmetal/form.css
+HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
+---
+2013/09/06 20:18:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/brushedmetal/form.css".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/brushedmeta...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/brushedmetal/form.css
+HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
+---
+2013/09/06 20:18:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/brushedmetal/form.css".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/brushedmeta...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/brushedmetal/form.css
+HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
+---
+2013/09/06 20:18:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/brushedmetal/form.css".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/brushedmeta...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/brushedmetal/form.css
+HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
+---
+2013/09/06 20:18:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/brushedmetal/form.css".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/brushedmeta...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/brushedmetal/form.css
+HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
+---
+2013/09/06 20:18:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/brushedmetal/form.css".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/brushedmeta...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/brushedmetal/form.css
+HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
+---
+2013/09/06 21:02:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/09/06 21:02:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/09/06 21:41:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/tinymce/themes/advanced/theme.min.js".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/tinymce/them...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/tinymce/themes/advanced/theme.min.js
+HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
+---
+2013/09/06 21:41:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/tinymce/themes/advanced/theme.min.js".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/tinymce/them...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/tinymce/themes/advanced/theme.min.js
+HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
+---
+2013/09/06 21:43:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/tinymce/themes/advanced/theme.min.js".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/tinymce/them...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/tinymce/themes/advanced/theme.min.js
+HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
+---
+2013/09/06 21:45:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/tinymce/plugins/safari/plugin.min.js".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/tinymce/plug...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/tinymce/plugins/safari/plugin.min.js
+HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
+---
+2013/09/06 21:45:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/tinymce/plugins/style/plugin.min.js".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/tinymce/plug...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/tinymce/plugins/style/plugin.min.js
+HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
+---
+2013/09/06 21:45:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/tinymce/themes/advanced/theme.min.js".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/tinymce/them...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/tinymce/themes/advanced/theme.min.js
+HTTP_REFERER=http://ano.owomoyela.net/admin/edit_story?story_id=22
+---

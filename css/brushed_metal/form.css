@@ -1,0 +1,26 @@
+.form_row {
+	margin: 0;
+}
+
+.form_row + .form_row {
+	margin-top:1em;
+}
+
+label {
+	display:inline-block;
+	width: 12.5em;
+	margin-right:.23em;
+	padding-right:.23em;
+	color:#06C;
+	border-top:2px solid #EFF4FA;
+	border-right:2px solid #EFF4FA;
+	font-weight:bold;
+	text-align: right;
+	vertical-align:top;
+}
+
+.wysiwyg {
+	width:50em;
+	display:inline-block;
+	clear:none;
+}

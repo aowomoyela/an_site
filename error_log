@@ -59,3 +59,21 @@
 [26-Aug-2013 11:46:58] PHP Fatal error:  Class 'SiteUtility' not found in /home1/owomoyel/public_html/subdomain_ano/protected/models/Story.php on line 161
 [26-Aug-2013 12:29:53] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/views/layouts/main.php on line 28
 [26-Aug-2013 12:30:07] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/views/layouts/main.php on line 28
+[06-Sep-2013 20:04:45] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 70
+[06-Sep-2013 20:05:15] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 71
+[06-Sep-2013 20:05:16] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 71
+[06-Sep-2013 20:05:17] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 71
+[06-Sep-2013 20:05:26] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 71
+[06-Sep-2013 20:05:27] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 71
+[06-Sep-2013 20:05:43] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 72
+[06-Sep-2013 20:05:44] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 72
+[06-Sep-2013 20:07:08] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 72
+[06-Sep-2013 20:07:10] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 72
+[06-Sep-2013 20:07:21] PHP Warning:  Unterminated comment starting line 63 in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 63
+[06-Sep-2013 20:07:21] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 63
+[06-Sep-2013 20:07:21] PHP Fatal error:  Class declarations may not be nested in /home1/owomoyel/yii/framework/collections/CListIterator.php on line 20
+[06-Sep-2013 20:07:22] PHP Warning:  Unterminated comment starting line 63 in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 63
+[06-Sep-2013 20:07:22] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 63
+[06-Sep-2013 20:07:22] PHP Fatal error:  Class declarations may not be nested in /home1/owomoyel/yii/framework/collections/CListIterator.php on line 20
+[06-Sep-2013 20:07:43] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 71
+[06-Sep-2013 20:09:14] PHP Parse error:  syntax error, unexpected ')' in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php on line 71
