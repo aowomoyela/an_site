@@ -25,6 +25,7 @@ class AdminController extends Controller {
 					'index',
 					'debug',
 					'edit_story',
+					'phpinfo',
 				),
 				'users' => array('@'),
 			),
@@ -45,15 +46,19 @@ class AdminController extends Controller {
 
 	public function actionIndex() {
 		// Landing page.
-		#$this->layout = 'admin_default';
 		$this->render('index');
 	}
 	
 	
 	public function actionDebug() {
-		#$this->layout = 'admin_default';
 		$this->render('debug');
 	}
+
+
+	public function actionPhpinfo() {
+		phpinfo();
+	}
+
 
 	/* Editing and management. */
 
@@ -62,14 +67,66 @@ class AdminController extends Controller {
 		// Switch behavior based on whether or not this is a form submission.
 		if ( Yii::app()->request->isPostRequest ) {
 			// We're being asked to update a fiction record.
+			#new dBug( $_POST );
+			// Load the appropriate model.
+			if ( $_POST['Story']['story_id'] == 'new' ) {
+				// Create a new story record.
+				$story = new Story();
+			} else {
+				// Find the existing record.
+				$story_id = (int)$_POST['Story']['story_id']; 
+				$story = Story::model()->findByPk( $story_id );
+			}
+
+			// If the story is successfully created or found, allow saving.
+			if ( is_null($story) ) {
+				throw new Exception('That story was not found in the database.');
+			} else {
+				foreach ( $_POST as $pkey => $pval ) {
+					$story->set($pkey, $pval);
+				}
+
+				foreach ( $_POST['Story'] as $pskey => $psval ) {
+					$story->set($pskey, $psval);					
+				}
+
+				$mode = "save";
+				switch ($mode) {
+					case "save":
+						echo "Running in save() mode.<hr />";
+						$story->save();
+					break;
+
+					case "update":
+						echo "Running in update() mode.<hr />";
+						// Hopefully-temporary workarounds to deal with save() not wanting to function.
+						if ( $_POST['Story']['story_id'] == 'new' ) {
+							$story->insert();
+						} else {
+							$story->update();
+						}
+					break;
+				}
+
+				// Return the admin to a meaningful page.
+				# $this->layout = "main";
+				# $this->render('admin/edit_story', array("story"=>$story, "message"=>"Story updated."));
+				Yii::app()->redirect( array('admin/edit_story', 'story_id'=>(int)$_POST['Story']['story_id']) );
+			}
+
 		} elseif ( isset($_GET['story_id']) ) {
-			// Find the story in the database.
-			$story_id = (int)$_GET['story_id'];
-			$story = Story::model()->find(array(
-				'select'=>'*',
-				'condition'=>'story_id=:story_id',
-				'params'=>array(':story_id'=>$story_id),
-			));
+			// Allow users to load existing stories or create new ones.
+			if ( $_GET['story_id'] == 'new' ) {
+				$story = new Story();
+			} else {
+				// Find the story in the database.
+				$story_id = (int)$_GET['story_id'];
+				$story = Story::model()->find(array(
+					'select'=>'*',
+					'condition'=>'story_id=:story_id',
+					'params'=>array(':story_id'=>$story_id),
+				));
+			}
 		
 			// If the story is found, allow editing.
 			if ( is_null($story) ) {

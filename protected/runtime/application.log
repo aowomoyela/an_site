@@ -2127,3 +2127,216 @@ REQUEST_URI=/admin/edit_story?story_id=22
 in /home1/owomoyel/public_html/subdomain_ano/protected/views/admin/edit_story.php (96)
 in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (89)
 in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:06:25 [error] [php] Missing argument 1 for Story::get(), called in /home1/owomoyel/yii/framework/base/CComponent.php on line 111 and defined (/home1/owomoyel/public_html/subdomain_ano/protected/models/Story.php:22)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/helpers/CHtml.php(2529): Story->__get()
+#1 /home1/owomoyel/yii/framework/web/helpers/CHtml.php(2252): resolveValue()
+#2 /home1/owomoyel/yii/framework/web/helpers/CHtml.php(1609): activeInputField()
+#3 /home1/owomoyel/public_html/subdomain_ano/protected/views/admin/edit_story.php(44): activeHiddenField()
+#4 /home1/owomoyel/yii/framework/web/CBaseController.php(126): require()
+#5 /home1/owomoyel/yii/framework/web/CBaseController.php(95): AdminController->renderInternal()
+#6 /home1/owomoyel/yii/framework/web/CController.php(869): AdminController->renderFile()
+#7 /home1/owomoyel/yii/framework/web/CController.php(782): AdminController->renderPartial()
+#8 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php(95): AdminController->render()
+#9 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): AdminController->actionEdit_story()
+#10 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#12 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#14 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#16 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#17 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/edit_story?story_id=22
+in /home1/owomoyel/public_html/subdomain_ano/protected/models/Story.php (22)
+in /home1/owomoyel/public_html/subdomain_ano/protected/views/admin/edit_story.php (44)
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (95)
+2013/09/07 12:06:26 [error] [php] Missing argument 1 for Story::get(), called in /home1/owomoyel/yii/framework/base/CComponent.php on line 111 and defined (/home1/owomoyel/public_html/subdomain_ano/protected/models/Story.php:22)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/helpers/CHtml.php(2529): Story->__get()
+#1 /home1/owomoyel/yii/framework/web/helpers/CHtml.php(2252): resolveValue()
+#2 /home1/owomoyel/yii/framework/web/helpers/CHtml.php(1609): activeInputField()
+#3 /home1/owomoyel/public_html/subdomain_ano/protected/views/admin/edit_story.php(44): activeHiddenField()
+#4 /home1/owomoyel/yii/framework/web/CBaseController.php(126): require()
+#5 /home1/owomoyel/yii/framework/web/CBaseController.php(95): AdminController->renderInternal()
+#6 /home1/owomoyel/yii/framework/web/CController.php(869): AdminController->renderFile()
+#7 /home1/owomoyel/yii/framework/web/CController.php(782): AdminController->renderPartial()
+#8 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php(95): AdminController->render()
+#9 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): AdminController->actionEdit_story()
+#10 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#12 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#14 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#16 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#17 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/edit_story?story_id=22
+in /home1/owomoyel/public_html/subdomain_ano/protected/models/Story.php (22)
+in /home1/owomoyel/public_html/subdomain_ano/protected/views/admin/edit_story.php (44)
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (95)
+2013/09/07 12:16:47 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:17:13 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:18:27 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:18:53 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:19:36 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:19:49 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:19:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:20:12 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:20:15 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:20:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:20:49 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:21:39 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:22:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:22:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:23:23 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:26:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (88)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:29:51 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (90)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:31:36 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (90)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:32:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (90)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/07 12:33:54 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (90)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/09 16:06:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/09/09 16:07:39 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (90)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/09 16:13:54 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (93)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/09 16:15:38 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (93)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/09 16:16:47 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (93)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/09 17:17:48 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (93)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/09 17:19:45 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (94)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/09 17:23:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (98)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/09 17:23:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (98)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/09 17:28:35 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (98)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/09 18:26:14 [error] [php] mysql_real_escape_string() [<a href='function.mysql-real-escape-string'>function.mysql-real-escape-string</a>]: Access denied for user 'owomoyel'@'localhost' (using password: NO) (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php:94)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#4 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#5 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#7 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/edit_story
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (94)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/09 18:27:06 [error] [php] mysql_real_escape_string() [<a href='function.mysql-real-escape-string'>function.mysql-real-escape-string</a>]: Access denied for user 'owomoyel'@'localhost' (using password: NO) (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php:94)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#4 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#5 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#7 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/edit_story
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (94)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/09 18:33:07 [error] [php] mysqli_real_escape_string() [<a href='function.mysqli-real-escape-string'>function.mysqli-real-escape-string</a>]: invalid object or resource mysqli
+ (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php:96)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#4 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#5 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#7 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/edit_story
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (96)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 10:06:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/09/10 10:16:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (129)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 10:17:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (131)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 10:21:00 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (131)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 10:25:30 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (131)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)

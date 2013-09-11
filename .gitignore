@@ -1,2 +1,3 @@
 images/site
 views/admin/debug.php
+error_log

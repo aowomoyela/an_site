@@ -27,6 +27,14 @@ class Story extends CActiveRecord
 		}
 	}
 
+	public function set($var, $value) {
+		if ( in_array($var, array('title', 'wordcount', 'link', 'link_active', 'pullquote', 'publication_market_id', 'publication_date', 'available_in_archive', 'story_text')) ) {
+			$this->$var = $value;
+		} else {
+			return false;
+		}
+	}
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -43,9 +51,10 @@ class Story extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('wordcount, link_active, publication_market_id, available_in_archive', 'numerical', 'integerOnly'=>true),
-			array('title', 'length', 'max'=>150),
-			array('link, pullquote, publication_date, story_text, created, modified', 'safe'),
+			// Unwise hacky stuff as a temporary measure. Folks, don't do what I'm doing.
+			#array('wordcount, publication_market_id,', 'numerical', 'integerOnly'=>true),
+			#array('title', 'length', 'max'=>150),
+			array('title, wordcount, link, link_active, pullquote, publication_market_id, publication_date, available_in_archive, story_text', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('story_id, title, wordcount, link, link_active, pullquote, publication_market_id, publication_date, available_in_archive, story_text, created, modified', 'safe', 'on'=>'search'),
@@ -131,10 +140,6 @@ class Story extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
-	}
-
-	public function afterFind() {
-		
 	}
 
 	public function get_catalog_block() {

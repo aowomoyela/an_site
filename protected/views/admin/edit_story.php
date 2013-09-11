@@ -40,7 +40,8 @@
 
 	elseif ( isset($story) ) {
 		// Give us the WYSIWYG editing form.
-		echo CHtml::beginForm();
+		echo CHtml::beginForm( array('admin/edit_story'), 'post', array('id'=>'edit_story_form') );
+		echo CHtml::activeHiddenField( $story, 'story_id' );
 ?>
 	<div class="form_row">
 		<?php echo CHtml::activeLabel($story, 'title'); ?>
@@ -112,7 +113,7 @@
 	</div>
 
 	<div class="form_row">
-		<input type="submit" value="log in &raquo;" class="inline_sans_label form_submit">
+		<input type="submit" value="save changes &raquo;" class="inline_sans_label form_submit">
 	</div>
 
 
