@@ -30,6 +30,22 @@ body {
 	line-height:1.5em;
 }
 
+	div.page_message {
+		margin:.5em;
+		padding:.5em;
+		border:2px solid #06C;
+		background-color:#EFF4FA;
+		font-weight:bold;
+	}
+
+	div.page_error {
+		margin:.5em;
+		padding:.5em;
+		border:2px solid #F00;
+		background-color:#EFEFEF;
+		font-weight:bold;
+	}
+
 #sidebar {
 	padding: 20px 20px 20px 0;
 }

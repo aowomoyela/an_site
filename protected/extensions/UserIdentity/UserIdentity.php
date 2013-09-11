@@ -22,7 +22,7 @@ class UserIdentity extends CUserIdentity {
 			return false;
 		} else {
 			// The correct admin credentials have been provided. Log them in.
-			$this->setState('model', $user);
+			#$this->setState('model', $user);
 			$this->setState('authorization', 'admin' );
 			// Return with no errors and a confirmation.
                         $this->errorCode==self::ERROR_NONE;

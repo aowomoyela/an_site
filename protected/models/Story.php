@@ -19,8 +19,17 @@
  */
 class Story extends CActiveRecord
 {
+	public function set_id_to_new() {
+		if ( $this->story_id == '' || is_null($this->story_id) ) {
+			$this->story_id = 'new';
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	public function get($var) {
-		if ( in_array($var, array('title', 'wordcount', 'link', 'link_active', 'pullquote', 'available_in_archive','publication_category_id', 'publication_market_id')) ) {
+		if ( in_array($var, array('story_id', 'title', 'wordcount', 'link', 'link_active', 'pullquote', 'available_in_archive', 'publication_category_id', 'publication_market_id')) ) {
 			return $this->$var;
 		} else {
 			return NULL;
@@ -28,7 +37,10 @@ class Story extends CActiveRecord
 	}
 
 	public function set($var, $value) {
-		if ( in_array($var, array('title', 'wordcount', 'link', 'link_active', 'pullquote', 'publication_market_id', 'publication_date', 'available_in_archive', 'story_text')) ) {
+		if ( in_array($var, array(
+					'title', 'wordcount', 'link', 'link_active', 'pullquote', 'published', 'publication_market_id', 'publication_date', 'available_in_archive', 'archive_url_title',
+					'publication_category_id', 'story_text'
+					)) ) {
 			$this->$var = $value;
 		} else {
 			return false;
@@ -54,7 +66,7 @@ class Story extends CActiveRecord
 			// Unwise hacky stuff as a temporary measure. Folks, don't do what I'm doing.
 			#array('wordcount, publication_market_id,', 'numerical', 'integerOnly'=>true),
 			#array('title', 'length', 'max'=>150),
-			array('title, wordcount, link, link_active, pullquote, publication_market_id, publication_date, available_in_archive, story_text', 'safe'),
+			array('title, wordcount, link, link_active, pullquote, publication_market_id, publication_date, available_in_archive, publication_category_id, story_text', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('story_id, title, wordcount, link, link_active, pullquote, publication_market_id, publication_date, available_in_archive, story_text, created, modified', 'safe', 'on'=>'search'),

@@ -2340,3 +2340,147 @@ in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
 2013/09/10 10:25:30 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1142 UPDATE command denied to user 'owomoyel_anyii'@'localhost' for table 'story'. The SQL statement executed was: UPDATE `story` SET `story_id`=:yp0, `title`=:yp1, `wordcount`=:yp2, `link`=:yp3, `link_active`=:yp4, `pullquote`=:yp5, `published`=:yp6, `publication_category_id`=:yp7, `publication_market_id`=:yp8, `publication_date`=:yp9, `available_in_archive`=:yp10, `archive_url_title`=:yp11, `story_text`=:yp12, `created`=:yp13, `modified`=:yp14 WHERE `story`.`story_id`=22.
 in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (131)
 in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 21:00:34 [error] [php] Undefined variable: long_stories (/home1/owomoyel/public_html/subdomain_ano/protected/views/fiction/demonology.php:19)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(869): FictionController->renderFile()
+#1 /home1/owomoyel/yii/framework/web/CController.php(782): FictionController->renderPartial()
+#2 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FictionController.php(85): FictionController->render()
+#3 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FictionController->actionDemonology()
+#4 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home1/owomoyel/yii/framework/web/CController.php(286): FictionController->runAction()
+#6 /home1/owomoyel/yii/framework/web/CController.php(265): FictionController->runActionWithFilters()
+#7 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): FictionController->run()
+#8 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/fiction/demonology
+in /home1/owomoyel/public_html/subdomain_ano/protected/views/fiction/demonology.php (19)
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FictionController.php (85)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 21:15:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '33' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `story` (`published`, `story_id`, `title`, `wordcount`, `link`, `link_active`, `pullquote`, `publication_category_id`, `publication_market_id`, `publication_date`, `available_in_archive`, `archive_url_title`, `story_text`, `created`, `modified`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (99)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 21:16:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '33' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `story` (`published`, `story_id`, `title`, `wordcount`, `link`, `link_active`, `pullquote`, `publication_category_id`, `publication_market_id`, `publication_date`, `available_in_archive`, `archive_url_title`, `story_text`, `created`, `modified`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (99)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 21:16:38 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '33' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `story` (`published`, `story_id`, `title`, `wordcount`, `link`, `link_active`, `pullquote`, `publication_category_id`, `publication_market_id`, `publication_date`, `available_in_archive`, `archive_url_title`, `story_text`, `created`, `modified`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (99)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 21:17:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '33' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `story` (`published`, `story_id`, `title`, `wordcount`, `link`, `link_active`, `pullquote`, `publication_category_id`, `publication_market_id`, `publication_date`, `available_in_archive`, `archive_url_title`, `story_text`, `created`, `modified`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (99)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 21:17:31 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '33' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `story` (`published`, `story_id`, `title`, `wordcount`, `link`, `link_active`, `pullquote`, `publication_category_id`, `publication_market_id`, `publication_date`, `available_in_archive`, `archive_url_title`, `story_text`, `created`, `modified`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (99)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 21:18:10 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '33' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `story` (`published`, `story_id`, `title`, `wordcount`, `link`, `link_active`, `pullquote`, `publication_category_id`, `publication_market_id`, `publication_date`, `available_in_archive`, `archive_url_title`, `story_text`, `created`, `modified`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (99)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 21:19:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '33' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `story` (`published`, `story_id`, `title`, `wordcount`, `link`, `link_active`, `pullquote`, `publication_category_id`, `publication_market_id`, `publication_date`, `available_in_archive`, `archive_url_title`, `story_text`, `created`, `modified`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (99)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 21:21:14 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '33' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `story` (`published`, `story_id`, `title`, `wordcount`, `link`, `link_active`, `pullquote`, `publication_category_id`, `publication_market_id`, `publication_date`, `available_in_archive`, `archive_url_title`, `story_text`, `created`, `modified`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (99)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 21:21:48 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '33' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `story` (`published`, `story_id`, `title`, `wordcount`, `link`, `link_active`, `pullquote`, `publication_category_id`, `publication_market_id`, `publication_date`, `available_in_archive`, `archive_url_title`, `story_text`, `created`, `modified`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (99)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 21:23:18 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '33' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `story` (`published`, `story_id`, `title`, `wordcount`, `link`, `link_active`, `pullquote`, `publication_category_id`, `publication_market_id`, `publication_date`, `available_in_archive`, `archive_url_title`, `story_text`, `created`, `modified`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (99)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 21:23:57 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '33' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `story` (`published`, `story_id`, `title`, `wordcount`, `link`, `link_active`, `pullquote`, `publication_category_id`, `publication_market_id`, `publication_date`, `available_in_archive`, `archive_url_title`, `story_text`, `created`, `modified`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (100)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 21:24:37 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '33' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `story` (`published`, `story_id`, `title`, `wordcount`, `link`, `link_active`, `pullquote`, `publication_category_id`, `publication_market_id`, `publication_date`, `available_in_archive`, `archive_url_title`, `story_text`, `created`, `modified`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (100)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 21:25:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '22' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `story` (`published`, `story_id`, `title`, `wordcount`, `link`, `link_active`, `pullquote`, `publication_category_id`, `publication_market_id`, `publication_date`, `available_in_archive`, `archive_url_title`, `story_text`, `created`, `modified`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (100)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/10 21:29:40 [error] [php] Undefined index: story_id (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php:103)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#1 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#3 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#4 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#5 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/edit_story
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (103)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/11 13:48:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/09/11 13:48:36 [error] [php] Undefined variable: user (/home1/owomoyel/public_html/subdomain_ano/protected/extensions/UserIdentity/UserIdentity.php:25)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home1/owomoyel/yii/framework/web/CController.php(286): SiteController->runAction()
+#2 /home1/owomoyel/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/site/login
+in /home1/owomoyel/public_html/subdomain_ano/protected/extensions/UserIdentity/UserIdentity.php (25)
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/SiteController.php (44)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/11 13:52:25 [error] [php] Undefined variable: user (/home1/owomoyel/public_html/subdomain_ano/protected/extensions/UserIdentity/UserIdentity.php:25)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home1/owomoyel/yii/framework/web/CController.php(286): SiteController->runAction()
+#2 /home1/owomoyel/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/site/login
+in /home1/owomoyel/public_html/subdomain_ano/protected/extensions/UserIdentity/UserIdentity.php (25)
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/SiteController.php (44)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/11 13:57:09 [error] [php] Undefined variable: publication_categories (/home1/owomoyel/public_html/subdomain_ano/protected/views/admin/edit_story.php:83)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(869): AdminController->renderFile()
+#1 /home1/owomoyel/yii/framework/web/CController.php(782): AdminController->renderPartial()
+#2 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php(115): AdminController->render()
+#3 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): AdminController->actionEdit_story()
+#4 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#6 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#8 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#10 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#11 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/edit_story
+in /home1/owomoyel/public_html/subdomain_ano/protected/views/admin/edit_story.php (83)
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (115)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/09/11 13:58:15 [error] [php] Undefined variable: publication_categories (/home1/owomoyel/public_html/subdomain_ano/protected/views/admin/edit_story.php:83)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(869): AdminController->renderFile()
+#1 /home1/owomoyel/yii/framework/web/CController.php(782): AdminController->renderPartial()
+#2 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php(127): AdminController->render()
+#3 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): AdminController->actionEdit_story()
+#4 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#6 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#8 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#10 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#11 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/edit_story
+in /home1/owomoyel/public_html/subdomain_ano/protected/views/admin/edit_story.php (83)
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (127)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)

@@ -64,24 +64,45 @@ class AdminController extends Controller {
 
 	public function actionEdit_story() {
 	try {
+		// Get publication categories for dropdown list.
+		$publication_categories = StoryPublicationCategory::model()->findAll( array(
+			'order'=>'title',
+		) );
+		$publication_categories = CHtml::listData( $publication_categories, 'publication_category_id', 'title' );
+
+		// Get publication markets for dropdown list.
+		$story_markets_query = 'select sm.market_id, sm.title, smt.type from story_market sm, story_market_type smt ';
+		$story_markets_query.= 'where sm.market_type_id = smt.type_id order by smt.type, sm.title';
+		$story_markets = StoryMarket::model()->findAllBySql($story_markets_query);
+		$story_markets = CHtml::listData( $story_markets, 'market_id', 'title', 'type' );
+
 		// Switch behavior based on whether or not this is a form submission.
 		if ( Yii::app()->request->isPostRequest ) {
 			// We're being asked to update a fiction record.
 			#new dBug( $_POST );
+			#echo "<p>Post data loaded.</p>";
 			// Load the appropriate model.
 			if ( $_POST['Story']['story_id'] == 'new' ) {
 				// Create a new story record.
+				#echo "<p>About to create story object.</p>";
 				$story = new Story();
-			} else {
+				#echo "<p>Story object created.</p>";
+			} elseif (is_numeric($_POST['Story']['story_id']) || is_int($_POST['Story']['story_id'])) {
 				// Find the existing record.
-				$story_id = (int)$_POST['Story']['story_id']; 
+				$story_id = (int)$_POST['Story']['story_id'];
+				#echo "<p>Finding story by primary key.</p>";
 				$story = Story::model()->findByPk( $story_id );
+				#echo "<p>isNewRecord: "; new dBug($story->isNewRecord); echo "<p>";
+			} else {
+				throw new Exception("Invalid story_id.");
 			}
 
 			// If the story is successfully created or found, allow saving.
 			if ( is_null($story) ) {
 				throw new Exception('That story was not found in the database.');
 			} else {
+				#unset($_POST['Story']['story_id']);
+
 				foreach ( $_POST as $pkey => $pval ) {
 					$story->set($pkey, $pval);
 				}
@@ -90,34 +111,27 @@ class AdminController extends Controller {
 					$story->set($pskey, $psval);					
 				}
 
-				$mode = "save";
-				switch ($mode) {
-					case "save":
-						echo "Running in save() mode.<hr />";
-						$story->save();
-					break;
+				#echo "<p>Pre-saving for story ID '".$story->get('story_id')."'</p>";
+				$story->save(); // Yii is trying to use INSERT on all save queries for some reason. >_<
+				/*if ( $_POST['Story']['story_id'] == 'new' ) {
+					$story->insert();
+				} elseif( is_numeric($_POST['Story']['story_id']) || is_int($_POST['Story']['story_id']) ) {
+					$story->update();
+				} else {
 
-					case "update":
-						echo "Running in update() mode.<hr />";
-						// Hopefully-temporary workarounds to deal with save() not wanting to function.
-						if ( $_POST['Story']['story_id'] == 'new' ) {
-							$story->insert();
-						} else {
-							$story->update();
-						}
-					break;
-				}
+				}*/
+				#echo "<p>Saved, presumably...</p>";
 
 				// Return the admin to a meaningful page.
-				# $this->layout = "main";
-				# $this->render('admin/edit_story', array("story"=>$story, "message"=>"Story updated."));
-				Yii::app()->redirect( array('admin/edit_story', 'story_id'=>(int)$_POST['Story']['story_id']) );
+				$this->layout = "main";
+				$this->render('edit_story', array("story"=>$story, "message"=>"Story updated.", 'publication_categories'=>$publication_categories, 'story_markets'=>$story_markets));
 			}
 
 		} elseif ( isset($_GET['story_id']) ) {
 			// Allow users to load existing stories or create new ones.
 			if ( $_GET['story_id'] == 'new' ) {
 				$story = new Story();
+				$story->set_id_to_new();
 			} else {
 				// Find the story in the database.
 				$story_id = (int)$_GET['story_id'];
@@ -132,16 +146,6 @@ class AdminController extends Controller {
 			if ( is_null($story) ) {
 				throw new Exception('That story was not found in the database.');
 			} else {
-				// Get publication categories for dropdown list.
-				$publication_categories = StoryPublicationCategory::model()->findAll( array(
-					'order'=>'title',
-				) );
-				$publication_categories = CHtml::listData( $publication_categories, 'publication_category_id', 'title' );
-				// Get publication markets for dropdown list.
-				$story_markets_query = 'select sm.market_id, sm.title, smt.type from story_market sm, story_market_type smt ';
-				$story_markets_query.= 'where sm.market_type_id = smt.type_id order by smt.type, sm.title';
-				$story_markets = StoryMarket::model()->findAllBySql($story_markets_query);
-				$story_markets = CHtml::listData( $story_markets, 'market_id', 'title', 'type' );
 				// Render the view with all the appropriate resources.
 				$this->render('edit_story', array('story'=>$story, 'publication_categories'=>$publication_categories, 'story_markets'=>$story_markets));
 			}
@@ -150,6 +154,7 @@ class AdminController extends Controller {
 		}
 	} catch (Exception $e) {
 		// Exception handling.
+		echo "<p>".$e->getMessage()."</p>"; // Temporary.
 	} }
 	
 }

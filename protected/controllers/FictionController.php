@@ -82,6 +82,7 @@ class FictionController extends Controller
 			'secondary_navigation'=>$secondary_navigation,
 			'short_stories'=>$short_stories,
 			'prompt_stories'=>$prompt_stories,
+			'long_stories'=>$long_stories,
 		));
 	}
 
