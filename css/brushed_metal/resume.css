@@ -1,0 +1,53 @@
+div#content {
+	font-family:Helvetica, Arial, Verdana, sans-serif;
+	line-height:1.25em;
+	padding:2em 9em;
+}
+
+div.resume {
+	/*width:90%
+	border:1px solid #00F;*/
+}
+
+h4 {
+	margin:0;
+	padding:0;
+	font-weight:bold;
+	color:#555;
+}
+
+h3 {
+	border-top:2px solid #777;
+	border-right:2px solid #777;
+	color:#555;
+	/*clear:both;*/
+	margin:1em 0 0 0;
+	padding:.25em .25em 0 0;
+	text-align:right;
+}
+
+ul {
+	margin:0 0 1em 0;
+	padding:0 0 0 2em;
+}
+
+strong {
+	font-size:1.05em;
+}
+
+#experience ul li {
+	margin: .4em 0;
+	line-height:1.15em;
+}
+
+div.section {
+
+}
+
+div.section_header {
+
+}
+
+div.section_details {
+	
+}

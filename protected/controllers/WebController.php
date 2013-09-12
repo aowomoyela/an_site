@@ -22,4 +22,10 @@ class WebController extends Controller
 		$this->render('index');
 	}
 
+	public function actionResume() {
+		$page = Page::model()->findByAttributes(array('url_short_title' => 'resume'));
+		$content = $page->content_html;
+		$this->render('resume', array('content'=>$content));
+	}
+
 }

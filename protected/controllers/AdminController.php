@@ -79,20 +79,14 @@ class AdminController extends Controller {
 		// Switch behavior based on whether or not this is a form submission.
 		if ( Yii::app()->request->isPostRequest ) {
 			// We're being asked to update a fiction record.
-			#new dBug( $_POST );
-			#echo "<p>Post data loaded.</p>";
 			// Load the appropriate model.
 			if ( $_POST['Story']['story_id'] == 'new' ) {
 				// Create a new story record.
-				#echo "<p>About to create story object.</p>";
 				$story = new Story();
-				#echo "<p>Story object created.</p>";
 			} elseif (is_numeric($_POST['Story']['story_id']) || is_int($_POST['Story']['story_id'])) {
 				// Find the existing record.
 				$story_id = (int)$_POST['Story']['story_id'];
-				#echo "<p>Finding story by primary key.</p>";
 				$story = Story::model()->findByPk( $story_id );
-				#echo "<p>isNewRecord: "; new dBug($story->isNewRecord); echo "<p>";
 			} else {
 				throw new Exception("Invalid story_id.");
 			}
@@ -101,8 +95,6 @@ class AdminController extends Controller {
 			if ( is_null($story) ) {
 				throw new Exception('That story was not found in the database.');
 			} else {
-				#unset($_POST['Story']['story_id']);
-
 				foreach ( $_POST as $pkey => $pval ) {
 					$story->set($pkey, $pval);
 				}
@@ -111,16 +103,7 @@ class AdminController extends Controller {
 					$story->set($pskey, $psval);					
 				}
 
-				#echo "<p>Pre-saving for story ID '".$story->get('story_id')."'</p>";
 				$story->save(); // Yii is trying to use INSERT on all save queries for some reason. >_<
-				/*if ( $_POST['Story']['story_id'] == 'new' ) {
-					$story->insert();
-				} elseif( is_numeric($_POST['Story']['story_id']) || is_int($_POST['Story']['story_id']) ) {
-					$story->update();
-				} else {
-
-				}*/
-				#echo "<p>Saved, presumably...</p>";
 
 				// Return the admin to a meaningful page.
 				$this->layout = "main";
@@ -150,6 +133,16 @@ class AdminController extends Controller {
 				$this->render('edit_story', array('story'=>$story, 'publication_categories'=>$publication_categories, 'story_markets'=>$story_markets));
 			}
 		} else {
+			// Determine category ID.
+			if ( !isset( $_POST["publication_category_id"] ) ) {
+				$publication_category_id = '1';
+			} else {
+				if ( is_numeric($_POST["publication_category_id"]) || is_int($_POST["publication_category_id"]) ) {
+					$publication_category_id = (int)$_POST["publication_category_id"];
+				} else {
+					$publication_category_id = '1';
+				}
+			}
 			// Load up a list of stories.
 		}
 	} catch (Exception $e) {
