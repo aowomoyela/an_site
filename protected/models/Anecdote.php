@@ -20,6 +20,14 @@ class Anecdote extends CActiveRecord
 		return 'anecdote';
 	}
 
+	public function get($var) {
+		if ( in_array($var, array('anecdote_title', 'anecdote_text')) ) {
+			return $this->$var;
+		} else {
+			return null;
+		}
+	}
+
 	/**
 	 * @return array validation rules for model attributes.
 	 */

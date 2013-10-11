@@ -136,6 +136,17 @@ body {
 		text-decoration:none;
 	}
 
+div#header_forms {
+	border-bottom:1px solid #06C;
+	padding-bottom:1em;
+	margin-bottom:1em;
+	text-align:right;
+}
+
+	div#header_forms form {
+		display:inline;
+	}
+
 div.pull_right {
 	float:right;
 	clear:right;

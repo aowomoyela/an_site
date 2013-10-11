@@ -134,16 +134,24 @@ class AdminController extends Controller {
 			}
 		} else {
 			// Determine category ID.
-			if ( !isset( $_POST["publication_category_id"] ) ) {
+			if ( !isset( $_GET["publication_category_id"] ) ) {
 				$publication_category_id = '1';
 			} else {
-				if ( is_numeric($_POST["publication_category_id"]) || is_int($_POST["publication_category_id"]) ) {
-					$publication_category_id = (int)$_POST["publication_category_id"];
+				if ( is_numeric($_GET["publication_category_id"]) || is_int($_GET["publication_category_id"]) ) {
+					$publication_category_id = (int)$_GET["publication_category_id"];
 				} else {
 					$publication_category_id = '1';
 				}
 			}
 			// Load up a list of stories.
+			$stories = Story::model()->findAllByAttributes(
+				array('publication_category_id'=>$publication_category_id), 
+				array('order'=>'title')
+			);
+			// Grab a list of publication categories.
+			$pub_cat_query = "select publication_category_id, title from story_publication_category order by title";
+			$publication_categories = SiteUtility::queryFull($pub_cat_query);
+			$this->render('edit_story_list', array('stories'=>$stories, 'publication_categories'=>$publication_categories, 'publication_category_id'=>$publication_category_id));
 		}
 	} catch (Exception $e) {
 		// Exception handling.

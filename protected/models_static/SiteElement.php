@@ -50,13 +50,9 @@
 		public static function get_random_anecdote() {
 			// Get a random anecdote from the table. Order by rand() isn't terribly efficient, but I anticipate small table sizes & low traffic.
 			$query = 'select anecdote_text from anecdote order by rand() limit 1';
-			// Too lazy to make a full-on model for anecdotes right now. Maybe later. (Hey, at least I'm honest.)
-			$connection = Yii::app()->db;
-			$cmd = $connection->createCommand($query);
-			$row = $cmd->queryRow();
-			if ($row) {
-				$return_value = $row['anecdote'];
-				foreach ( $row as $column_name => $column_value ) { $return_value = $column_value; }
+			$anecdote = Anecdote::model()->findBySql( $query );
+			if ( !is_null($anecdote) ) {
+				$return_value = $anecdote->get('anecdote_text');
 			} else { $return_value = 'No anecdotes found. The database must not be feeling chatty.'; }
 			return $return_value;
 		}

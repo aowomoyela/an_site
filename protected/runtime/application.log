@@ -2553,3 +2553,218 @@ REQUEST_URI=/about
 in /home1/owomoyel/public_html/subdomain_ano/protected/models_static/SiteElement.php (58)
 in /home1/owomoyel/public_html/subdomain_ano/protected/views/site/about.php (60)
 in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/SiteController.php (81)
+2013/10/04 22:32:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/10/05 10:14:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/05 21:03:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/06 17:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/06 17:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "about/about".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('about/about')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/about/about/
+---
+2013/10/06 22:13:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/10/07 04:13:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/07 04:13:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "about/images/site/250_bio/bio_welp_250.jpg".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('about/images/si...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/about/images/site/250_bio/bio_welp_250.jpg
+---
+2013/10/07 19:03:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/10/07 19:32:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/08 21:03:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/11 04:57:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/11 10:25:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/10/11 10:42:47 [error] [php] include(CDbCritieria.php): failed to open stream: No such file or directory (/home1/owomoyel/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php(147): spl_autoload_call()
+#1 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): AdminController->actionEdit_story()
+#2 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#4 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#6 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#8 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#9 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/edit_story
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (147)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/10/11 11:18:04 [error] [php] implode(): Argument must be an array (/home1/owomoyel/public_html/subdomain_ano/protected/extensions/SiteSecurity/SiteSecurity.php:12)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CBaseController.php(126): require()
+#1 /home1/owomoyel/yii/framework/web/CBaseController.php(95): AdminController->renderInternal()
+#2 /home1/owomoyel/yii/framework/web/CController.php(869): AdminController->renderFile()
+#3 /home1/owomoyel/yii/framework/web/CController.php(782): AdminController->renderPartial()
+#4 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php(54): AdminController->render()
+#5 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): AdminController->actionDebug()
+#6 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#8 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#10 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#12 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#13 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/debug
+in /home1/owomoyel/public_html/subdomain_ano/protected/extensions/SiteSecurity/SiteSecurity.php (12)
+in /home1/owomoyel/public_html/subdomain_ano/protected/views/admin/debug.php (4)
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (54)
+2013/10/11 11:18:57 [error] [php] implode(): Argument must be an array (/home1/owomoyel/public_html/subdomain_ano/protected/extensions/SiteSecurity/SiteSecurity.php:12)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CBaseController.php(126): require()
+#1 /home1/owomoyel/yii/framework/web/CBaseController.php(95): AdminController->renderInternal()
+#2 /home1/owomoyel/yii/framework/web/CController.php(869): AdminController->renderFile()
+#3 /home1/owomoyel/yii/framework/web/CController.php(782): AdminController->renderPartial()
+#4 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php(54): AdminController->render()
+#5 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): AdminController->actionDebug()
+#6 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#8 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#10 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#12 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#13 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/debug
+in /home1/owomoyel/public_html/subdomain_ano/protected/extensions/SiteSecurity/SiteSecurity.php (12)
+in /home1/owomoyel/public_html/subdomain_ano/protected/views/admin/debug.php (4)
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (54)
+2013/10/11 11:19:47 [error] [php] implode(): Argument must be an array (/home1/owomoyel/public_html/subdomain_ano/protected/extensions/SiteSecurity/SiteSecurity.php:12)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CBaseController.php(126): require()
+#1 /home1/owomoyel/yii/framework/web/CBaseController.php(95): AdminController->renderInternal()
+#2 /home1/owomoyel/yii/framework/web/CController.php(869): AdminController->renderFile()
+#3 /home1/owomoyel/yii/framework/web/CController.php(782): AdminController->renderPartial()
+#4 /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php(54): AdminController->render()
+#5 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): AdminController->actionDebug()
+#6 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#8 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#10 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#12 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#13 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/debug
+in /home1/owomoyel/public_html/subdomain_ano/protected/extensions/SiteSecurity/SiteSecurity.php (12)
+in /home1/owomoyel/public_html/subdomain_ano/protected/views/admin/debug.php (4)
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (54)
+2013/10/11 11:24:18 [error] [php] Undefined variable: query (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php:153)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#1 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#3 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#4 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#5 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/edit_story
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (153)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/10/11 11:26:06 [error] [php] Undefined index: Story (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php:83)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#1 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#3 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#4 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#5 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/edit_story
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (83)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
