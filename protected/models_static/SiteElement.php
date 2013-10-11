@@ -15,6 +15,7 @@
 					array('label'=>'Blog', 'url'=>'http://magistrate.dreamwidth.org/'),
 					array('label'=>'About', 'url'=>array('/site/about',)),
 					array('label'=>'Resume', 'url'=>array('/web/resume')),
+					array('label'=>'GitHub', 'url'=>'https://github.com/aowomoyela'),
 				),
 			);
 		} // END public static function get_main_nav_array()
