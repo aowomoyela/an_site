@@ -27,7 +27,18 @@
 					return array(
 						'items'=>array(
 							array( 'label'=>'Demonology', 'url'=>array('/fiction/demonology') ),
-							array( 'label'=>'Pixel-Stained', 'url'=>array('/fiction/pixel') ),
+							//array( 'label'=>'Pixel-Stained', 'url'=>array('/fiction/pixel') ),
+							array( 'label'=>'Patreon', 'url'=>array('/fiction/patreon') ),
+						),
+					);
+				break;
+				
+				case 'admin':
+					return array(
+						'items'=>array(
+							array( 'label'=>'Edit Stories', 'url'=>array('/admin/edit_story') ),
+							//array( 'label'=>'Pixel-Stained', 'url'=>array('/fiction/pixel') ),
+							//array( 'label'=>'Patreon', 'url'=>array('/fiction/patreon') ),
 						),
 					);
 				break;

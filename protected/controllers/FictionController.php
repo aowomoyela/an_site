@@ -94,4 +94,32 @@ class FictionController extends Controller
 		$this->render('pixel_stained', array('secondary_navigation'=>$secondary_navigation));
 	}
 
+
+	public function actionPatreon() {
+		$this->pageTitle = Yii::app()->name.' - Fiction via Patreon';
+		$secondary_navigation = SiteElement::get_secondary_nav_array('web_original_fiction');
+		// Get the story lists for various types of fiction.
+		$short_stories = Story::model()->findAll(array(
+			'select'=>'t.title, wordcount, link, link_active, pullquote, publication_date, available_in_archive, archive_url_title',
+			'order'=>'t.title',
+			'condition'=>'published = 1 && publication_category_id = 8 && available_in_archive = 1',
+		));
+		$long_stories = Story::model()->findAll(array(
+			'select'=>'t.title, wordcount, link, link_active, pullquote, publication_date, available_in_archive, archive_url_title',
+			'order'=>'t.title',
+			'condition'=>'published = 1 && publication_category_id = 9 && available_in_archive = 1',
+		));
+		// Render the page.
+		$this->render('patreon', array(
+			'secondary_navigation'=>$secondary_navigation,
+			'short_stories'=>$short_stories,
+			'long_stories'=>$long_stories,
+		));
+	}
+	
+	public function actionPatreon_acknowledgements() {
+		$this->pageTitle = Yii::app()->name.' - Patreon - An Thanks...';
+		$this->render('patreon_acknowledgements', array());
+	}
+
 }

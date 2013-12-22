@@ -98,7 +98,7 @@ body {
 		text-decoration:none;
 	}
 
-#submenu {
+#submenu, #submenu_vertical  {
 	padding: 0 .5em 0 0;
 	margin: 0 .5em .5em 0;
 	float:left;
@@ -107,21 +107,38 @@ body {
 	background-color:#FFF;
 }
 
-	#submenu ul {
+#submenu_horizontal {
+	/*padding: 0 .5em 0 0;*/
+	margin: .5em 0 .5em 0;
+	clear:both;
+	border-bottom:1px solid #3E3E3E;
+	background-color:#FFF;
+}
+
+	#submenu ul, #submenu_vertical ul {
 		padding:0 0 0 .5em;
 		margin:0;
 		list-style-type:none;
 	}
+	
+	#submenu_horizontal ul {
+		padding: 0 0 1em 0;
+		margin: -1em 0 0 0;
+	}
 
-	#submenu ul li {
+	#submenu ul li, #submenu_vertical ul li {
 		/* display: inline; */
 	}
 
-	#submenu ul li + li {
+	#submenu_horizontal ul li {
+		display: inline;
+	}
+
+	#submenu ul li + li, #submenu_vertical ul li + li {
 		margin-top:.5em;
 	}
 
-	#submenu ul li a {
+	#submenu ul li a, #submenu_horizontal ul li a, #submenu_vertical ul li a {
 		color:#06C;
 		background-color:#EFF4FA;
 		font-size:.9em;
@@ -130,7 +147,9 @@ body {
 		padding:.3em .8em;
 	}
 
-	#submenu ul li a:hover, #submenu ul li.active a {
+	#submenu ul li a:hover, #submenu ul li.active a,
+	#submenu_horizontal ul li a:hover, #submenu_horizontal ul li.active a,
+	#submenu_vertical ul li a:hover, #submenu_vertical ul li.active a {
 		color: #FEFEFF;
 		background-color:#06C;
 		text-decoration:none;

@@ -123,12 +123,14 @@
 ?>
 
 <script type="text/javascript">
+	// See: http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Toolbar
+
 	CKEDITOR.replace( 'pullquote', {
 		toolbar :
 		[
 			{ name: 'document', items : [ 'Source' ] },
 			{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','-','Subscript','Superscript','-','Blockquote' ] },
-			//{ name: 'paragraph', items : [ 'NumberedList','BulletedList' ] },
+			{ name: 'links', items : [ 'Link','Unlink' ] },
 			{ name: 'tools', items : [ 'Maximize' ] }
 		]
 	} );

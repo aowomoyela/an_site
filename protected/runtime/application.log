@@ -2768,3 +2768,983 @@ Stack trace:
 REQUEST_URI=/admin/edit_story
 in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (83)
 in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2013/10/11 21:03:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/12 10:04:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/13 01:59:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/13 01:59:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/10/14 21:04:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/15 02:55:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/16 00:27:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/17 21:05:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/18 02:55:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/18 18:09:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/21 02:56:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/21 12:17:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/10/24 02:56:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/01 18:31:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/02 08:34:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/02 23:33:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/03 13:53:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/04 12:11:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/04 15:44:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/05 01:19:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/05 14:32:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/05 17:32:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/07 06:12:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/07 14:19:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "about/about".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('about/about')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/about/about/
+---
+2013/11/08 00:13:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/08 18:12:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/14 21:22:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/11/15 16:53:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/16 04:55:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/18 02:24:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/29 14:42:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/11/29 21:46:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/11/29 21:51:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/11/29 21:51:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/12/08 12:19:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/08 16:51:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/10 13:17:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/11 01:13:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/12 08:10:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/12 21:48:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/13 09:11:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/13 10:12:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/13 21:35:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/14 16:52:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/17 22:00:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/12/18 21:01:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/18 22:38:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/19 00:45:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/19 01:04:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/19 01:04:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/19 01:07:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/19 01:15:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dev/css/default.css".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/dev/css/...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dev/css/default.css
+---
+2013/12/19 01:22:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sign_up.html".' in /home1/owomoyel/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(270): CController->missingAction('sign_up.html')
+#1 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('sign_up.html')
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/sign_up...')
+#3 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fiction/sign_up.html
+HTTP_REFERER=http://an.owomoyela.net/fiction/
+---
+2013/12/19 01:22:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in /home1/owomoyel/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(270): CController->missingAction('index.php')
+#1 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('index.php')
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/index.p...')
+#3 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fiction/index.php?page=en_Signup
+---
+2013/12/19 01:22:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "account".' in /home1/owomoyel/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(270): CController->missingAction('account')
+#1 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('account')
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/account...')
+#3 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fiction/account/register.php
+HTTP_REFERER=http://an.owomoyela.net/fiction/
+---
+2013/12/19 01:22:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "join.php".' in /home1/owomoyel/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(270): CController->missingAction('join.php')
+#1 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('join.php')
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/join.ph...')
+#3 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fiction/join.php
+---
+2013/12/19 04:07:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "resume".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('resume')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/resume/
+---
+2013/12/19 04:16:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/19 05:41:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "year-of-the-rabbit".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('year-of-the-rab...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/year-of-the-rabbit/
+---
+2013/12/19 07:31:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/19 07:38:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "the-relative-densities-of-seawater-and-blood".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('the-relative-de...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/the-relative-densities-of-seawater-and-blood/
+---
+2013/12/19 09:28:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/images/misc/vivagon.jpeg".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/images/m...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/images/misc/vivagon.jpeg
+---
+2013/12/19 10:23:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/19 13:44:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/images/an/_resampled/ResizedImage325325-smiley.jpg".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/images/a...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/images/an/_resampled/ResizedImage325325-smiley.jpg
+---
+2013/12/19 13:48:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/19 14:32:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/19 21:08:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/images/misc/vivagon.jpeg".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/images/m...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/images/misc/vivagon.jpeg
+HTTP_REFERER=http://www.bing.com/images/search?q=easy+to+draw+santa&qs=n&form=QBIR&pq=easy+to+draw+santa&sc=5-18&sp=-1&sk=
+---
+2013/12/19 21:09:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/images/misc/vivagon.jpeg".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/images/m...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/images/misc/vivagon.jpeg
+HTTP_REFERER=http://www.bing.com/images/search?q=easy+to+draw+santa&qs=n&form=QBIR&pq=easy+to+draw+santa&sc=5-18&sp=-1&sk=
+---
+2013/12/19 21:57:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/19 21:57:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "about/images/site/250_bio/bio_fade_250.jpg".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('about/images/si...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/about/images/site/250_bio/bio_fade_250.jpg
+---
+2013/12/19 22:08:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "about/about".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('about/about')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/about/about/
+---
+2013/12/19 22:24:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/19 23:40:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "resume".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('resume')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/resume/
+---
+2013/12/19 23:40:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "the-big-menu".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('the-big-menu')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/the-big-menu/
+---
+2013/12/20 00:43:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "the-relative-densities-of-seawater-and-blood".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('the-relative-de...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/the-relative-densities-of-seawater-and-blood/
+---
+2013/12/20 04:18:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/20 05:03:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/20 05:08:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/20 07:03:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "year-of-the-rabbit".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('year-of-the-rab...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/year-of-the-rabbit/
+---
+2013/12/20 11:05:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/20 11:41:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/20 16:26:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "resume".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('resume')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/resume/
+---
+2013/12/20 17:10:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/images/misc/vivagon.jpeg".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/images/m...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/images/misc/vivagon.jpeg
+---
+2013/12/20 17:31:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/20 17:59:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/12/20 18:50:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/12/20 18:51:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/20 20:36:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/12/20 22:56:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/20 22:59:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fiction-small-monuments".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction-small-m...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fiction-small-monuments/
+---
+2013/12/21 00:16:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/21 02:17:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/images/misc/vivagon.jpeg".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/images/m...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/images/misc/vivagon.jpeg
+---
+2013/12/21 02:18:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/images/misc/vivagon.jpeg".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/images/m...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/images/misc/vivagon.jpeg
+HTTP_REFERER=https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&docid=RULFuzie09RqsM&tbnid=FLxfrStM9JmVxM:&ved=0CAIQjBw&url=http%3A%2F%2Fan.owomoyela.net%2Fassets%2Fimages%2Fmisc%2Fvivagon.jpeg&ei=w1y1Urq_NoHg2QXxtYCICw&bvm=bv.58187178,d.b2I&psig=AFQjCNESCZ4Jd93y01eyKPVMAOvijJdWhw&ust=1387703821724132
+---
+2013/12/21 02:19:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/12/21 02:51:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://an.owomoyela.net/
+---
+2013/12/21 05:25:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/21 06:22:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/21 08:38:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/images/misc/vivagon.jpeg".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/images/m...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/images/misc/vivagon.jpeg
+HTTP_REFERER=http://images.search.yahoo.com/images/view;_ylt=A0PDoX56x7RSRjUAIPmJzbkF;_ylu=X3oDMTIybzQxa2hlBHNlYwNzcgRzbGsDaW1nBG9pZAM3MTAzYzVkMGE5ZDg5ZjM0M2I4OWVjYzk0ODQwMDBiYQRncG9zAzEEaXQDYmluZw--?back=http%3A%2F%2Fimages.search.yahoo.com%2Fsearch%2Fimages%3F_adv_prop%3Dimage%26va%3Deasy%2Bfantasy%2Banimal%2Bdrawings%26fr%3Dyfp-t-145%26tab%3Dorganic%26ri%3D1&w=326&h=250&imgurl=www.how-to-draw-cartoons-online.com%2Fimage-files%2Ffantasy-drawings.gif&rurl=http%3A%2F%2Fwww.how-to-draw-cartoons-online.com%2Ffantasy-drawings.html&size=22.8KB&name=%3Cb%3EFantasy+Drawings%3C%2Fb%3E&p=easy+fantasy+animal+drawings&oid=7103c5d0a9d89f343b89ecc9484000ba&fr2=&fr=yfp-t-145&tt=%3Cb%3EFantasy+Drawings%3C%2Fb%3E&b=0&ni=128&no=1&ts=&tab=organic&sigr=120ctdbd5&sigb=13qdu2g9d&sigi=124r0gua0&.crumb=zULpd9QbejR&fr=yfp-t-145
+---
+2013/12/21 08:38:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/images/misc/vivagon.jpeg".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/images/m...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/images/misc/vivagon.jpeg
+HTTP_REFERER=http://images.search.yahoo.com/images/view;_ylt=A0PDoX56x7RSRjUAIPmJzbkF;_ylu=X3oDMTIybzQxa2hlBHNlYwNzcgRzbGsDaW1nBG9pZAM3MTAzYzVkMGE5ZDg5ZjM0M2I4OWVjYzk0ODQwMDBiYQRncG9zAzEEaXQDYmluZw--?back=http%3A%2F%2Fimages.search.yahoo.com%2Fsearch%2Fimages%3F_adv_prop%3Dimage%26va%3Deasy%2Bfantasy%2Banimal%2Bdrawings%26fr%3Dyfp-t-145%26tab%3Dorganic%26ri%3D1&w=326&h=250&imgurl=www.how-to-draw-cartoons-online.com%2Fimage-files%2Ffantasy-drawings.gif&rurl=http%3A%2F%2Fwww.how-to-draw-cartoons-online.com%2Ffantasy-drawings.html&size=22.8KB&name=%3Cb%3EFantasy+Drawings%3C%2Fb%3E&p=easy+fantasy+animal+drawings&oid=7103c5d0a9d89f343b89ecc9484000ba&fr2=&fr=yfp-t-145&tt=%3Cb%3EFantasy+Drawings%3C%2Fb%3E&b=0&ni=128&no=1&ts=&tab=organic&sigr=120ctdbd5&sigb=13qdu2g9d&sigi=124r0gua0&.crumb=zULpd9QbejR&fr=yfp-t-145
+---
+2013/12/21 08:38:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/21 08:46:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/images/misc/vivagon.jpeg".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/images/m...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/images/misc/vivagon.jpeg
+HTTP_REFERER=http://images.search.yahoo.com/images/view;_ylt=A0PDoX56x7RSRjUAIPmJzbkF;_ylu=X3oDMTIybzQxa2hlBHNlYwNzcgRzbGsDaW1nBG9pZAM3MTAzYzVkMGE5ZDg5ZjM0M2I4OWVjYzk0ODQwMDBiYQRncG9zAzEEaXQDYmluZw--?back=http%3A%2F%2Fimages.search.yahoo.com%2Fsearch%2Fimages%3F_adv_prop%3Dimage%26va%3Deasy%2Bfantasy%2Banimal%2Bdrawings%26fr%3Dyfp-t-145%26tab%3Dorganic%26ri%3D1&w=326&h=250&imgurl=www.how-to-draw-cartoons-online.com%2Fimage-files%2Ffantasy-drawings.gif&rurl=http%3A%2F%2Fwww.how-to-draw-cartoons-online.com%2Ffantasy-drawings.html&size=22.8KB&name=%3Cb%3EFantasy+Drawings%3C%2Fb%3E&p=easy+fantasy+animal+drawings&oid=7103c5d0a9d89f343b89ecc9484000ba&fr2=&fr=yfp-t-145&tt=%3Cb%3EFantasy+Drawings%3C%2Fb%3E&b=0&ni=128&no=1&ts=&tab=organic&sigr=120ctdbd5&sigb=13qdu2g9d&sigi=124r0gua0&.crumb=zULpd9QbejR&fr=yfp-t-145
+---
+2013/12/21 12:11:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/21 13:33:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "year-of-the-rabbit".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('year-of-the-rab...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/year-of-the-rabbit/
+---
+2013/12/21 14:10:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/21 15:41:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/21 16:36:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/21 17:11:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/21 17:45:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/21 17:45:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/21 19:03:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "the-relative-densities-of-seawater-and-blood".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('the-relative-de...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/the-relative-densities-of-seawater-and-blood/
+---
+2013/12/21 19:37:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/12/21 19:37:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/12/21 19:44:52 [error] [php] Undefined variable: short_stories (/home1/owomoyel/public_html/subdomain_an/protected/views/fiction/patreon.php:9)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(869): FictionController->renderFile()
+#1 /home1/owomoyel/yii/framework/web/CController.php(782): FictionController->renderPartial()
+#2 /home1/owomoyel/public_html/subdomain_an/protected/controllers/FictionController.php(113): FictionController->render()
+#3 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FictionController->actionPatreon()
+#4 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home1/owomoyel/yii/framework/web/CController.php(286): FictionController->runAction()
+#6 /home1/owomoyel/yii/framework/web/CController.php(265): FictionController->runActionWithFilters()
+#7 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): FictionController->run()
+#8 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home1/owomoyel/public_html/subdomain_an/index.php(13): CWebApplication->run()
+REQUEST_URI=/fiction/patreon
+in /home1/owomoyel/public_html/subdomain_an/protected/views/fiction/patreon.php (9)
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FictionController.php (113)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2013/12/21 20:11:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/21 20:15:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/12/21 21:17:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/crescent_sun.jpg".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/crescent...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/crescent_sun.jpg
+HTTP_REFERER=http://an.owomoyela.net/admin/
+---
+2013/12/21 21:17:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/crescent_sun.jpg".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/crescent...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/crescent_sun.jpg
+HTTP_REFERER=http://an.owomoyela.net/admin/
+---
+2013/12/21 21:17:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/crescent_sun.jpg".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/crescent...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/crescent_sun.jpg
+---
+2013/12/21 21:28:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "portage".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('portage')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/portage/
+---
