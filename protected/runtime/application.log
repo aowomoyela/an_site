@@ -3748,3 +3748,356 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/portage/
 ---
+2013/12/21 22:07:24 [error] [exception.CException] exception 'CException' with message 'Property "CMenu.0" is not defined.' in /home1/owomoyel/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 /home1/owomoyel/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(FictionController), 'zii.widgets.CMe...', Array)
+#2 /home1/owomoyel/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CMe...', Array)
+#3 /home1/owomoyel/public_html/subdomain_an/protected/views/layouts/main.php(25): CBaseController->widget('zii.widgets.CMe...', Array)
+#4 /home1/owomoyel/yii/framework/web/CBaseController.php(126): require('/home1/owomoyel...')
+#5 /home1/owomoyel/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home1/owomoyel...', Array, true)
+#6 /home1/owomoyel/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home1/owomoyel...', Array, true)
+#7 /home1/owomoyel/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 /home1/owomoyel/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 /home1/owomoyel/yii/framework/web/CBaseController.php(206): COutputProcessor->run()
+#10 /home1/owomoyel/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 /home1/owomoyel/public_html/subdomain_an/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#12 /home1/owomoyel/yii/framework/web/CBaseController.php(126): require('/home1/owomoyel...')
+#13 /home1/owomoyel/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home1/owomoyel...', Array, true)
+#14 /home1/owomoyel/yii/framework/web/CController.php(784): CBaseController->renderFile('/home1/owomoyel...', Array, true)
+#15 /home1/owomoyel/public_html/subdomain_an/protected/controllers/FictionController.php(57): CController->render('web_original', Array)
+#16 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FictionController->actionWeb_original()
+#17 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /home1/owomoyel/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#19 /home1/owomoyel/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('web_original')
+#21 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/web_ori...')
+#22 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/fiction/web_original
+HTTP_REFERER=http://an.owomoyela.net/fiction/archive/six_perspectives
+---
+2013/12/21 22:09:35 [error] [exception.CException] exception 'CException' with message 'Property "CMenu.0" is not defined.' in /home1/owomoyel/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 /home1/owomoyel/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(FictionController), 'zii.widgets.CMe...', Array)
+#2 /home1/owomoyel/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CMe...', Array)
+#3 /home1/owomoyel/public_html/subdomain_an/protected/views/layouts/main.php(25): CBaseController->widget('zii.widgets.CMe...', Array)
+#4 /home1/owomoyel/yii/framework/web/CBaseController.php(126): require('/home1/owomoyel...')
+#5 /home1/owomoyel/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home1/owomoyel...', Array, true)
+#6 /home1/owomoyel/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home1/owomoyel...', Array, true)
+#7 /home1/owomoyel/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 /home1/owomoyel/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 /home1/owomoyel/yii/framework/web/CBaseController.php(206): COutputProcessor->run()
+#10 /home1/owomoyel/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 /home1/owomoyel/public_html/subdomain_an/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#12 /home1/owomoyel/yii/framework/web/CBaseController.php(126): require('/home1/owomoyel...')
+#13 /home1/owomoyel/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home1/owomoyel...', Array, true)
+#14 /home1/owomoyel/yii/framework/web/CController.php(784): CBaseController->renderFile('/home1/owomoyel...', Array, true)
+#15 /home1/owomoyel/public_html/subdomain_an/protected/controllers/FictionController.php(57): CController->render('web_original', Array)
+#16 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FictionController->actionWeb_original()
+#17 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /home1/owomoyel/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#19 /home1/owomoyel/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('web_original')
+#21 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction/web_ori...')
+#22 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/fiction/web_original
+HTTP_REFERER=http://an.owomoyela.net/fiction/archive/six_perspectives
+---
+2013/12/21 22:16:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/21 23:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/21 23:38:26 [error] [php] Undefined variable: secondary_navigation (/home1/owomoyel/public_html/subdomain_an/protected/views/admin/story_submissions.php:7)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(869): AdminController->renderFile()
+#1 /home1/owomoyel/yii/framework/web/CController.php(782): AdminController->renderPartial()
+#2 /home1/owomoyel/public_html/subdomain_an/protected/controllers/AdminController.php(179): AdminController->render()
+#3 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): AdminController->actionManage_submissions()
+#4 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#6 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#8 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#10 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#11 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home1/owomoyel/public_html/subdomain_an/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/manage_submissions
+in /home1/owomoyel/public_html/subdomain_an/protected/views/admin/story_submissions.php (7)
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/AdminController.php (179)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2013/12/22 01:29:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/22 04:43:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/22 04:47:10 [error] [php] Trying to get property of non-object (/home1/owomoyel/yii/framework/web/helpers/CHtml.php:2529)
+Stack trace:
+#0 /home1/owomoyel/public_html/subdomain_an/protected/views/admin/story_submissions.php(44): activeHiddenField()
+#1 /home1/owomoyel/yii/framework/web/CBaseController.php(126): require()
+#2 /home1/owomoyel/yii/framework/web/CBaseController.php(95): AdminController->renderInternal()
+#3 /home1/owomoyel/yii/framework/web/CController.php(869): AdminController->renderFile()
+#4 /home1/owomoyel/yii/framework/web/CController.php(782): AdminController->renderPartial()
+#5 /home1/owomoyel/public_html/subdomain_an/protected/controllers/AdminController.php(181): AdminController->render()
+#6 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): AdminController->actionManage_submissions()
+#7 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#9 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#11 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#13 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#14 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home1/owomoyel/public_html/subdomain_an/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/manage_submissions
+in /home1/owomoyel/public_html/subdomain_an/protected/views/admin/story_submissions.php (44)
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/AdminController.php (181)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2013/12/22 04:47:48 [error] [php] Undefined variable: story (/home1/owomoyel/public_html/subdomain_an/protected/views/admin/story_submissions.php:55)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(869): AdminController->renderFile()
+#1 /home1/owomoyel/yii/framework/web/CController.php(782): AdminController->renderPartial()
+#2 /home1/owomoyel/public_html/subdomain_an/protected/controllers/AdminController.php(181): AdminController->render()
+#3 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): AdminController->actionManage_submissions()
+#4 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#6 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#8 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#10 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#11 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home1/owomoyel/public_html/subdomain_an/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/manage_submissions
+in /home1/owomoyel/public_html/subdomain_an/protected/views/admin/story_submissions.php (55)
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/AdminController.php (181)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2013/12/22 07:20:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/22 07:20:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "the-relative-densities-of-seawater-and-blood".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('the-relative-de...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/the-relative-densities-of-seawater-and-blood/
+---
+2013/12/22 07:38:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/22 07:38:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dev/css/default.css".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/dev/css/...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dev/css/default.css
+---
+2013/12/22 07:40:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+HTTP_REFERER=http://www.an.owomoyela.net/robots.txt
+---
+2013/12/22 07:58:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "about-2".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('about-2')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/about-2/
+---
+2013/12/22 08:27:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/22 09:46:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/22 10:27:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/22 10:44:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/12/22 10:44:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/12/22 11:07:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/22 11:09:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/22 11:35:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fiction-resources".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fiction-resourc...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fiction-resources/
+---
+2013/12/22 11:35:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "clarion-west".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('clarion-west')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/clarion-west/
+---
+2013/12/22 12:04:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/dev/css/default.css".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/dev/css/...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/dev/css/default.css
+---
+2013/12/22 13:37:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/22 14:33:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/22 16:50:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/12/22 17:22:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/22 17:30:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by s.publication_category_id, s.title' at line 1. The SQL statement executed was: select s.story_id, s.title, s.publication_category_id, spc.title as category_type from story s, story_publication_category spc where s.publication_category_id = spc.publication_category_idorder by s.publication_category_id, s.title.
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/AdminController.php (173)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2013/12/22 17:31:00 [error] [php] Use of undefined constant stories - assumed 'stories' (/home1/owomoyel/public_html/subdomain_an/protected/views/admin/story_submissions.php:31)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(869): AdminController->renderFile()
+#1 /home1/owomoyel/yii/framework/web/CController.php(782): AdminController->renderPartial()
+#2 /home1/owomoyel/public_html/subdomain_an/protected/controllers/AdminController.php(199): AdminController->render()
+#3 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): AdminController->actionManage_submissions()
+#4 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#6 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#8 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#10 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#11 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home1/owomoyel/public_html/subdomain_an/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/manage_submissions
+in /home1/owomoyel/public_html/subdomain_an/protected/views/admin/story_submissions.php (31)
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/AdminController.php (199)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2013/12/22 17:47:20 [error] [php] Undefined variable: value (/home1/owomoyel/public_html/subdomain_an/protected/controllers/AdminController.php:197)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#1 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#3 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#4 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#5 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /home1/owomoyel/public_html/subdomain_an/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/manage_submissions
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/AdminController.php (197)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)

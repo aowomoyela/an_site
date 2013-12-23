@@ -9,7 +9,7 @@
 	$cs->registerCssFile('http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/base/jquery-ui.css');
 	$cs->registerScriptFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js');
 	$cs->registerScriptFile($baseUrl.'/js/ckeditor/ckeditor.js');
-	$cs->registerScriptFile($baseUrl.'/js/admin/edit_story.js');
+	$cs->registerScriptFile($baseUrl.'/js/admin/datepicker.js');
 	
 
 

@@ -6,7 +6,8 @@
 		/**************/
 
 		public static function get_main_nav_array() {
-			return array(
+			
+			$navigation_array = array(
 				'items'=>array(
 					array('label'=>'Home', 'url'=>array('/home')),
 					array('label'=>'Web', 'url'=>array('/web/index')),
@@ -18,6 +19,21 @@
 					array('label'=>'GitHub', 'url'=>'https://github.com/aowomoyela'),
 				),
 			);
+			
+			
+			//Determine whether or not to display the admin link button
+			if ( Yii::app()->user->isGuest ) {
+				// This user is not logged in.
+			} elseif ( Yii::app()->user->authorization == 'admin' ) {
+				// This user is an admin; show them the link.
+				$navigation_array["items"][] = array('label'=>'Admin', 'url'=>array('/admin/index'));
+				$navigation_array["items"][] = array('label'=>'Log Out', 'url'=>array('/site/logout'));
+			} else {
+				// This user is logged in, but not an administrator.
+				$navigation_arrayn_array["items"][] = array('label'=>'Log Out', 'url'=>array('/site/logout'));
+			}
+			
+			return $navigation_array;
 		} // END public static function get_main_nav_array()
 
 
@@ -37,7 +53,16 @@
 					return array(
 						'items'=>array(
 							array( 'label'=>'Edit Stories', 'url'=>array('/admin/edit_story') ),
-							//array( 'label'=>'Pixel-Stained', 'url'=>array('/fiction/pixel') ),
+							array( 'label'=>'Manage Submissions', 'url'=>array('/admin/manage_submissions') ),
+							//array( 'label'=>'Patreon', 'url'=>array('/fiction/patreon') ),
+						),
+					);
+				break;
+				
+				case 'admin_submissions':
+					return array(
+						'items'=>array(
+							array( 'label'=>'Manage Submissions', 'url'=>array('/admin/manage_submissions') ),
 							//array( 'label'=>'Patreon', 'url'=>array('/fiction/patreon') ),
 						),
 					);

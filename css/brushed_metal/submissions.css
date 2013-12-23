@@ -1,0 +1,33 @@
+table {
+
+}
+
+td {
+	border-bottom:1px solid #69F;
+	border-right:1px solid #69F;
+	padding:.25em;
+}
+	
+th {
+	border-bottom:1px solid #039;
+	border-right:1px solid #039;
+	padding:.25em;
+	text-align:left;
+}
+	
+tr:hover td, tr:hover th {
+	/*border:1px solid #00F;*/
+	background-color:#E5E5E5;
+}
+	
+tr.acceptance {
+	background-color:#CCF;
+}
+	
+tr.rewrite {
+	background-color:#CFC;
+}
+	
+tr.withdrawal {
+	background-color:#CCC;
+}

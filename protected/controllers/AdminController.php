@@ -25,6 +25,7 @@ class AdminController extends Controller {
 					'index',
 					'debug',
 					'edit_story',
+					'manage_submissions',
 					'phpinfo',
 				),
 				'users' => array('@'),
@@ -157,7 +158,96 @@ class AdminController extends Controller {
 	} catch (Exception $e) {
 		// Exception handling.
 		echo "<p>".$e->getMessage()."</p>"; // Temporary.
-	} }
+	} } // END public function actionEdit_story()
+
+
+
+	public function actionManage_submissions() {
+	try {
+		// Provide secondary navigation.
+		$secondary_navigation = SiteElement::get_secondary_nav_array('admin_submissions');
+		// Get stories for dropdown list.
+		$stories_query = 'select s.story_id, s.title, s.publication_category_id, spc.title as category_type from story s, story_publication_category spc '; 
+		$stories_query.= 'where s.publication_category_id = spc.publication_category_id ';
+		$stories_query.= 'order by s.publication_category_id, s.title';
+		$stories = Story::model()->findAllBySql($stories_query);
+		$stories = CHtml::listData( $stories, 'story_id', 'title', 'category_type' );
+		// Get publication markets for dropdown list.
+		$story_markets_query = 'select sm.market_id, sm.title, smt.type from story_market sm, story_market_type smt ';
+		$story_markets_query.= 'where sm.market_type_id = smt.type_id order by smt.type, sm.title';
+		$story_markets = StoryMarket::model()->findAllBySql($story_markets_query);
+		$story_markets = CHtml::listData( $story_markets, 'market_id', 'title', 'type' );
+		// Get list of submissions.
+		$submissions = StorySubmission::model()->with('story','story_submission_response','story_market')->findAll( array(
+			'order'=>'submitted DESC',
+		) );
+		
+		
+		// Switch behaviors based on whether or not this is a form submission.
+		if ( Yii::app()->request->isPostRequest ) {
+			// We're being asked to create a new submission or update an existing record.
+			new dBug($_POST);
+			// See if there's a submission ID set. If not, it's probably a new submission.
+			if ( isset($_POST['StorySubmission']['submission_id']) ) {
+				// There is a submission_id.  Try to update the record.
+			} else {
+				// No submission_id.  Create a new record.
+				$new_submission = new StorySubmission;
+				foreach ($_POST['StorySubmission'] as $key => $val ) {
+					$new_submission->set($key, $val);
+					$new_submission->save();
+				}
+				// Render the updated page if there have been no errors.
+				$this->render('story_submissions', array(
+					'message'=>'Submission logged.',
+					'submissions'=>$submissions, 
+					'secondary_navigation'=>$secondary_navigation, 
+					'new_submission'=>$new_submission,
+					'stories'=>$stories,
+					'story_markets'=>$story_markets,
+				));
+			}
+		} else {
+			// Just show the submissions info page.  Provide an empty 'new' submission in case we want to add a record.
+			$new_submission = new StorySubmission();
+			// Render the page.
+			$this->render('story_submissions', array(
+				'submissions'=>$submissions, 
+				'secondary_navigation'=>$secondary_navigation, 
+				'new_submission'=>$new_submission,
+				'stories'=>$stories,
+				'story_markets'=>$story_markets,
+			));
+		}
+	} catch  (Exception $e) {
+		// Exception handling.
+		echo "<p>".$e->getMessage()."</p>"; // Temporary.
+	} } // END public function actionManage_submissions()
 	
 }
+
+/***************************/
+/* Miscellaneous Functions */
+/***************************/
+
+	function days_out($submitted, $returned) {
+		/* Takes a date-submitted in the form YYYY-MM-DD and returns difference in days, from current date */
+		$sub_bits = explode('-', $submitted);
+		if ($returned == '' || $returned == NULL || $returned == '0000-00-00' ) {
+			$today = date('d');
+			$tomonth = date('m');
+			$toyear = date('Y');		
+		} else {
+			$ret_bits = explode('-', $returned);
+			$today = $ret_bits[2];
+			$tomonth = $ret_bits[1];
+			$toyear = $ret_bits[0];	
+		}
+		$now_stamp = mktime(0, 0, 0, $tomonth, $today, $toyear);
+		$sub_stamp = mktime(0, 0, 0, $sub_bits[1], $sub_bits[2], $sub_bits[0]);
+		$difference = $now_stamp - $sub_stamp;
+		$days = $difference / 86400;
+		return round($days);
+	}
+
 ?>

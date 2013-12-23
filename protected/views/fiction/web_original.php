@@ -7,7 +7,7 @@
 <h2 class="left_header"><a href="<?php echo Yii::app()->createUrl('fiction/demonology') ?>">Demonology</a></h2>
 
 <p>
-	Merigoa isn't the America you're used to. For one thing, New York is New Amsterdam, the FBI is the FIA, and youre more likely to catch celebrities singing at the 
+	Merigoa isn't the America you're used to. For one thing, New York is New Amsterdam, the FBI is the FIA, and you're more likely to catch celebrities singing at the 
 	World Series than the Superbowl. For another, there are demons.
 </p>
 

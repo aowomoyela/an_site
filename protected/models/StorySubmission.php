@@ -1,32 +1,52 @@
 <?php
 
 /**
- * This is the model class for table "story_market".
+ * This is the model class for table "story_submission".
  *
- * The followings are the available columns in table 'story_market':
+ * The followings are the available columns in table 'story_submission':
+ * @property integer $submission_id
+ * @property integer $story_id
+ * @property integer $draft_number
  * @property integer $market_id
- * @property string $title
- * @property integer $market_type_id
+ * @property string $submitted
+ * @property string $returned
+ * @property integer $response_id
  * @property string $notes
- * @property string $created
- * @property string $modified
  */
-class StoryMarket extends CActiveRecord
+class StorySubmission extends CActiveRecord
 {
-
+	
+	public function set_id_to_new() {
+		if ( $this->submission_id == '' || is_null($this->submission_id) ) {
+			$this->submission_id = 'new';
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	public function get($var) {
-		if ( in_array($var, array('market_id', 'title', 'market_type_id', 'notes')) ) {
+		if ( in_array($var, array('submission_id', 'story_id', 'draft_number', 'market_id', 'submitted', 'returned', 'response_id', 'notes')) ) {
 			return $this->$var;
 		} else {
 			return NULL;
 		}
 	}
+	
+	public function set($var, $value) {
+		if ( in_array($var, array('submission_id', 'story_id', 'draft_number', 'market_id', 'submitted', 'returned', 'response_id', 'notes')) ) {
+			$this->$var = $value;
+		} else {
+			return false;
+		}
+	}
+	
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'story_market';
+		return 'story_submission';
 	}
 
 	/**
@@ -37,12 +57,12 @@ class StoryMarket extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('market_type_id', 'numerical', 'integerOnly'=>true),
-			array('title', 'length', 'max'=>100),
-			array('notes, created, modified', 'safe'),
+			array('story_id, market_id', 'required'),
+			array('story_id, draft_number, market_id, response_id', 'numerical', 'integerOnly'=>true),
+			array('submitted, returned, notes', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('market_id, title, market_type_id, notes, created, modified', 'safe', 'on'=>'search'),
+			array('submission_id, story_id, draft_number, market_id, submitted, returned, response_id, notes', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,8 +74,9 @@ class StoryMarket extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'story' => array(self::HAS_MANY, 'Story', 'publiation_market_id'),
-			'story_submission' => array(self::HAS_MANY, 'StorySubmission', 'market_id'),
+			'story' => array(self::BELONGS_TO, 'Story', 'story_id'),
+			'story_market' => array(self::BELONGS_TO, 'StoryMarket', 'market_id'),
+			'story_submission_response' => array(self::BELONGS_TO, 'StorySubmissionResponse', 'response_id'),
 		);
 	}
 
@@ -65,12 +86,14 @@ class StoryMarket extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'submission_id' => 'Submission',
+			'story_id' => 'Story',
+			'draft_number' => 'Draft Number',
 			'market_id' => 'Market',
-			'title' => 'Title',
-			'market_type_id' => 'Market Type',
+			'submitted' => 'Submitted',
+			'returned' => 'Returned',
+			'response_id' => 'Response',
 			'notes' => 'Notes',
-			'created' => 'Created',
-			'modified' => 'Modified',
 		);
 	}
 
@@ -92,12 +115,14 @@ class StoryMarket extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('submission_id',$this->submission_id);
+		$criteria->compare('story_id',$this->story_id);
+		$criteria->compare('draft_number',$this->draft_number);
 		$criteria->compare('market_id',$this->market_id);
-		$criteria->compare('title',$this->title,true);
-		$criteria->compare('market_type_id',$this->market_type_id);
+		$criteria->compare('submitted',$this->submitted,true);
+		$criteria->compare('returned',$this->returned,true);
+		$criteria->compare('response_id',$this->response_id);
 		$criteria->compare('notes',$this->notes,true);
-		$criteria->compare('created',$this->created,true);
-		$criteria->compare('modified',$this->modified,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -108,7 +133,7 @@ class StoryMarket extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return StoryMarket the static model class
+	 * @return StorySubmission the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

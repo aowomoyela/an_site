@@ -4,3 +4,11 @@
 [21-Dec-2013 19:41:47 America/Denver] PHP Parse error:  syntax error, unexpected 'web_original_fiction' (T_STRING) in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FictionController.php on line 100
 [21-Dec-2013 19:42:13 America/Denver] PHP Parse error:  syntax error, unexpected 'web_original_fiction' (T_STRING) in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FictionController.php on line 100
 [21-Dec-2013 19:42:29 America/Denver] PHP Parse error:  syntax error, unexpected 'web_original_fiction' (T_STRING) in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FictionController.php on line 100
+[21-Dec-2013 22:07:41 America/Denver] PHP Parse error:  syntax error, unexpected '$navigation_arrayn_array' (T_VARIABLE) in /home1/owomoyel/public_html/subdomain_an/protected/models_static/SiteElement.php on line 33
+[21-Dec-2013 22:07:43 America/Denver] PHP Parse error:  syntax error, unexpected '$navigation_arrayn_array' (T_VARIABLE) in /home1/owomoyel/public_html/subdomain_an/protected/models_static/SiteElement.php on line 33
+[21-Dec-2013 22:10:15 America/Denver] PHP Parse error:  syntax error, unexpected '$navigation_arrayn_array' (T_VARIABLE) in /home1/owomoyel/public_html/subdomain_an/protected/models_static/SiteElement.php on line 33
+[21-Dec-2013 23:39:13 America/Denver] PHP Fatal error:  Call to a member function get() on a non-object in /home1/owomoyel/public_html/subdomain_an/protected/views/admin/story_submissions.php on line 28
+[21-Dec-2013 23:50:43 America/Denver] PHP Fatal error:  Call to a member function get() on a non-object in /home1/owomoyel/public_html/subdomain_an/protected/views/admin/story_submissions.php on line 34
+[21-Dec-2013 23:50:50 America/Denver] PHP Fatal error:  Call to a member function get() on a non-object in /home1/owomoyel/public_html/subdomain_an/protected/views/admin/story_submissions.php on line 34
+[21-Dec-2013 23:53:27 America/Denver] PHP Fatal error:  Call to a member function get() on a non-object in /home1/owomoyel/public_html/subdomain_an/protected/views/admin/story_submissions.php on line 34
+[21-Dec-2013 23:53:53 America/Denver] PHP Fatal error:  Call to a member function get() on a non-object in /home1/owomoyel/public_html/subdomain_an/protected/views/admin/story_submissions.php on line 34
