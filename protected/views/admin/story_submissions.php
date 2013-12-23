@@ -111,9 +111,17 @@
 			echo CHtml::activeHiddenField( $sub, 'submission_id' );
 		}
 		echo '<td>'.$sub->get('submission_id').'</td>'."\r\n";
-		echo '<td>'.$sub->story->get('title').'</td>'."\r\n";
+		echo '<td>';
+			echo '<a href="'.Yii::app()->createUrl('admin/manage_submissions', array('story_id'=>$sub->get('story_id')));
+			echo '" style="text-decoration:none; color:#000; display:block;">'.$sub->story->get('title');
+			echo '</a>';
+		echo '</td>'."\r\n";
 		echo '<td>'.$sub->get('draft_number').'</td>'."\r\n";
-		echo '<td>'.$sub->story_market->get('title').'</td>'."\r\n";
+		echo '<td>';
+			echo '<a href="'.Yii::app()->createUrl('admin/manage_submissions', array('market_id'=>$sub->story_market->get('market_id')));
+			echo '" style="text-decoration:none; color:#000; display:block;">'.$sub->story_market->get('title');
+			echo '</a>';
+		echo '</td>'."\r\n";
 		echo '<td>'.$sub->get('submitted').'</td>'."\r\n";
 		echo '<td>';
 			if ( isset($sub->story_submission_response) ) { echo $sub->get('returned'); }

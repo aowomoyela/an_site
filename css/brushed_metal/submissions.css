@@ -17,7 +17,7 @@ th {
 	
 tr:hover td, tr:hover th {
 	/*border:1px solid #00F;*/
-	background-color:#E5E5E5;
+	background-color:#FF6;
 }
 	
 tr.acceptance {

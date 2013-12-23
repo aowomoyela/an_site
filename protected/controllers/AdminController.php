@@ -182,7 +182,17 @@ class AdminController extends Controller {
 		$submission_responses = CHtml::listData( $submission_responses, 'response_id', 'response');
 		// Get possible responses for dropdown.
 		// Get list of submissions.
+		if (isset($_GET['story_id'])) {
+			$story_id = (int)$_GET['story_id'];
+			$where = "`story`.`story_id` = '".$story_id."'";
+		} elseif (isset($_GET['market_id'])) {
+			$market_id = (int)$_GET['market_id'];
+			$where = "story_market.market_id = '".$market_id."'";
+		} else {
+			$where = '1=1';
+		}
 		$submissions = StorySubmission::model()->with('story','story_submission_response','story_market')->findAll( array(
+			'condition'=>$where,
 			'order'=>'submitted DESC',
 		) );
 		
