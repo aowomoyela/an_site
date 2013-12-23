@@ -34,7 +34,7 @@ class StorySubmission extends CActiveRecord
 	}
 	
 	public function set($var, $value) {
-		if ( in_array($var, array('submission_id', 'story_id', 'draft_number', 'market_id', 'submitted', 'returned', 'response_id', 'notes')) ) {
+		if ( in_array($var, array('story_id', 'draft_number', 'market_id', 'submitted', 'returned', 'response_id', 'notes')) ) {
 			$this->$var = $value;
 		} else {
 			return false;

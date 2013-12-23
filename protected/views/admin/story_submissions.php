@@ -63,7 +63,7 @@
 		)); ?>
 	</td>
 	<td><?php 
-		echo CHtml::activeTextField($new_submission, 'submitted', array("readonly"=>"readonly", "class"=>"datepicker", "size"=>"10"));
+		echo CHtml::activeTextField($new_submission, 'submitted', array("readonly"=>"readonly", "class"=>"datepicker", "size"=>"10", "id"=>"submitted_new"));
 	?></td>
 	<td><input type="submit" value="&raquo;"></td>
 	<?php echo CHtml::endForm(); ?>
@@ -92,6 +92,12 @@
 			if ( in_array( $sub->story_submission_response->get('response_id'), array(1, 5, 6)) ) {
 				// Happy things! Acceptances, requests, etc.
 				$tr_class = "acceptance";
+			} elseif ( in_array( $sub->story_submission_response->get('response_id'), array(2)) ) {
+				// Revision requests
+				$tr_class = "rewrite";
+			} elseif ( in_array( $sub->story_submission_response->get('response_id'), array(4, 7)) ) {
+				// Sketchy stuff - withdrawals and assumed rejections
+				$tr_class = "withdrawal";
 			} else {
 				$tr_class = "normal";
 			}
@@ -99,33 +105,42 @@
 			$tr_class = "waiting";
 		}
 		// Print out the row.
-		echo '<tr class="'.$tr_class.'">';
+		echo '<tr class="'.$tr_class.'">'."\r\n";
 		if ( !isset($sub->story_submission_response) ) {
-			echo CHtml::beginForm( array('admin/edit_submission'), 'post', array('id'=>'edit_submission_form'.$sub->get('submission_id')) );
+			echo CHtml::beginForm( array('admin/manage_submissions'), 'post', array('id'=>'edit_submission_form'.$sub->get('submission_id')) );
 			echo CHtml::activeHiddenField( $sub, 'submission_id' );
 		}
-		echo '<td>'.$sub->get('submission_id').'</td>';
-		echo '<td>'.$sub->story->get('title').'</td>';
-		echo '<td>'.$sub->get('draft_number').'</td>';
-		echo '<td>'.$sub->story_market->get('title').'</td>';
-		echo '<td>'.$sub->get('submitted').'</td>';
+		echo '<td>'.$sub->get('submission_id').'</td>'."\r\n";
+		echo '<td>'.$sub->story->get('title').'</td>'."\r\n";
+		echo '<td>'.$sub->get('draft_number').'</td>'."\r\n";
+		echo '<td>'.$sub->story_market->get('title').'</td>'."\r\n";
+		echo '<td>'.$sub->get('submitted').'</td>'."\r\n";
 		echo '<td>';
 			if ( isset($sub->story_submission_response) ) { echo $sub->get('returned'); }
 			else {
-				echo CHtml::activeTextField($sub, 'returned', array("readonly"=>"readonly", "class"=>"datepicker", "size"=>"10"));
+				echo CHtml::activeTextField($sub, 'returned', array("class"=>"datepicker", "size"=>"10", "id"=>"returned_id_".$sub->get('submission_id')));
 			}
-		echo '</td>';
+		echo '</td>'."\r\n";
 		echo '<td>';
 			if ( isset($sub->story_submission_response) ) { echo $sub->story_submission_response->get("response"); }
 			else {
-				echo "(Response dropdown)";
+				echo CHtml::activeDropDownList($sub, 'response_id', $submission_responses, array(
+					'options' => array(
+						 #$sub->get('market_id') => array('selected'=>true),
+					),
+					'empty' => '(none)',
+				));
 			}
-		echo '</td>';
-		echo '<td>'.days_out($sub->get('submitted'), $sub->get('returned')).'</td>';
+		echo '</td>'."\r\n";
+		echo '<td>';
+			echo days_out($sub->get('submitted'), $sub->get('returned'));
+			if ( !isset($sub->story_submission_response) ) { echo '<input type="submit" value="&raquo;">'; }
+		echo '</td>'."\r\n";
+		
 		if ( !isset($sub->story_submission_response) ) {
 			echo CHtml::endForm();
 		}
-		echo '</tr>';
+		echo '</tr>'."\r\n"."\r\n";
 	}
 
 ?>

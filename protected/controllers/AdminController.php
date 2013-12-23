@@ -177,6 +177,10 @@ class AdminController extends Controller {
 		$story_markets_query.= 'where sm.market_type_id = smt.type_id order by smt.type, sm.title';
 		$story_markets = StoryMarket::model()->findAllBySql($story_markets_query);
 		$story_markets = CHtml::listData( $story_markets, 'market_id', 'title', 'type' );
+		// Get possible responses for dropdown.
+		$submission_responses = StorySubmissionResponse::model()->findAll();
+		$submission_responses = CHtml::listData( $submission_responses, 'response_id', 'response');
+		// Get possible responses for dropdown.
 		// Get list of submissions.
 		$submissions = StorySubmission::model()->with('story','story_submission_response','story_market')->findAll( array(
 			'order'=>'submitted DESC',
@@ -186,27 +190,38 @@ class AdminController extends Controller {
 		// Switch behaviors based on whether or not this is a form submission.
 		if ( Yii::app()->request->isPostRequest ) {
 			// We're being asked to create a new submission or update an existing record.
-			new dBug($_POST);
 			// See if there's a submission ID set. If not, it's probably a new submission.
 			if ( isset($_POST['StorySubmission']['submission_id']) ) {
 				// There is a submission_id.  Try to update the record.
+				$submission_record = StorySubmission::model()->findByPk( $_POST['StorySubmission']['submission_id'] );
+				foreach ($_POST['StorySubmission'] as $key => $val ) {
+					$submission_record->set($key, $val);
+				}
+				$submission_record->save();
 			} else {
 				// No submission_id.  Create a new record.
 				$new_submission = new StorySubmission;
 				foreach ($_POST['StorySubmission'] as $key => $val ) {
 					$new_submission->set($key, $val);
-					$new_submission->save();
 				}
-				// Render the updated page if there have been no errors.
-				$this->render('story_submissions', array(
-					'message'=>'Submission logged.',
-					'submissions'=>$submissions, 
-					'secondary_navigation'=>$secondary_navigation, 
-					'new_submission'=>$new_submission,
-					'stories'=>$stories,
-					'story_markets'=>$story_markets,
-				));
+				$new_submission->save();
 			}
+			// Get updated list of submissions.
+			$submissions = StorySubmission::model()->with('story','story_submission_response','story_market')->findAll( array(
+				'order'=>'submitted DESC',
+			) );
+			// Create a new story to stock the page's form with.
+			$new_submission = new StorySubmission();
+			// Render the updated page if there have been no errors.
+			$this->render('story_submissions', array(
+				'message'=>'Submission logged.',
+				'submissions'=>$submissions, 
+				'secondary_navigation'=>$secondary_navigation, 
+				'new_submission'=>$new_submission,
+				'stories'=>$stories,
+				'story_markets'=>$story_markets,
+				'submission_responses'=>$submission_responses,
+			));
 		} else {
 			// Just show the submissions info page.  Provide an empty 'new' submission in case we want to add a record.
 			$new_submission = new StorySubmission();
@@ -217,6 +232,7 @@ class AdminController extends Controller {
 				'new_submission'=>$new_submission,
 				'stories'=>$stories,
 				'story_markets'=>$story_markets,
+				'submission_responses'=>$submission_responses,
 			));
 		}
 	} catch  (Exception $e) {

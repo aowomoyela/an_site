@@ -63,7 +63,7 @@
 					return array(
 						'items'=>array(
 							array( 'label'=>'Manage Submissions', 'url'=>array('/admin/manage_submissions') ),
-							//array( 'label'=>'Patreon', 'url'=>array('/fiction/patreon') ),
+							array( 'label'=>'Add New Story', 'url'=>array('/admin/edit_story', 'story_id'=>'new') ),
 						),
 					);
 				break;

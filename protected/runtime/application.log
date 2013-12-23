@@ -4101,3 +4101,36 @@ Stack trace:
 REQUEST_URI=/admin/manage_submissions
 in /home1/owomoyel/public_html/subdomain_an/protected/controllers/AdminController.php (197)
 in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2013/12/22 18:15:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "edit_submission".' in /home1/owomoyel/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(270): CController->missingAction('edit_submission')
+#1 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('edit_submission')
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/edit_subm...')
+#3 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/edit_submission
+HTTP_REFERER=http://an.owomoyela.net/admin/manage_submissions
+---
+2013/12/22 18:21:25 [error] [php] Undefined variable: new_submission (/home1/owomoyel/public_html/subdomain_an/protected/controllers/AdminController.php:214)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#1 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#3 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#4 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#5 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /home1/owomoyel/public_html/subdomain_an/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/manage_submissions
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/AdminController.php (214)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2013/12/22 18:23:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
