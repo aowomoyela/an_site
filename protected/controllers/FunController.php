@@ -28,7 +28,7 @@ class FunController extends Controller
 		$list = '';
 		// Make a random array of numbers 1-75 as filler.
 		$bingo_squares = array();
-		while ( count($bingo_squares) <= $num_card_elements) {
+		while ( count($bingo_squares) < $num_card_elements) {
 			$new_square = rand(1, 75);
 			if ( !in_array($new_square, $bingo_squares) ) {
 				$bingo_squares[] = $new_square;
@@ -41,9 +41,9 @@ class FunController extends Controller
 				$card_size = 5;
 			}
 			// Now, handle the actual card elements.
-			$list = $_POST['list'];
+			$list = strip_tags($_POST['list']);
 			$list_items = explode(',', $list);
-			if ( count($list_items >= $num_card_elements) ) {
+			if ( count($list_items) >= $num_card_elements ) {
 				// There are enough items to fill a card.
 				shuffle($list_items);
 				$bingo_squares = array_slice($list_items, 0, $num_card_elements);
@@ -51,12 +51,12 @@ class FunController extends Controller
 				$card_ready = true;	
 			} else {
 				// There aren't enough items to fill a card!
-				$message = "Not enough items in list to fill a $card_size x $card_size grid.";
+				$message = "There aren't enough items in your list to fill a $card_size x $card_size grid. Have a default card instead!";
 				$card_ready = false;
 			}
 		} else {
 			// Display the form to create a bingo card.
-			$message = "Let's make you a card!";
+			$message = "Here's a default card to show you what it'll look like.";
 			$card_ready = false;
 		}
 		// Render the page.

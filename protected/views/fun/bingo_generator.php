@@ -1,4 +1,14 @@
-<h2><?php echo $message; ?></h2>
+<h2>Let's make you a bingo card!</h2>
+
+<h3 style="margin-top:3em;">Input a comma-separated list of values:</h3>
+
+<?php echo CHtml::beginForm( array('fun/bingo_generator'), 'post', array('id'=>'bingo_generator') ); ?>
+	<textarea name="list" cols="94" rows="10"><?php echo $list; ?></textarea><br /><br />
+	<input type="submit" value="Create a bingo card &raquo;" />
+<?php echo CHtml::endForm(); ?>	
+</form>
+
+<h3 style="margin-top:3em;"><?php echo $message; ?></h3>
 <?php
 	$position = 1;
 	$free_space_square = ceil( pow($card_size, 2)/2 );
@@ -14,10 +24,10 @@
 			} elseif ($position < $free_space_square) {
 				$index = $position - 1;
 				//$html_string.=count($bingo_squares);
-				$html_string.= strip_tags(trim($bingo_squares[$index]));
+				$html_string.= trim($bingo_squares[$index]);
 			} else {
 				$index = $position - 2;
-				$html_string.= strip_tags(trim($bingo_squares[$index]));
+				$html_string.= trim($bingo_squares[$index]);
 			}
 			$position++;
 			$html_string.= '</td>'."\r\n";
@@ -30,16 +40,7 @@
 	echo $html_string;
 	
 	// Display the HTML to copy and paste.
-	echo '<h3>And here is your code:<h3>';
+	echo '<h3 style="margin-top:3em;">And here is the code:<h3>';
 	echo '<p><textarea cols="94" rows="25">'.$html_string.'</textarea></p>';
 ?>
 
-<hr />
-
-<h3>Input a comma-separated list of values:</h3>
-
-<?php echo CHtml::beginForm( array('fun/bingo_generator'), 'post', array('id'=>'bingo_generator') ); ?>
-	<textarea name="list" cols="94" rows="25"></textarea><br /><br />
-	<input type="submit" value="Create a bingo card &raquo;" />
-<?php echo CHtml::endForm(); ?>	
-</form>

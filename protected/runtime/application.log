@@ -1890,3 +1890,96 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2013/12/24 20:31:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/12/24 20:31:26 [error] [php] Undefined offset: 1 (/home1/owomoyel/public_html/subdomain_an/protected/views/fun/bingo_generator.php:27)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(869): FunController->renderFile()
+#1 /home1/owomoyel/yii/framework/web/CController.php(782): FunController->renderPartial()
+#2 /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php(69): FunController->render()
+#3 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FunController->actionBingo_generator()
+#4 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home1/owomoyel/yii/framework/web/CController.php(286): FunController->runAction()
+#6 /home1/owomoyel/yii/framework/web/CController.php(265): FunController->runActionWithFilters()
+#7 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): FunController->run()
+#8 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home1/owomoyel/public_html/subdomain_an/index.php(13): CWebApplication->run()
+REQUEST_URI=/fun/bingo_generator
+in /home1/owomoyel/public_html/subdomain_an/protected/views/fun/bingo_generator.php (27)
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php (69)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2013/12/24 20:31:50 [error] [php] Undefined offset: 1 (/home1/owomoyel/public_html/subdomain_an/protected/views/fun/bingo_generator.php:27)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(869): FunController->renderFile()
+#1 /home1/owomoyel/yii/framework/web/CController.php(782): FunController->renderPartial()
+#2 /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php(69): FunController->render()
+#3 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FunController->actionBingo_generator()
+#4 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home1/owomoyel/yii/framework/web/CController.php(286): FunController->runAction()
+#6 /home1/owomoyel/yii/framework/web/CController.php(265): FunController->runActionWithFilters()
+#7 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): FunController->run()
+#8 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home1/owomoyel/public_html/subdomain_an/index.php(13): CWebApplication->run()
+REQUEST_URI=/fun/bingo_generator
+in /home1/owomoyel/public_html/subdomain_an/protected/views/fun/bingo_generator.php (27)
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php (69)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2013/12/24 20:32:17 [error] [php] Undefined offset: 1 (/home1/owomoyel/public_html/subdomain_an/protected/views/fun/bingo_generator.php:27)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(869): FunController->renderFile()
+#1 /home1/owomoyel/yii/framework/web/CController.php(782): FunController->renderPartial()
+#2 /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php(69): FunController->render()
+#3 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FunController->actionBingo_generator()
+#4 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home1/owomoyel/yii/framework/web/CController.php(286): FunController->runAction()
+#6 /home1/owomoyel/yii/framework/web/CController.php(265): FunController->runActionWithFilters()
+#7 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): FunController->run()
+#8 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home1/owomoyel/public_html/subdomain_an/index.php(13): CWebApplication->run()
+REQUEST_URI=/fun/bingo_generator
+in /home1/owomoyel/public_html/subdomain_an/protected/views/fun/bingo_generator.php (27)
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php (69)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2013/12/24 20:33:28 [error] [php] Undefined offset: 1 (/home1/owomoyel/public_html/subdomain_an/protected/views/fun/bingo_generator.php:27)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(869): FunController->renderFile()
+#1 /home1/owomoyel/yii/framework/web/CController.php(782): FunController->renderPartial()
+#2 /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php(69): FunController->render()
+#3 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FunController->actionBingo_generator()
+#4 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home1/owomoyel/yii/framework/web/CController.php(286): FunController->runAction()
+#6 /home1/owomoyel/yii/framework/web/CController.php(265): FunController->runActionWithFilters()
+#7 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): FunController->run()
+#8 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home1/owomoyel/public_html/subdomain_an/index.php(13): CWebApplication->run()
+REQUEST_URI=/fun/bingo_generator
+in /home1/owomoyel/public_html/subdomain_an/protected/views/fun/bingo_generator.php (27)
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php (69)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2013/12/24 20:34:14 [error] [php] Undefined offset: 1 (/home1/owomoyel/public_html/subdomain_an/protected/views/fun/bingo_generator.php:27)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(869): FunController->renderFile()
+#1 /home1/owomoyel/yii/framework/web/CController.php(782): FunController->renderPartial()
+#2 /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php(70): FunController->render()
+#3 /home1/owomoyel/yii/framework/web/actions/CInlineAction.php(49): FunController->actionBingo_generator()
+#4 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home1/owomoyel/yii/framework/web/CController.php(286): FunController->runAction()
+#6 /home1/owomoyel/yii/framework/web/CController.php(265): FunController->runActionWithFilters()
+#7 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): FunController->run()
+#8 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home1/owomoyel/public_html/subdomain_an/index.php(13): CWebApplication->run()
+REQUEST_URI=/fun/bingo_generator
+in /home1/owomoyel/public_html/subdomain_an/protected/views/fun/bingo_generator.php (27)
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php (70)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)
