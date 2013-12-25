@@ -7,18 +7,21 @@
 <h2>Let's make you a bingo card!</h2>
 
 <h3 style="margin-top:3em;">Input a comma-separated list of at least <?php echo $num_card_elements; ?> values.</h3>
-<p>(Or choose from one of these: <select name="list_loader" id="list_loader">
+<p><strong>Or choose from one of these:</strong></p>
+<p><select name="list_loader" id="list_loader" multiple="multiple" size="8">
 	<option value="empty">(empty)</option>
-	<optgroup label="Premade lists">
+	<optgroup label="Fiction-writing prompts">
 		<option value="polti_dramatic_situations">Georges Polti's 19th-Century List of 36 Dramatic Situations</option>
+		<option value="robert_plutchik_emotion_list">Robert Plutchik's list of emotions</option>
 	</optgroup>
-</select>)</p>
+</select></p>
+
+<p>If one of your values really needs a comma, use the HTML code <strong>&amp;#44;</strong> in place of the comma <em>within</em> the value.</p>
 
 <?php echo CHtml::beginForm( array('fun/bingo_generator'), 'post', array('id'=>'bingo_generator') ); ?>
 	<textarea id="bingo_list" name="list" cols="94" rows="10"><?php echo $list; ?></textarea><br /><br />
 	<input type="submit" value="Create a bingo card &raquo;" />
-<?php echo CHtml::endForm(); ?>	
-</form>
+<?php echo CHtml::endForm(); ?>
 
 <h3 style="margin-top:3em;"><?php echo $message; ?></h3>
 <?php

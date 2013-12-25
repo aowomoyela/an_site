@@ -43,6 +43,7 @@ class FunController extends Controller
 			// Now, handle the actual card elements.
 			$list = strip_tags($_POST['list']);
 			$list_items = explode(',', $list);
+			$list_items = array_filter(array_map('trim', $list_items));
 			if ( count($list_items) >= $num_card_elements ) {
 				// There are enough items to fill a card.
 				shuffle($list_items);
