@@ -66,6 +66,7 @@ class FunController extends Controller
 			'list'=>$list,
 			'card_ready'=>$card_ready,
 			'card_size'=>$card_size,
+			'num_card_elements'=>$num_card_elements,
 		));
 	} catch(Exception $e) {
 		// Stuff goes here, you know the drill

@@ -1983,3 +1983,91 @@ REQUEST_URI=/fun/bingo_generator
 in /home1/owomoyel/public_html/subdomain_an/protected/views/fun/bingo_generator.php (27)
 in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php (70)
 in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2013/12/24 20:53:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2013/12/24 21:03:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fun/resources/polti_dramatic_situations.csv".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fun/resource...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/fun/resources/polti_dramatic_situations.csv
+HTTP_REFERER=http://an.owomoyela.net/fun/bingo_generator
+---
+2013/12/24 21:03:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fun/resources/polti_dramatic_situations.csv".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fun/resource...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/fun/resources/polti_dramatic_situations.csv
+HTTP_REFERER=http://an.owomoyela.net/fun/bingo_generator
+---
+2013/12/24 21:04:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fun/resources/polti_dramatic_situations.csv".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fun/resource...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/fun/resources/polti_dramatic_situations.csv
+HTTP_REFERER=http://an.owomoyela.net/fun/bingo_generator
+---
+2013/12/24 21:05:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fun/resources/polti_dramatic_situations.csv".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fun/resource...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/fun/resources/polti_dramatic_situations.csv
+HTTP_REFERER=http://an.owomoyela.net/fun/bingo_generator
+---
+2013/12/24 21:08:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fun/resources/polti_dramatic_situations.csv".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fun/resource...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/fun/resources/polti_dramatic_situations.csv
+---
+2013/12/24 21:09:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "resources".' in /home1/owomoyel/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(270): CController->missingAction('resources')
+#1 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): CController->run('resources')
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('fun/resources/p...')
+#3 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fun/resources/polti_dramatic_situations.csv
+HTTP_REFERER=http://an.owomoyela.net/fun/bingo_generator
+---
+2013/12/24 21:11:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fun/bingo_generator/resources/empty.csv".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fun/bingo_ge...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/fun/bingo_generator/resources/empty.csv
+HTTP_REFERER=http://an.owomoyela.net/fun/bingo_generator
+---
+2013/12/24 21:16:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/12/24 21:16:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

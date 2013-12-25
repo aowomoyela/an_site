@@ -1,9 +1,21 @@
+<?php
+	$baseUrl = Yii::app()->baseUrl; 
+	$cs = Yii::app()->getClientScript();
+	$cs->registerScriptFile($baseUrl.'/js/fun/bingo_generator/list_loader.js');
+?>
+
 <h2>Let's make you a bingo card!</h2>
 
-<h3 style="margin-top:3em;">Input a comma-separated list of values:</h3>
+<h3 style="margin-top:3em;">Input a comma-separated list of at least <?php echo $num_card_elements; ?> values.</h3>
+<p>(Or choose from one of these: <select name="list_loader" id="list_loader">
+	<option value="empty">(empty)</option>
+	<optgroup label="Premade lists">
+		<option value="polti_dramatic_situations">Georges Polti's 19th-Century List of 36 Dramatic Situations</option>
+	</optgroup>
+</select>)</p>
 
 <?php echo CHtml::beginForm( array('fun/bingo_generator'), 'post', array('id'=>'bingo_generator') ); ?>
-	<textarea name="list" cols="94" rows="10"><?php echo $list; ?></textarea><br /><br />
+	<textarea id="bingo_list" name="list" cols="94" rows="10"><?php echo $list; ?></textarea><br /><br />
 	<input type="submit" value="Create a bingo card &raquo;" />
 <?php echo CHtml::endForm(); ?>	
 </form>
@@ -13,7 +25,7 @@
 	$position = 1;
 	$free_space_square = ceil( pow($card_size, 2)/2 );
 	// Set up the HTML
-	$html_string = '<table style="width:auto; display:inline; margin-left:auto; margin-right:auto;">'."\r\n\r\n";
+	$html_string = '<table style="width:auto; display:inline;">'."\r\n\r\n";
 	for ($y=1; $y<=$card_size; $y++) {
 		$html_string.= '<tr>'."\r\n";
 		for ($x=1; $x<=$card_size; $x++) {
