@@ -6,14 +6,14 @@
 
 <h2>Let's make you a bingo card!</h2>
 
-<h3 style="margin-top:2em;">Input a comma-separated list of at least <?php echo $num_card_elements; ?> values.</h3>
+<h3 style="margin-top:2em;">Input a comma-separated list of at least <span class="num_card_elements"><?php echo $num_card_elements; ?></span> values.</h3>
 
 <p>If one of your values needs a comma, use the HTML code <strong>&amp;#44;</strong> in place of the comma <em>within</em> the value.</p>
 
 <?php echo CHtml::beginForm( array('fun/bingo_generator'), 'post', array('id'=>'bingo_generator') ); ?>
 	<textarea id="bingo_list" name="list" cols="94" rows="10"><?php echo $list; ?></textarea><br /><br />
 	<input type="checkbox" name="use_repeat_values" value="1" <?php if($use_repeat_values){ echo 'checked="checked"'; } ?> />
-		Allow repeated values for lists with under <?php echo $num_card_elements; ?> items?<br /><br />
+		Allow repeated values for lists with under <span class="num_card_elements"><?php echo $num_card_elements; ?></span> items?<br /><br />
 	<input type="submit" value="Create a bingo card &raquo;" /><br /><br />
 <?php echo CHtml::endForm(); ?>
 
@@ -26,8 +26,10 @@
 	</optgroup>
 	<optgroup label="Life, lifestyle and living resources">
 		<option value="little_self-care_tasks">Little actions for self-care</option>
+		<option value="little_housekeeping_tasks">Little housekeeping tasks</option>
 	</optgroup>
 </select></p>
+<p>(You can also edit these lists in the editor above, after loading them.)</p>
 
 <h3 style="margin-top:3em;"><?php echo $message; ?></h3>
 <?php
@@ -76,4 +78,4 @@ pre-made lists don't work. I've been replacing them with slashes, dashes, and el
 <p>If you have suggestions for additions to existing lists, or there are features you'd like to see, feel free to comment on that post as well! 
 Again, I can't guarantee that all suggestions will be implemented, but I'll do my best to make this a usable resource.</p>
 
-<p>But reports, unsurprisingly, should also go there.</p>
+<p>Bug reports, unsurprisingly, should also go there.</p>

@@ -2598,3 +2598,11 @@ REQUEST_URI=/fun/bingo_generator
 in /home1/owomoyel/public_html/subdomain_an/protected/views/fun/bingo_generator.php (48)
 in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php (88)
 in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2013/12/25 17:42:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
