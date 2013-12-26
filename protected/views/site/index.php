@@ -3,7 +3,7 @@
 	and <a href="<?php echo Yii::app()->createUrl('fiction/index'); ?>">speculative fiction author</a>. What brings you to the site?
 </p>
 
-<h2 class="left_header"><a href="<?php echo Yii::app()->createUrl('web/index'); ?>">Web</a></h2>
+<h2 class="left_header section"><a href="<?php echo Yii::app()->createUrl('web/index'); ?>">Web</a></h2>
 
 <p>
         Back in my Freshman year of undergrad, I started working for <a href="http://www.uiowa.edu/">UIowa</a>'s <a href="http://imu.uiowa.edu/">Iowa Memorial Union</a>.
@@ -13,7 +13,7 @@
         helping communities make their world a better place by making the charitable giving process more efficient and more engaging. I'm currently seeking a new full-time position.
 </p>
 
-<h2 class="right_header"><a href="<?php echo Yii::app()->createUrl('fiction/index'); ?>">Fiction</a></h2>
+<h2 class="right_header section"><a href="<?php echo Yii::app()->createUrl('fiction/index'); ?>">Fiction</a></h2>
 
 <p>
         Hard science fiction. Mythic fantasy. If it falls in the spectrum, odds are I'll dabble in it. I've been published all over, from <a href="http://www.asimovs.com/">Asmiov's</a>
@@ -32,7 +32,7 @@
 	<a href="<?php echo Yii::app()->createUrl('fiction/index'); ?>">clicking on through &raquo;</a>
 </p>
 
-<h2 class="left_header"><a href="<?php echo Yii::app()->createUrl('site/about'); ?>">Me</a></h2>
+<h2 class="left_header section"><a href="<?php echo Yii::app()->createUrl('site/about'); ?>">Me</a></h2>
 
 <p>
         I've recently made the jump to the San Francisco Bay Area, where I remain amazed at the relative uniformity of day-to-day forecasts. Prior to that I lived in the wilds of

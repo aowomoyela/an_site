@@ -210,7 +210,13 @@ div.story_catalog_block {
 
 
 h2 {
+	border-bottom:2px solid #06C;
+	padding: .25em 0 4px 0 ;
+}
+
+h2.section {
 	border-top:1px solid #06C;
+	border-bottom: none;
 	padding: .25em 0 0 0 ;
 }
 

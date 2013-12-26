@@ -6,22 +6,28 @@
 
 <h2>Let's make you a bingo card!</h2>
 
-<h3 style="margin-top:3em;">Input a comma-separated list of at least <?php echo $num_card_elements; ?> values.</h3>
-<p><strong>Or choose from one of these:</strong></p>
-<p><select name="list_loader" id="list_loader" multiple="multiple" size="8">
-	<option value="empty">(empty)</option>
-	<optgroup label="Fiction-writing prompts">
-		<option value="polti_dramatic_situations">Georges Polti's 19th-Century List of 36 Dramatic Situations</option>
-		<option value="robert_plutchik_emotion_list">Robert Plutchik's list of emotions</option>
-	</optgroup>
-</select></p>
+<h3 style="margin-top:2em;">Input a comma-separated list of at least <?php echo $num_card_elements; ?> values.</h3>
 
-<p>If one of your values really needs a comma, use the HTML code <strong>&amp;#44;</strong> in place of the comma <em>within</em> the value.</p>
+<p>If one of your values needs a comma, use the HTML code <strong>&amp;#44;</strong> in place of the comma <em>within</em> the value.</p>
 
 <?php echo CHtml::beginForm( array('fun/bingo_generator'), 'post', array('id'=>'bingo_generator') ); ?>
 	<textarea id="bingo_list" name="list" cols="94" rows="10"><?php echo $list; ?></textarea><br /><br />
-	<input type="submit" value="Create a bingo card &raquo;" />
+	<input type="checkbox" name="use_repeat_values" value="1" <?php if($use_repeat_values){ echo 'checked="checked"'; } ?> />
+		Allow repeated values for lists with under <?php echo $num_card_elements; ?> items?<br /><br />
+	<input type="submit" value="Create a bingo card &raquo;" /><br /><br />
 <?php echo CHtml::endForm(); ?>
+
+<p><strong>Or choose one or more of these:</strong></p>
+<p><select name="list_loader" id="list_loader" multiple="multiple" size="8">
+	<option value="empty">(empty)</option>
+	<optgroup label="Fiction-writing prompts">
+		<option value="polti_dramatic_situations">Georges Polti's 19th-century list of 36 dramatic situations</option>
+		<option value="robert_plutchik_emotion_list">Robert Plutchik's 1980 list of emotions</option>
+	</optgroup>
+	<optgroup label="Life, lifestyle and living resources">
+		<option value="little_self-care_tasks">Little actions for self-care</option>
+	</optgroup>
+</select></p>
 
 <h3 style="margin-top:3em;"><?php echo $message; ?></h3>
 <?php
@@ -38,7 +44,6 @@
 				$html_string.= "FREE SPACE";
 			} elseif ($position < $free_space_square) {
 				$index = $position - 1;
-				//$html_string.=count($bingo_squares);
 				$html_string.= trim($bingo_squares[$index]);
 			} else {
 				$index = $position - 2;
@@ -59,3 +64,16 @@
 	echo '<p><textarea cols="94" rows="25">'.$html_string.'</textarea></p>';
 ?>
 
+<h2 class="section" style="margin-top:3em;">Got lists?  Additions?  Bugs?</h2>
+
+<p>If you have some good general-use lists that you want to see added, leave me a note (or the full comma-separated list) at 
+<a href="http://magistrate.dreamwidth.org/34518.html">my DreamWidth post</a>!  (Note that, at the moment, there's a bug where any commas – 
+even the HTML-entity escaped ones (and even ones which escape the ampersand on that entity!) are loading as commas, so commas within values of
+pre-made lists don't work. I've been replacing them with slashes, dashes, and ellipses until I can get the bugs worked out.)</p>
+
+<p>I may not take all lists, but I'll do my best to add ones that it seems like many people will find a use for.</p>
+
+<p>If you have suggestions for additions to existing lists, or there are features you'd like to see, feel free to comment on that post as well! 
+Again, I can't guarantee that all suggestions will be implemented, but I'll do my best to make this a usable resource.</p>
+
+<p>But reports, unsurprisingly, should also go there.</p>

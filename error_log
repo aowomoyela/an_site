@@ -15,3 +15,4 @@
 [24-Dec-2013 19:52:31 America/Denver] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php on line 33
 [24-Dec-2013 19:52:39 America/Denver] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php on line 33
 [24-Dec-2013 19:53:00 America/Denver] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php on line 33
+[25-Dec-2013 17:10:47 America/Denver] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php on line 66
