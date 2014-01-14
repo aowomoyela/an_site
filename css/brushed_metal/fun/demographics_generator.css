@@ -1,0 +1,27 @@
+fieldset {
+	padding: 1em;
+	border: 1px solid #000;
+}
+
+fieldset + fieldset {
+	margin-top: 1.5em;
+}
+
+legend {
+	border:1px solid #000;
+	padding: .15em;
+	font-weight: bold;
+}
+
+fieldset div {
+	margin: .15em 0;
+}
+
+label {
+	float:left;
+	border-left: 1px solid #06C;
+	border-top: 1px solid #06C;
+	margin-right: .5em;
+	text-align:right;
+	width: 10em;
+}

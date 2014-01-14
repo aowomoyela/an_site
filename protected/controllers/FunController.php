@@ -18,6 +18,9 @@ class FunController extends Controller
 	}
 
 
+	/************************************************************************************/
+	/* Bingo cards generator – initially for writing prompts, but use your imagination! */
+	/************************************************************************************/
 	public function actionBingo_generator() {
 	try {
 		$this->pageTitle = Yii::app()->name.' - Bingo Generator';
@@ -92,6 +95,30 @@ class FunController extends Controller
 		// Stuff goes here, you know the drill
 	}
 	} // END public function actionBingo_generator()
+	
+	
+	/************************************************************************************************/
+	/* Demographics randomizer, probably for minor characters, but potentially for challenges, etc. */
+	/* Inspired by Alex Conall's Excel demographics generator, which can be found in Google Docs:   */
+	/* https://docs.google.com/document/d/1cVY6GD7RfL9ltZOUjp6wkGQcKzk-PImQd6YU4AAZTGE/edit?pli=1   */
+	/************************************************************************************************/
+	public function actionDemographics_generator() {
+	try {
+		// See if this is a POST request or not.
+		if ( Yii::app()->request->isPostRequest ) {
+			
+		} else {
+			
+		}
+		
+		// Render the page.
+		$this->render('demographics_generator', array(
+			// Variables go here.
+		));
+		
+	} catch (Exception $e) {
+		
+	}} // END public function actionDemographics_generator()
 
 }
 

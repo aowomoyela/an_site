@@ -11159,3 +11159,105 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2014/01/13 22:16:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2014/01/13 22:35:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/01/13 22:52:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/01/14 00:08:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fun/demographics_generator/demographics_category.html".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fun/demograp...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/fun/demographics_generator/demographics_category.html
+HTTP_REFERER=http://an.owomoyela.net/fun/demographics_generator
+---
+2014/01/14 00:08:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fun/demographics_generator/demographics_category.html".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fun/demograp...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/fun/demographics_generator/demographics_category.html
+HTTP_REFERER=http://an.owomoyela.net/fun/demographics_generator
+---
+2014/01/14 00:09:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fun/demographics_generator/demographics_category.html".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fun/demograp...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/fun/demographics_generator/demographics_category.html
+HTTP_REFERER=http://an.owomoyela.net/fun/demographics_generator
+---
+2014/01/14 00:11:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fun/demographics_generator/demographics_category.html".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fun/demograp...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/fun/demographics_generator/demographics_category.html
+HTTP_REFERER=http://an.owomoyela.net/fun/demographics_generator
+---
+2014/01/14 00:12:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fun/demographics_generator/demographics_category.html".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fun/demograp...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/fun/demographics_generator/demographics_category.html
+HTTP_REFERER=http://an.owomoyela.net/fun/demographics_generator
+---
+2014/01/14 00:14:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fun/demographics_generator/demographics_category.html".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fun/demograp...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/fun/demographics_generator/demographics_category.html
+---
+2014/01/14 00:18:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/fun/demographics_generator/demographics_category.inc".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/fun/demograp...')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/fun/demographics_generator/demographics_category.inc
+HTTP_REFERER=http://an.owomoyela.net/fun/demographics_generator
+---
+2014/01/14 00:20:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/01/14 00:54:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
