@@ -106,15 +106,55 @@ class FunController extends Controller
 	try {
 		// See if this is a POST request or not.
 		if ( Yii::app()->request->isPostRequest ) {
+			#new dBug($_POST);
+			// We'll have a number of random mixes to generate, and a superarray of the categories, their options, and the option weights.
+			if ( !is_int($_POST['number']) && !is_numeric($_POST['number']) ) { $number = 10; } else { $number = $_POST['number']; }
+			//Handle each category.
+			$option_bounds = array();
+			foreach ($_POST['categories'] as $category_name => $category) {
+				// Work out what the total weight is.
+				$total_weight = 0;
+				$weight_pointer = 1;
+				foreach ($category as $option => $weight) {
+					$total_weight += $weight;
+					// Work up an array we can compare against an RNG later.
+					$option_bounds[$category_name][$option]['low_bound'] = $weight_pointer;
+					$weight_pointer += $weight-1;
+					$option_bounds[$category_name][$option]['high_bound'] = $weight_pointer;
+					$weight_pointer++;
+				}
+				// Make a note of the total weight. We'll need it to set the bounds of the RNG.
+				$option_bounds[$category_name]['total_weight'] = $total_weight;
+			}
+			#new dBug($option_bounds);
 			
+			// Now, let's get on with generating $number combinations.
+			$results = array();
+			for ( $i = 0; $i < $number; $i++ ) {
+				// Look at each category...
+				foreach ($_POST['categories'] as $category_name => $category) {
+					// ...and choose a random value from the weighted list. First, generate an index within the weight bounds...
+					$random = rand(1, $option_bounds[$category_name]['total_weight']);
+					// ...then look through the upper and lower bounds until you find a range that fits the number.
+					foreach ($option_bounds[$category_name] as $option_name => $option) {
+						if ( $random >= $option['low_bound'] && $random <= $option['high_bound'] ) {
+							$results[$i][$category_name] = $option_name;
+						}
+					}
+				}
+			}
+			
+			// At this point, we should have $number combinations.  Render the page.
+			#new dBug($results);
+			$this->render('demographics_generated_values', array(
+				'results'=>$results,
+			));	
 		} else {
-			
+			// Render the page.
+			$this->render('demographics_generator', array(
+				// Variables go here.
+			));	
 		}
-		
-		// Render the page.
-		$this->render('demographics_generator', array(
-			// Variables go here.
-		));
 		
 	} catch (Exception $e) {
 		

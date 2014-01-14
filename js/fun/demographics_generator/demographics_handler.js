@@ -22,8 +22,14 @@ function bindHandlers(root) {
 			// Replace the appropriate values.
 			var category_block = data.toString().replace(/{CATEGORY}/g, category_name);
 			// Append the new fieldset to the form.
-			bindHandlers( $("#demographics_generator").append( category_block ) );
+			$("#demographics_generator").append( category_block );
 		}, 'text' );
+		// Fix element binding.
+		setTimeout(function(){
+			$("*").unbind();
+			bindHandlers(document);
+		}, 500);
+		
 	});
 	
 	// Add a new option to the parent category.
@@ -39,12 +45,17 @@ function bindHandlers(root) {
 			// Replace the appropriate values.
 			var option_block = data.toString().replace(/{CATEGORY}/g, category_name).replace(/{OPTION}/g, option_name);
 			// Append the new fieldset to the form.
-			bindHandlers( parent_fieldset.append( option_block ) );
+			parent_fieldset.append( option_block );
 		}, 'text' );
+		// Fix element binding.
+		setTimeout(function(){
+			$("*").unbind();
+			bindHandlers(document);
+		}, 500);
 	});
 	
-	// Restrict weight inputs to numeric values.
-	$(".option_weight", root).change(function() {
+	// Restrict weight and other inputs to numeric values.
+	$(".num_only", root).change(function() {
 		var value = $(this).val();
 		value = value.replace(/[^0-9]/g, "");
 		$(this).val(value);

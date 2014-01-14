@@ -25,3 +25,7 @@ label {
 	text-align:right;
 	width: 10em;
 }
+
+li.individual_listing {
+	margin-top:1.5em;
+}

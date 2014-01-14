@@ -11261,3 +11261,84 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2014/01/14 02:09:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/01/14 02:14:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2014/01/14 02:17:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2014/01/14 02:21:05 [error] [php] Illegal offset type (/home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php:121)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(286): FunController->runAction()
+#1 /home1/owomoyel/yii/framework/web/CController.php(265): FunController->runActionWithFilters()
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): FunController->run()
+#3 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home1/owomoyel/public_html/subdomain_an/index.php(13): CWebApplication->run()
+REQUEST_URI=/fun/demographics_generator
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php (121)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2014/01/14 02:21:30 [error] [php] Illegal offset type (/home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php:121)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(286): FunController->runAction()
+#1 /home1/owomoyel/yii/framework/web/CController.php(265): FunController->runActionWithFilters()
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): FunController->run()
+#3 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home1/owomoyel/public_html/subdomain_an/index.php(13): CWebApplication->run()
+REQUEST_URI=/fun/demographics_generator
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php (121)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2014/01/14 02:21:38 [error] [php] Illegal offset type (/home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php:121)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(286): FunController->runAction()
+#1 /home1/owomoyel/yii/framework/web/CController.php(265): FunController->runActionWithFilters()
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): FunController->run()
+#3 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home1/owomoyel/public_html/subdomain_an/index.php(13): CWebApplication->run()
+REQUEST_URI=/fun/demographics_generator
+in /home1/owomoyel/public_html/subdomain_an/protected/controllers/FunController.php (121)
+in /home1/owomoyel/public_html/subdomain_an/index.php (13)
+2014/01/14 02:54:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/01/14 02:57:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/01/14 03:02:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_an/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
