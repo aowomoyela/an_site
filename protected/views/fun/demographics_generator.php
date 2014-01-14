@@ -9,7 +9,7 @@
 <p><strong>Inspired by 
 	<span style='white-space: nowrap;'><a href='http://alexconall.dreamwidth.org/profile'><img src='http://www.dreamwidth.org/img/silk/identity/user.png' alt='[personal profile] ' width='17' height='17' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' /></a><a href='http://alexconall.dreamwidth.org/'><b>alexconall</b></a></span>'s
 	<a href="https://docs.google.com/document/d/1cVY6GD7RfL9ltZOUjp6wkGQcKzk-PImQd6YU4AAZTGE/edit?pli=1">Excel demographics generator</a>.
-</strong></p>
+</strong>  <em>Please note that this generator is still in alpha.</em></p>
 
 <p>Play around using the following form, using the gender fields as an example. Categories might include things such as sexuality, nationality,
 	ethnicity, temperament, age range, etc. The numbers after each option define the <em>ratios</em> of each individual option to the others
