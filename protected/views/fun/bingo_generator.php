@@ -13,16 +13,34 @@
 <?php echo CHtml::beginForm( array('fun/bingo_generator'), 'post', array('id'=>'bingo_generator') ); ?>
 	<textarea id="bingo_list" name="list" cols="94" rows="10"><?php echo $list; ?></textarea><br /><br />
 	<input type="checkbox" name="use_repeat_values" value="1" <?php if($use_repeat_values){ echo 'checked="checked"'; } ?> />
-		Allow repeated values for lists with under <span class="num_card_elements"><?php echo $num_card_elements; ?></span> items?<br /><br />
+		Allow repeated values for lists with fewer than <span class="num_card_elements"><?php echo $num_card_elements; ?></span> items?<br /><br />
 	<input type="submit" value="Create a bingo card &raquo;" /><br /><br />
 <?php echo CHtml::endForm(); ?>
 
 <p><strong>Or choose one or more of these:</strong></p>
-<p><select name="list_loader" id="list_loader" multiple="multiple" size="8">
+<p><select name="list_loader" id="list_loader" multiple="multiple" size="10">
 	<option value="empty">(empty)</option>
-	<optgroup label="Fiction-writing prompts">
+	<optgroup label="Historical fiction-writing prompts">
+		<option value="aarne-thompson_fairytale_classification">Aarne-Thompson fairytale classification (with numbers &amp; examples)</option>
 		<option value="polti_dramatic_situations">Georges Polti's 19th-century list of 36 dramatic situations</option>
 		<option value="robert_plutchik_emotion_list">Robert Plutchik's 1980 list of emotions</option>
+	</optgroup>
+	<optgroup label="TVTropes">
+		<option value="tvtropes/horror_tropes">Horror Tropes (fetched 8 January 2014)</option>
+	</optgroup>
+	<optgroup label="Ysabetwordsmith's fiction-writing prompts">
+		<option value="ysabetwordsmith/chromatic_character">Chromatic Characters</option>
+		<option value="ysabetwordsmith/disabilities">People with Disabilities</option>
+		<option value="ysabetwordsmith/asexuality_and_demisexuality">Asexuality &amp; Demisexuality</option>
+		<option value="ysabetwordsmith/gentle_fiction">Gentle Fiction (No Sex, Violence, or Foul Language)</option>
+		<option value="ysabetwordsmith/emotions">Emotions</option>
+		<option value="ysabetwordsmith/themes">Themes</option>
+		<option value="ysabetwordsmith/genres">Genres</option>
+		<option value="ysabetwordsmith/kinks">Kinks</option>
+		<option value="ysabetwordsmith/characterization_tropes">Characterization Tropes</option>
+		<option value="ysabetwordsmith/setting_tropes">Setting Tropes</option>
+		<option value="ysabetwordsmith/plot_tropes">Plot Tropes</option>
+		<option value="ysabetwordsmith/motif_tropes">Motif Tropes</option>
 	</optgroup>
 	<optgroup label="Life, lifestyle and living resources">
 		<option value="little_self-care_tasks">Little actions for self-care</option>
@@ -79,3 +97,11 @@ pre-made lists don't work. I've been replacing them with slashes, dashes, and el
 Again, I can't guarantee that all suggestions will be implemented, but I'll do my best to make this a usable resource.</p>
 
 <p>Bug reports, unsurprisingly, should also go there.</p>
+
+<h3>Known bugs:</h3>
+<ul>
+	<li>Commas inside values of pre-made lists always appear as delimiters when loaded, no matter how well-escaped they are.</li>
+	<li>The Aarne-Thompson list <a href="http://magistrate.dreamwidth.org/34518.html?thread=135126#cmt135126">doesn't play well with others, or even with itself</a>: 
+		cards generated with it and another list will only include values from the Aarne-Thompson list, and after the initial page generation, the textarea cuts
+		off within the listing for 852.</li>
+</ul>
