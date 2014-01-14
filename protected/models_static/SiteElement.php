@@ -17,6 +17,7 @@
 					array('label'=>'About', 'url'=>array('/site/about',)),
 					array('label'=>'Resume', 'url'=>array('/web/resume')),
 					array('label'=>'GitHub', 'url'=>'https://github.com/aowomoyela'),
+					array('label'=>'Fun', 'url'=>array('/fun/index')),
 				),
 			);
 			

@@ -16,6 +16,12 @@ class FunController extends Controller
 			),
 		);
 	}
+	
+	
+	public function actionIndex() {
+		$this->pageTitle = Yii::app()->name.' - Fun!';
+		$this->render('index');
+	}
 
 
 	/************************************************************************************/
