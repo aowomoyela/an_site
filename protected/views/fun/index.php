@@ -1,4 +1,4 @@
-<p>These are various and sundry projects I've done to amuse myself of provide resources for other activities which amuse me. Like writing.</p>
+<p>These are various and sundry projects I've done to amuse myself, or provide resources for other activities which amuse me. Like writing.</p>
 
 <p>If we're honest, these are mostly writing-related.</p>
 

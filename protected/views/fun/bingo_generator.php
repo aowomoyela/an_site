@@ -28,7 +28,7 @@
 	<optgroup label="TVTropes">
 		<option value="tvtropes/horror_tropes">Horror Tropes (fetched 8 January 2014)</option>
 	</optgroup>
-	<optgroup label="Ysabetwordsmith's fiction-writing prompts">
+	<optgroup label="Ysabetwordsmith's miscellaneous prompts">
 		<option value="ysabetwordsmith/art_media">Art Media</option>
 		<option value="ysabetwordsmith/asexuality_and_demisexuality">Asexuality &amp; Demisexuality</option>
 		<option value="ysabetwordsmith/characterization_tropes">Characterization Tropes</option>
