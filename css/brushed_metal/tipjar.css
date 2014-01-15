@@ -1,0 +1,25 @@
+div#tipjar {
+	margin: 3em .5em .5em .5em;
+	padding: .25em;
+	border: 2px solid #06C;
+	font-size: .85em;
+    overflow:hidden;
+}
+
+div#tipjar >div{
+    display:inline-block;
+    vertical-align:middle;
+    /*width:49%;*/
+}
+
+div#tipjar div#tipjar_button {
+	width:80px;
+}
+
+div#tipjar div#tipjar_text {
+	width: 90%;
+}
+
+div#tipjar >div form{
+    float:left;
+}

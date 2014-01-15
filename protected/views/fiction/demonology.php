@@ -1,4 +1,8 @@
 <?php
+$baseUrl = Yii::app()->baseUrl;
+        $cs = Yii::app()->getClientScript();
+		$cs->registerCssFile($baseUrl.'/css/brushed_metal/tipjar.css');
+
 	echo '<div id="submenu">'."\r\n";
 		$this->widget('zii.widgets.CMenu', $secondary_navigation);
 	echo '</div>'."\r\n";
@@ -33,3 +37,11 @@
 	}
 ?>
 
+
+<?php
+	/***********************/
+	/* PAGE FINAL - Tipjar */
+	/***********************/
+	
+	SiteElement::get_tipjar('fiction');
+?>
