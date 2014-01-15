@@ -2,6 +2,7 @@
 	$baseUrl = Yii::app()->baseUrl; 
 	$cs = Yii::app()->getClientScript();
 	$cs->registerCssFile($baseUrl.'/css/brushed_metal/fun/demographics_generator.css');
+	$cs->registerCssFile($baseUrl.'/css/brushed_metal/tipjar.css');
 ?>
 
 <h2>Character Demographics Randomizer</h2>
@@ -25,3 +26,11 @@
 	}
 ?>
 </ol>
+
+<?php
+	/***********************/
+	/* PAGE FINAL - Tipjar */
+	/***********************/
+	
+	SiteElement::get_tipjar('web');
+?>

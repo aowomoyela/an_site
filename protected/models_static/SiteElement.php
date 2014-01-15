@@ -79,8 +79,62 @@
 		public static function get_site_footer() {
 			return 'Site content &copy; An Owomoyela 2005 - '.date('Y'). ' unless otherwise noted';
 		}
+		
 
+		/***********************************/
+		/* SLIGHTLY LESS UNIVERSAL CONTENT */
+		/***********************************/
 
+		public static function get_tipjar($type = fiction) {
+			$tipjar_block  = '';
+			
+			switch($type) {
+				case 'web':
+$tipjar_block = <<<EOT
+	<div id="tipjar">
+		<div id="tipjar_button">
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="CRATNJLA4EVPN">
+			<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
+		</div>
+		
+		<div id="tipjar_text">
+			My web work comes out of my free time and self-taught skills. If you appreciate it and want to support my work, consider buying me a virtual cup of tea!
+			Contributions enable me to spend more of my time creating content for you to enjoy, and I deeply appreciate every one.
+		</div>
+	</div>
+EOT;
+				break;
+				
+				case 'fiction':
+				default:
+$tipjar_block = <<<EOT
+	<div id="tipjar">
+		<div id="tipjar_button">
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="A56H7GS5TYK3Q">
+			<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
+		</div>
+		
+		<div id="tipjar_text">
+			I do my best to keep my fiction freely available online. If you appreciate it and want to support my work, consider buying me a virtual cup of tea!
+			Contributions enable me to spend more of my time creating content for you to enjoy, and I deeply appreciate every one.
+		</div>
+	</div>
+EOT;
+				break;
+			}
+
+			echo $tipjar_block;
+		} // END public static function get_tipjar($type = fiction)
+		
+		
 		/****************************************/
 		/* WACKY, PROBABLY ONE-OFF CONTENT BITS */
 		/****************************************/

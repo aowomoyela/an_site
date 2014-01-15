@@ -1,3 +1,9 @@
+<?php
+$baseUrl = Yii::app()->baseUrl;
+        $cs = Yii::app()->getClientScript();
+		$cs->registerCssFile($baseUrl.'/css/brushed_metal/tipjar.css');
+?>
+
 <p>These are various and sundry projects I've done to amuse myself, or provide resources for other activities which amuse me. Like writing.</p>
 
 <p>If we're honest, these are mostly writing-related.</p>
@@ -17,3 +23,11 @@
 	<a href="https://docs.google.com/document/d/1cVY6GD7RfL9ltZOUjp6wkGQcKzk-PImQd6YU4AAZTGE/edit?pli=1">Excel demographics generator</a>.
 	This customizable <a href="<?php echo Yii::app()->createUrl('fun/demographics_generator'); ?>">demographics generator</a> 
 	could be a useful tool for generating NPCs, minor characters, or even main characters for some challenges.</p>
+	
+<?php
+	/***********************/
+	/* PAGE FINAL - Tipjar */
+	/***********************/
+	
+	SiteElement::get_tipjar('web');
+?>

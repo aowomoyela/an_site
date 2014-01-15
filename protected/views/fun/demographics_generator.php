@@ -3,6 +3,7 @@
 	$cs = Yii::app()->getClientScript();
 	$cs->registerScriptFile($baseUrl.'/js/fun/demographics_generator/demographics_handler.js');
 	$cs->registerCssFile($baseUrl.'/css/brushed_metal/fun/demographics_generator.css');
+	$cs->registerCssFile($baseUrl.'/css/brushed_metal/tipjar.css');
 ?>
 
 <h2>Character Demographics Randomizer</h2>
@@ -64,3 +65,11 @@
 <div style="margin-top:1em;"><a class="add_category">[Add Category]</a></div>
 
 </div>
+
+<?php
+	/***********************/
+	/* PAGE FINAL - Tipjar */
+	/***********************/
+	
+	SiteElement::get_tipjar('web');
+?>

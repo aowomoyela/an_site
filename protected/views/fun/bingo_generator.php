@@ -2,6 +2,7 @@
 	$baseUrl = Yii::app()->baseUrl; 
 	$cs = Yii::app()->getClientScript();
 	$cs->registerScriptFile($baseUrl.'/js/fun/bingo_generator/list_loader.js');
+	$cs->registerCssFile($baseUrl.'/css/brushed_metal/tipjar.css');
 ?>
 
 <h2>Let's make you a bingo card!</h2>
@@ -121,3 +122,11 @@ Again, I can't guarantee that all suggestions will be implemented, but I'll do m
 		cards generated with it and another list will only include values from the Aarne-Thompson list, and after the initial page generation, the textarea cuts
 		off within the listing for 852.</li>
 </ul>
+
+<?php
+	/***********************/
+	/* PAGE FINAL - Tipjar */
+	/***********************/
+	
+	SiteElement::get_tipjar('web');
+?>
