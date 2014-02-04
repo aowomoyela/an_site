@@ -1,6 +1,5 @@
 <?php
 require(dirname(__FILE__).'/../../../../secure/an_site/site_constants.php');
-#require('/home1/owomoyel/secure/an_site/site_constants.php');
 
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');

@@ -13,8 +13,15 @@
 
 <?php echo CHtml::beginForm( array('fun/bingo_generator'), 'post', array('id'=>'bingo_generator') ); ?>
 	<textarea id="bingo_list" name="list" cols="94" rows="10"><?php echo $list; ?></textarea><br /><br />
+	
 	<input type="checkbox" name="use_repeat_values" value="1" <?php if($use_repeat_values){ echo 'checked="checked"'; } ?> />
 		Allow repeated values for lists with fewer than <span class="num_card_elements"><?php echo $num_card_elements; ?></span> items?<br /><br />
+		
+	<p><label for="background">Background color:</label> <select name="background">
+		<option value="FFFFFF" selected="selected">White</option>
+		<option value="transparent">Transparent</option>
+	</select></p>
+		
 	<input type="submit" value="Create a bingo card &raquo;" /><br /><br />
 <?php echo CHtml::endForm(); ?>
 
@@ -33,11 +40,13 @@
 		<option value="ysabetwordsmith/art_media">Art Media</option>
 		<option value="ysabetwordsmith/asexuality_and_demisexuality">Asexuality &amp; Demisexuality</option>
 		<option value="ysabetwordsmith/characterization_tropes">Characterization Tropes</option>
+		<option value="ysabetwordsmith/childhood_experiences">Childhood Experiences</option>
 		<option value="ysabetwordsmith/chromatic_character">Chromatic Characters</option>
 		<option value="ysabetwordsmith/death">Death</option>
 		<option value="ysabetwordsmith/desperate_situations">Desperate Situations</option>
 		<option value="ysabetwordsmith/emotions">Emotions</option>
 		<option value="ysabetwordsmith/end_of_the_world">End of the World</option>
+		<option value="ysabetwordsmith/ethnic_groups">Ethnic Groups</option>
 		<option value="ysabetwordsmith/famous_movie_quotes">Famous Movie Quotes</option>
 		<option value="ysabetwordsmith/food">Food</option>
 		<option value="ysabetwordsmith/genres">Genres</option>
@@ -55,9 +64,13 @@
 		<option value="ysabetwordsmith/poetic_terms_and_techniques">Poetic Terms &amp; Techniques</option>
 		<option value="ysabetwordsmith/positive_coping_techniques">Positive Coping Techniques</option>
 		<option value="ysabetwordsmith/setting_tropes">Setting Tropes</option>
+		<option value="ysabetwordsmith/sex_and_romance">Sex &amp; Romance</option>
 		<option value="ysabetwordsmith/superpowers">Superpowers</option>
+		<option value="ysabetwordsmith/swadesh_basic_list">Swadesh Basic List</option>
 		<option value="ysabetwordsmith/themes">Themes</option>
 		<option value="ysabetwordsmith/time_periods">Time Periods</option>
+		<option value="ysabetwordsmith/types_of_family">Types of Family</option>
+		<option value="ysabetwordsmith/worldbuilding">Worldbuilding</option>
 	</optgroup>
 	<optgroup label="Life, lifestyle and living resources">
 		<option value="little_self-care_tasks">Little actions for self-care</option>
@@ -71,7 +84,7 @@
 	$position = 1;
 	$free_space_square = ceil( pow($card_size, 2)/2 );
 	// Set up the HTML
-	$html_string = '<table style="width:auto; display:inline;">'."\r\n\r\n";
+	$html_string = '<table style="width:auto; '.$background_color.' display:inline;">'."\r\n\r\n";
 	for ($y=1; $y<=$card_size; $y++) {
 		$html_string.= '<tr>'."\r\n";
 		for ($x=1; $x<=$card_size; $x++) {

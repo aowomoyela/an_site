@@ -1,0 +1,212 @@
+2014/02/01 11:13:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2014/02/02 02:24:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2014/02/02 11:54:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "about/about".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('about/about')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/about/about/
+---
+2014/02/02 19:47:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2014/02/03 00:29:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2014/02/03 02:33:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "robots.txt".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2014/02/04 02:48:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/04 02:48:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/02/04 02:59:11 [error] [php] Undefined variable: background_color (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/FunController.php:107)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(286): FunController->runAction()
+#1 /home1/owomoyel/yii/framework/web/CController.php(265): FunController->runActionWithFilters()
+#2 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): FunController->run()
+#3 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/fun/bingo_generator
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FunController.php (107)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2014/02/04 03:00:46 [error] [php] preg_match(): No ending delimiter '^' found (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/FunController.php:62)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home1/owomoyel/yii/framework/web/CController.php(286): FunController->runAction()
+#2 /home1/owomoyel/yii/framework/web/CController.php(265): FunController->runActionWithFilters()
+#3 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): FunController->run()
+#4 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/fun/bingo_generator
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FunController.php (62)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2014/02/04 03:01:07 [error] [php] preg_match(): No ending delimiter '^' found (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/FunController.php:62)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home1/owomoyel/yii/framework/web/CController.php(286): FunController->runAction()
+#2 /home1/owomoyel/yii/framework/web/CController.php(265): FunController->runActionWithFilters()
+#3 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): FunController->run()
+#4 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/fun/bingo_generator
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FunController.php (62)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2014/02/04 03:01:19 [error] [php] preg_match(): No ending delimiter '^' found (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/FunController.php:62)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home1/owomoyel/yii/framework/web/CController.php(286): FunController->runAction()
+#2 /home1/owomoyel/yii/framework/web/CController.php(265): FunController->runActionWithFilters()
+#3 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): FunController->run()
+#4 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/fun/bingo_generator
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FunController.php (62)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2014/02/04 03:27:52 [error] [php] Undefined variable: baseUrl (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php:260)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#1 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#3 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#4 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#5 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/manage_bingo_lists
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (260)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2014/02/04 03:28:30 [error] [php] Undefined index: file_path (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php:263)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#1 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#3 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#4 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#5 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/manage_bingo_lists
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (263)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2014/02/04 03:29:03 [error] [php] Undefined index: bingo_list (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php:266)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#1 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#3 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#4 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#5 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/manage_bingo_lists
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (266)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2014/02/04 03:29:54 [error] [php] Undefined index: bingo_list (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php:266)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#1 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#3 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#4 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#5 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/manage_bingo_lists
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (266)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2014/02/04 03:30:57 [error] [php] fopen(/js/fun/bingo_generator/resources/temp_testing.csv): failed to open stream: No such file or directory (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php:273)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#4 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#5 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#7 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/manage_bingo_lists
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (273)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2014/02/04 03:31:22 [error] [php] fopen(/js/fun/bingo_generator/resources/temp_testing.csv): failed to open stream: No such file or directory (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php:272)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#4 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#5 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#7 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/manage_bingo_lists
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (272)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2014/02/04 03:33:47 [error] [php] fopen(/home1/owomoyel/public_html/subdomain_ano/protected/js/fun/bingo_generator/resources/temp_testing.csv): failed to open stream: No such file or directory (/home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php:272)
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(133): AdminController->runAction()
+#2 /home1/owomoyel/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home1/owomoyel/yii/framework/web/filters/CFilterChain.php(130): AdminAuthFilter->filter()
+#4 /home1/owomoyel/yii/framework/web/CController.php(291): CFilterChain->run()
+#5 /home1/owomoyel/yii/framework/web/CController.php(265): AdminController->runActionWithFilters()
+#6 /home1/owomoyel/yii/framework/web/CWebApplication.php(282): AdminController->run()
+#7 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/manage_bingo_lists
+in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (272)
+in /home1/owomoyel/public_html/subdomain_ano/index.php (13)

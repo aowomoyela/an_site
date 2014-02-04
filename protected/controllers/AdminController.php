@@ -250,6 +250,45 @@ class AdminController extends Controller {
 		echo "<p>".$e->getMessage()."</p>"; // Temporary.
 	} } // END public function actionManage_submissions()
 	
+	
+	
+	public function actionManage_bingo_lists() {
+	try {
+		// Switch behaviors based on whether or not this is a form submission.
+		if ( Yii::app()->request->isPostRequest ) {
+			// Handle POST data.
+			$resource_path = Yii::app()->basePath.'/..'.'/js/fun/bingo_generator/resources/';
+			if (true) { //TO-DO: add validation! While not exhausted.
+				$file_name = $_POST['file_name'];
+				$file_path = $file_name.'.csv';
+			}
+			if (true) {
+				$file_contents = $_POST['bingo_list'];
+			}
+			if (true) {
+				$list_title = $_POST['list_title'];
+			}
+			// File functions.
+			$new_file_location = $resource_path.$file_path;
+			$new_file = fopen($new_file_location,"w");
+			fwrite($new_file, $file_contents);
+			fclose($new_file);
+			// Generate the select option.
+			$listing = htmlspecialchars('<option value="'.$file_name.'">'.$list_title.'</option>');
+			// Render the page.
+			$this->render('bingo_csv_management', array(
+				"listing" => $listing,
+			));
+		} else {
+			// Display forms page.
+			$this->render('bingo_csv_management', array(
+			));
+		}
+	} catch  (Exception $e) {
+		// Exception handling.
+		echo "<p>".$e->getMessage()."</p>"; // Temporary.
+	} } // END public function actionManageBingoList()
+	
 }
 
 /***************************/
