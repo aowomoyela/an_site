@@ -37,6 +37,7 @@ class FunController extends Controller
 		$list = '';
 		$use_repeat_values = true;
 		$background_color = 'background-color:#FFFFFF;';
+		$text_color = 'color:#000000;';
 		// Make a random array of numbers 1-75 as filler.
 		$bingo_squares = array();
 		while ( count($bingo_squares) < $num_card_elements) {
@@ -56,14 +57,13 @@ class FunController extends Controller
 			} else {
 				$use_repeat_values = false;
 			}
-			// Some display stuff like background color.
-			if ( $_POST['background'] == 'transparent' ) {
-				$background_color = '';
-			} elseif ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['background']) ) {
-				$background_color = 'background-color:#'.$_POST['background'].';';	
-			} else {
-				$background_color = 'background-color:#FFFFFF;';
-			}
+			// Background color.
+			if ( $_POST['background'] == 'transparent' ) { $background_color = ''; }
+				elseif ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['background']) ) { $background_color = 'background-color:'.$_POST['background'].';'; }
+				else { $background_color = 'background-color:#FFFFFF;'; }
+			// Text color.
+			if ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['color']) ) { $text_color = 'color:'.$_POST['color'].';'; }
+				else { $text_color = 'color:#000000;'; }
 			// Now, handle the actual card elements.
 			$list = strip_tags($_POST['list'], '<a><i><em><strong><b><u><strike>');
 			$list_items = explode(',', $list);
@@ -106,6 +106,7 @@ class FunController extends Controller
 			'num_card_elements'=>$num_card_elements,
 			'use_repeat_values'=>$use_repeat_values,
 			'background_color'=>$background_color,
+			'text_color'=>$text_color,
 		));
 	} catch(Exception $e) {
 		// Stuff goes here, you know the drill

@@ -210,3 +210,11 @@ Stack trace:
 REQUEST_URI=/admin/manage_bingo_lists
 in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/AdminController.php (272)
 in /home1/owomoyel/public_html/subdomain_ano/index.php (13)
+2014/02/04 15:25:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home1/owomoyel/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home1/owomoyel/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home1/owomoyel/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home1/owomoyel/public_html/subdomain_ano/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

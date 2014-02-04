@@ -1,8 +1,12 @@
 <?php
 	$baseUrl = Yii::app()->baseUrl; 
 	$cs = Yii::app()->getClientScript();
+	$cs->registerScriptFile($baseUrl.'/js/colorpicker/js/colorpicker.js');
 	$cs->registerScriptFile($baseUrl.'/js/fun/bingo_generator/list_loader.js');
+	$cs->registerScriptFile($baseUrl.'/js/fun/bingo_generator/color_update.js');
+	$cs->registerCssFile($baseUrl.'/js/colorpicker/css/colorpicker.css');
 	$cs->registerCssFile($baseUrl.'/css/brushed_metal/tipjar.css');
+	$cs->registerCssFile($baseUrl.'/css/brushed_metal/fun/bingo_generator.css');
 ?>
 
 <h2>Let's make you a bingo card!</h2>
@@ -14,13 +18,27 @@
 <?php echo CHtml::beginForm( array('fun/bingo_generator'), 'post', array('id'=>'bingo_generator') ); ?>
 	<textarea id="bingo_list" name="list" cols="94" rows="10"><?php echo $list; ?></textarea><br /><br />
 	
+	<fieldset><legend>Configuration Options</legend>
+	
 	<input type="checkbox" name="use_repeat_values" value="1" <?php if($use_repeat_values){ echo 'checked="checked"'; } ?> />
 		Allow repeated values for lists with fewer than <span class="num_card_elements"><?php echo $num_card_elements; ?></span> items?<br /><br />
+	
+	<table style="width:auto; display:inline; float:left; clear:left;"><tr>
+		<td id="exmaple_color_td" style="border:1px solid #000; height:7em; width:7em; text-align:center;">EXAMPLE</td>
+	</tr></table>
 		
-	<p><label for="background">Background color:</label> <select name="background">
-		<option value="FFFFFF" selected="selected">White</option>
-		<option value="transparent">Transparent</option>
-	</select></p>
+	<br /><p>
+		<label for="background">Background color:</label> 
+		<input type="text" name="background" size="8" id="background_color" class="colorpicker_input" value="#ffffff"/>
+		(Or choose transparent: <input type="checkbox" name="transparent" value="transparent" id="transparent_background" />)
+	</p>
+	
+	<p>
+		<label for="background">Text color:</label> 
+		<input type="text" name="color" size="8" id="text_color" class="colorpicker_input" value="#000000"/>
+	</p>
+	
+	</fieldset><br />
 		
 	<input type="submit" value="Create a bingo card &raquo;" /><br /><br />
 <?php echo CHtml::endForm(); ?>
@@ -84,12 +102,12 @@
 	$position = 1;
 	$free_space_square = ceil( pow($card_size, 2)/2 );
 	// Set up the HTML
-	$html_string = '<table style="width:auto; '.$background_color.' display:inline;">'."\r\n\r\n";
+	$html_string = '<table style="width:auto; display:inline;">'."\r\n\r\n";
 	for ($y=1; $y<=$card_size; $y++) {
 		$html_string.= '<tr>'."\r\n";
 		for ($x=1; $x<=$card_size; $x++) {
 			// X-positioning
-			$html_string.= '<td style="border:1px solid #000; height:10em; width:10em; text-align:center;">';
+			$html_string.= '<td style="border:1px solid #000; height:10em; width:10em; text-align:center; '.$background_color.' '.$text_color.'">';
 			if ($position == $free_space_square) {
 				$html_string.= "FREE SPACE";
 			} elseif ($position < $free_space_square) {
@@ -134,6 +152,7 @@ Again, I can't guarantee that all suggestions will be implemented, but I'll do m
 	<li>The Aarne-Thompson list <a href="http://magistrate.dreamwidth.org/34518.html?thread=135126#cmt135126">doesn't play well with others, or even with itself</a>: 
 		cards generated with it and another list will only include values from the Aarne-Thompson list, and after the initial page generation, the textarea cuts
 		off within the listing for 852.</li>
+	<li>Custom text colors do not apply to linked text, such as the TV Tropes squares.</li>
 </ul>
 
 <?php
