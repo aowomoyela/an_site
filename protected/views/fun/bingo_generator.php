@@ -18,32 +18,9 @@
 <?php echo CHtml::beginForm( array('fun/bingo_generator'), 'post', array('id'=>'bingo_generator') ); ?>
 	<textarea id="bingo_list" name="list" cols="94" rows="10"><?php echo $list; ?></textarea><br /><br />
 	
-	<fieldset><legend>Configuration Options</legend>
-	
-	<input type="checkbox" name="use_repeat_values" value="1" <?php if($use_repeat_values){ echo 'checked="checked"'; } ?> />
-		Allow repeated values for lists with fewer than <span class="num_card_elements"><?php echo $num_card_elements; ?></span> items?<br /><br />
-	
-	<table style="width:auto; display:inline; float:left; clear:left;"><tr>
-		<td id="exmaple_color_td" style="border:1px solid #000; height:7em; width:7em; text-align:center;">EXAMPLE</td>
-	</tr></table>
-		
-	<br /><p>
-		<label for="background">Background color:</label> 
-		<input type="text" name="background" size="8" id="background_color" class="colorpicker_input" value="#ffffff"/>
-		(Or choose transparent: <input type="checkbox" name="transparent" value="transparent" id="transparent_background" />)
-	</p>
-	
-	<p>
-		<label for="background">Text color:</label> 
-		<input type="text" name="color" size="8" id="text_color" class="colorpicker_input" value="#000000"/>
-	</p>
-	
-	</fieldset><br />
-		
-	<input type="submit" value="Create a bingo card &raquo;" /><br /><br />
-<?php echo CHtml::endForm(); ?>
 
-<p><strong>Or choose one or more of these:</strong></p>
+<fieldset><legend>Or choose one or more of these:</legend>
+<p>(You can also edit these lists in the editor above, after loading them.)</p>
 <p><select name="list_loader" id="list_loader" multiple="multiple" size="10">
 	<option value="empty">(empty)</option>
 	<optgroup label="Historical fiction-writing prompts">
@@ -95,7 +72,34 @@
 		<option value="little_housekeeping_tasks">Little housekeeping tasks</option>
 	</optgroup>
 </select></p>
-<p>(You can also edit these lists in the editor above, after loading them.)</p>
+</fieldset>
+	
+	
+	<fieldset><legend>Configuration Options</legend>
+	
+	<input type="checkbox" name="use_repeat_values" value="1" <?php if($use_repeat_values){ echo 'checked="checked"'; } ?> />
+		Allow repeated values for lists with fewer than <span class="num_card_elements"><?php echo $num_card_elements; ?></span> items?<br /><br />
+	
+	<table style="width:auto; display:inline; float:left; clear:left;"><tr>
+		<td id="exmaple_color_td" style="border:1px solid #000; height:7em; width:7em; text-align:center;">EXAMPLE</td>
+	</tr></table>
+		
+	<br /><p>
+		<label for="background">Background color:</label> 
+		<input type="text" name="background" size="8" id="background_color" class="colorpicker_input" value="#ffffff"/>
+		(Or choose transparent: <input type="checkbox" name="transparent" value="transparent" id="transparent_background" />)
+	</p>
+	
+	<p>
+		<label for="background">Text color:</label> 
+		<input type="text" name="color" size="8" id="text_color" class="colorpicker_input" value="#000000"/>
+	</p>
+	
+	</fieldset><br />
+		
+	<input type="submit" value="Create a bingo card &raquo;" /><br /><br />
+<?php echo CHtml::endForm(); ?>
+
 
 <h3 style="margin-top:3em;"><?php echo $message; ?></h3>
 <?php

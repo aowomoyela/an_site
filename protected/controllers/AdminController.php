@@ -102,7 +102,11 @@ class AdminController extends Controller {
 				}
 
 				foreach ( $_POST['Story'] as $pskey => $psval ) {
-					$story->set($pskey, $psval);					
+					if ($psval == '' || is_null($psval)) {
+						$story->set($pskey, new CDbExpression('NULL'));
+					} else {
+						$story->set($pskey, $psval);
+					}
 				}
 
 				$story->save(); // Yii is trying to use INSERT on all save queries for some reason. >_<

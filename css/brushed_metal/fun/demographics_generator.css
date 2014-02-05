@@ -9,7 +9,7 @@ fieldset + fieldset {
 
 legend {
 	border:1px solid #000;
-	padding: .15em;
+	padding: .15em .25em;
 	font-weight: bold;
 }
 
