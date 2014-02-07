@@ -58,7 +58,7 @@ class FunController extends Controller
 			if ( in_array($_POST['card_size'], array(3,5,7)) ) {
 				$card_size = $_POST['card_size'];
 			}
-			if ($card_size == 7) { $cell_size = '8em;'; }
+			if ($card_size == 7) { $cell_size = '8em'; }
 			$num_card_elements = pow($card_size, 2)-1; // A square with a free space in the middle.
 			if ( isset($_POST['use_repeat_values']) ) {
 				$use_repeat_values = true;
