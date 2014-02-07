@@ -24,7 +24,7 @@
 <p><select name="list_loader" id="list_loader" multiple="multiple" size="10">
 	<option value="empty">(empty)</option>
 	<optgroup label="Historical fiction-writing prompts">
-		<option value="aarne-thompson_fairytale_classification">Aarne-Thompson fairytale classification (with numbers &amp; examples)</option>
+		<option value="aarne-thompson_fairytale_classification_1">Aarne-Thompson fairytale classification (with numbers &amp; examples)</option>
 		<option value="polti_dramatic_situations">Georges Polti's 19th-century list of 36 dramatic situations</option>
 		<option value="robert_plutchik_emotion_list">Robert Plutchik's 1980 list of emotions</option>
 	</optgroup>
@@ -153,9 +153,6 @@ Again, I can't guarantee that all suggestions will be implemented, but I'll do m
 <h3>Known bugs:</h3>
 <ul>
 	<li>Commas inside values of pre-made lists always appear as delimiters when loaded, no matter how well-escaped they are.</li>
-	<li>The Aarne-Thompson list <a href="http://magistrate.dreamwidth.org/34518.html?thread=135126#cmt135126">doesn't play well with others, or even with itself</a>: 
-		cards generated with it and another list will only include values from the Aarne-Thompson list, and after the initial page generation, the textarea cuts
-		off within the listing for 852.</li>
 	<li>Custom text colors do not apply to linked text, such as the TV Tropes squares.</li>
 </ul>
 
