@@ -19,3 +19,5 @@
 [04-Feb-2014 16:04:44 America/Denver] PHP Parse error:  syntax error, unexpected '$list' (T_VARIABLE) in /home1/owomoyel/public_html/subdomain_ano/protected/controllers/FunController.php on line 70
 [04-Feb-2014 21:04:48 America/Denver] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home1/owomoyel/public_html/subdomain_ano/protected/models/Story.php on line 174
 [04-Feb-2014 21:04:51 America/Denver] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home1/owomoyel/public_html/subdomain_ano/protected/models/Story.php on line 174
+[07-Feb-2014 01:28:03 America/Denver] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home1/owomoyel/public_html/subdomain_ano/protected/views/fun/bingo_generator.php on line 82
+[07-Feb-2014 01:28:05 America/Denver] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home1/owomoyel/public_html/subdomain_ano/protected/views/fun/bingo_generator.php on line 82

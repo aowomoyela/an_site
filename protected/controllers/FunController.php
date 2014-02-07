@@ -36,6 +36,8 @@ class FunController extends Controller
 		$delimiter = ',';
 		$list = '';
 		$use_repeat_values = true;
+		// Mechanics done.  Let's look at some aesthetics.
+		$cell_size = '10em';
 		$background_color = 'background-color:#FFFFFF;';
 		$background_hex = '#FFFFFF';
 		$text_color = 'color:#000000;';
@@ -52,10 +54,12 @@ class FunController extends Controller
 		}
 		// See if this is a POST request or not.
 		if ( Yii::app()->request->isPostRequest ) {
-			// Any mechanics that need to be handled get handled here.
-			if ( $card_size%2 == 0 || $card_size > 7 ) {
-				$card_size = 5;
+			// Any mechanics that need to be handled get handled here. Such as... card size!
+			if ( in_array($_POST['card_size'], array(3,5,7)) ) {
+				$card_size = $_POST['card_size'];
 			}
+			if ($card_size == 7) { $cell_size = '8em;'; }
+			$num_card_elements = pow($card_size, 2)-1; // A square with a free space in the middle.
 			if ( isset($_POST['use_repeat_values']) ) {
 				$use_repeat_values = true;
 			} else {
@@ -126,6 +130,7 @@ class FunController extends Controller
 			'card_size'=>$card_size,
 			'num_card_elements'=>$num_card_elements,
 			'use_repeat_values'=>$use_repeat_values,
+			'cell_size'=>$cell_size,
 			'background_color'=>$background_color,
 			'text_color'=>$text_color,
 			'border_color'=>$border_color,

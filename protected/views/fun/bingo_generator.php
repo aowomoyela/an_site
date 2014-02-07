@@ -4,6 +4,7 @@
 	$cs->registerScriptFile($baseUrl.'/js/colorpicker/js/colorpicker.js');
 	$cs->registerScriptFile($baseUrl.'/js/fun/bingo_generator/list_loader.js');
 	$cs->registerScriptFile($baseUrl.'/js/fun/bingo_generator/color_update.js');
+	$cs->registerScriptFile($baseUrl.'/js/fun/bingo_generator/size_update.js');
 	$cs->registerCssFile($baseUrl.'/js/colorpicker/css/colorpicker.css');
 	$cs->registerCssFile($baseUrl.'/css/brushed_metal/tipjar.css');
 	$cs->registerCssFile($baseUrl.'/css/brushed_metal/fun/bingo_generator.css');
@@ -85,7 +86,7 @@
 	</tr></table>
 		
 	<p>
-		<label for="background">Background color:</label> 
+		<label class="color_config" for="background">Background color:</label> 
 		<input type="text" name="background" size="8" id="background_color" class="colorpicker_input" value="<?php echo $background_hex; ?>"/>
 		(Or choose transparent: <input type="checkbox" name="transparent" value="transparent" id="transparent_background" <?php
 			if ($background_hex == "transparent") { echo ' checked="checked"'; }
@@ -93,13 +94,20 @@
 	</p>
 	
 	<p>
-		<label for="text_color">Text color:</label> 
+		<label class="color_config" for="text_color">Text color:</label> 
 		<input type="text" name="color" size="8" id="text_color" class="colorpicker_input" value="<?php echo $text_hex; ?>"/>
 	</p>
 	
 	<p>
-		<label for="border_color">Border color:</label> 
+		<label class="color_config" for="border_color">Border color:</label> 
 		<input type="text" name="border_color" size="8" id="border_color" class="colorpicker_input" value="<?php echo $border_hex; ?>"/>
+	</p>
+	
+	<p style="clear:both;">
+		<label for="card_size">Card size:</label>
+		<input type="radio" name="card_size" class="card_size" id="card_size_3" value="3"<?php if ($card_size == 3) {echo ' checked="checked"';} ?> /> <span>3x3</span> &emsp;&emsp;
+		<input type="radio" name="card_size" class="card_size" id="card_size_5" value="5"<?php if ($card_size == 5) {echo ' checked="checked"';} ?> /> <span>5x5</span> &emsp;&emsp;
+		<input type="radio" name="card_size" class="card_size" id="card_size_7" value="7"<?php if ($card_size == 7) {echo ' checked="checked"';} ?> /> <span>7x7</span>
 	</p>
 	
 	</fieldset><br />
@@ -118,7 +126,7 @@
 		$html_string.= '<tr>'."\r\n";
 		for ($x=1; $x<=$card_size; $x++) {
 			// X-positioning
-			$html_string.= '<td style="'.$border_color.' height:10em; width:10em; text-align:center; '.$background_color.' '.$text_color.'">';
+			$html_string.= '<td style="'.$border_color.' height:'.$cell_size.'; width:'.$cell_size.'; text-align:center; '.$background_color.' '.$text_color.'">';
 			if ($position == $free_space_square) {
 				$html_string.= "FREE SPACE";
 			} elseif ($position < $free_space_square) {

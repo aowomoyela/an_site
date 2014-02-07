@@ -18,6 +18,15 @@ fieldset div {
 }
 
 label {
+	float:none;
+	border:none;
+	margin:0 0 0 1em;
+	padding:0;
+	text-align:auto;
+	width: auto;
+}
+
+label.color_config {
 	float:left;
 	border-right: 1px solid #000;
 	border-bottom: 1px solid #000;
