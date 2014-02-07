@@ -87,7 +87,9 @@
 	<br /><p>
 		<label for="background">Background color:</label> 
 		<input type="text" name="background" size="8" id="background_color" class="colorpicker_input" value="<?php echo $background_hex; ?>"/>
-		(Or choose transparent: <input type="checkbox" name="transparent" value="transparent" id="transparent_background" />)
+		(Or choose transparent: <input type="checkbox" name="transparent" value="transparent" id="transparent_background" <?php
+			if ($background_hex == "transparent") { echo ' checked="checked"'; }
+		?> />)
 	</p>
 	
 	<p>
