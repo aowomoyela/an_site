@@ -86,13 +86,13 @@
 		
 	<br /><p>
 		<label for="background">Background color:</label> 
-		<input type="text" name="background" size="8" id="background_color" class="colorpicker_input" value="#ffffff"/>
+		<input type="text" name="background" size="8" id="background_color" class="colorpicker_input" value="<?php echo $background_hex; ?>"/>
 		(Or choose transparent: <input type="checkbox" name="transparent" value="transparent" id="transparent_background" />)
 	</p>
 	
 	<p>
 		<label for="background">Text color:</label> 
-		<input type="text" name="color" size="8" id="text_color" class="colorpicker_input" value="#000000"/>
+		<input type="text" name="color" size="8" id="text_color" class="colorpicker_input" value="<?php echo $text_hex; ?>"/>
 	</p>
 	
 	</fieldset><br />

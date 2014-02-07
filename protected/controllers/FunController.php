@@ -37,7 +37,9 @@ class FunController extends Controller
 		$list = '';
 		$use_repeat_values = true;
 		$background_color = 'background-color:#FFFFFF;';
+		$background_hex = '#FFFFFF';
 		$text_color = 'color:#000000;';
+		$text_hex = '#000000';
 		// Make a random array of numbers 1-75 as filler.
 		$bingo_squares = array();
 		while ( count($bingo_squares) < $num_card_elements) {
@@ -58,12 +60,23 @@ class FunController extends Controller
 				$use_repeat_values = false;
 			}
 			// Background color.
-			if ( $_POST['background'] == 'transparent' ) { $background_color = ''; }
-				elseif ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['background']) ) { $background_color = 'background-color:'.$_POST['background'].';'; }
-				else { $background_color = 'background-color:#FFFFFF;'; }
+			if ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['background']) ) {
+				$background_color = 'background-color:'.$_POST['background'].';';
+				$background_hex = $_POST['background'];
+			}
+			// Background transparency and CSS attribute.
+			if ( $_POST['background'] == 'transparent' ) {
+				$background_color = '';
+				$background_hex = 'transparent';
+			} else {
+				$background_color = 'background-color:'.$background_hex.';';
+			}
 			// Text color.
-			if ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['color']) ) { $text_color = 'color:'.$_POST['color'].';'; }
-				else { $text_color = 'color:#000000;'; }
+			if ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['color']) ) {
+				$text_hex = $_POST['color'];
+				$text_color = 'color:'.$_POST['color'].';';
+			}
+			$text_color = 'color:'.$text_hex.';';
 			// Now, handle the actual card elements.
 			$list = strip_tags($_POST['list'], '<a><i><em><strong><b><u><strike>');
 			$list_items = explode(',', $list);
@@ -107,6 +120,8 @@ class FunController extends Controller
 			'use_repeat_values'=>$use_repeat_values,
 			'background_color'=>$background_color,
 			'text_color'=>$text_color,
+			'background_hex'=>$background_hex,
+			'text_hex'=>$text_hex,
 		));
 	} catch(Exception $e) {
 		// Stuff goes here, you know the drill
