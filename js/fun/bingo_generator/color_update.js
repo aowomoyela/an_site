@@ -8,6 +8,9 @@ $(function() {
 	var preloaded_text_hex = $('#text_color').val();
 	$('#exmaple_color_td').css('color', preloaded_text_hex);
 	
+	var preloaded_border_hex = $('#border_color').val();
+	$('#exmaple_color_td').css('border', '1px solid ' + preloaded_border_hex);
+	
 	// Change the background input value and Example TD background to reflect ColorPicker selections.
 	$('#background_color').attr('readonly', true).ColorPicker({
 		color: '#ffffff',
@@ -24,6 +27,15 @@ $(function() {
 		onChange: function (hsb, hex, rgb) {
 			$('#text_color').val('#' + hex);
 			$('#exmaple_color_td').css('color', '#' + hex);
+		}
+	});
+	
+	// Change the border input value and Example TD border color to reflect ColorPicker selections.
+	$('#border_color').attr('readonly', true).ColorPicker({
+		color: '#000000',
+		onChange: function (hsb, hex, rgb) {
+			$('#border_color').val('#' + hex);
+			$('#exmaple_color_td').css('border', '1px solid #' + hex);
 		}
 	});
 	

@@ -81,10 +81,10 @@
 		Allow repeated values for lists with fewer than <span class="num_card_elements"><?php echo $num_card_elements; ?></span> items?<br /><br />
 	
 	<table style="width:auto; display:inline; float:left; clear:left;"><tr>
-		<td id="exmaple_color_td" style="border:1px solid #000; height:7em; width:7em; text-align:center;">EXAMPLE</td>
+		<td id="exmaple_color_td" style="border:1px solid #000; height:7.1em; width:7.1em; text-align:center;">EXAMPLE</td>
 	</tr></table>
 		
-	<br /><p>
+	<p>
 		<label for="background">Background color:</label> 
 		<input type="text" name="background" size="8" id="background_color" class="colorpicker_input" value="<?php echo $background_hex; ?>"/>
 		(Or choose transparent: <input type="checkbox" name="transparent" value="transparent" id="transparent_background" <?php
@@ -93,8 +93,13 @@
 	</p>
 	
 	<p>
-		<label for="background">Text color:</label> 
+		<label for="text_color">Text color:</label> 
 		<input type="text" name="color" size="8" id="text_color" class="colorpicker_input" value="<?php echo $text_hex; ?>"/>
+	</p>
+	
+	<p>
+		<label for="border_color">Border color:</label> 
+		<input type="text" name="border_color" size="8" id="border_color" class="colorpicker_input" value="<?php echo $border_hex; ?>"/>
 	</p>
 	
 	</fieldset><br />
@@ -113,7 +118,7 @@
 		$html_string.= '<tr>'."\r\n";
 		for ($x=1; $x<=$card_size; $x++) {
 			// X-positioning
-			$html_string.= '<td style="border:1px solid #000; height:10em; width:10em; text-align:center; '.$background_color.' '.$text_color.'">';
+			$html_string.= '<td style="'.$border_color.' height:10em; width:10em; text-align:center; '.$background_color.' '.$text_color.'">';
 			if ($position == $free_space_square) {
 				$html_string.= "FREE SPACE";
 			} elseif ($position < $free_space_square) {

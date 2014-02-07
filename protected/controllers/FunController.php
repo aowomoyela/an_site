@@ -40,6 +40,8 @@ class FunController extends Controller
 		$background_hex = '#FFFFFF';
 		$text_color = 'color:#000000;';
 		$text_hex = '#000000';
+		$border_color = 'border:1px solid #000000;';
+		$border_hex = '#000000';
 		// Make a random array of numbers 1-75 as filler.
 		$bingo_squares = array();
 		while ( count($bingo_squares) < $num_card_elements) {
@@ -77,6 +79,12 @@ class FunController extends Controller
 				$text_color = 'color:'.$_POST['color'].';';
 			}
 			$text_color = 'color:'.$text_hex.';';
+			// Border color.
+			if ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['border_color']) ) {
+				$border_hex = $_POST['border_color'];
+				$border_color = 'border:1px solid '.$_POST['border_color'].';';
+			}
+			$border_color = 'border:1px solid '.$border_hex.';';
 			// Now, handle the actual card elements.
 			$list = strip_tags($_POST['list'], '<a><i><em><strong><b><u><strike>');
 			$list_items = explode(',', $list);
@@ -120,8 +128,10 @@ class FunController extends Controller
 			'use_repeat_values'=>$use_repeat_values,
 			'background_color'=>$background_color,
 			'text_color'=>$text_color,
+			'border_color'=>$border_color,
 			'background_hex'=>$background_hex,
 			'text_hex'=>$text_hex,
+			'border_hex'=>$border_hex,
 		));
 	} catch(Exception $e) {
 		// Stuff goes here, you know the drill
