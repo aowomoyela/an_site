@@ -32,6 +32,11 @@
 	<optgroup label="TVTropes">
 		<option value="tvtropes/horror_tropes">Horror Tropes (fetched 8 January 2014)</option>
 	</optgroup>
+	<optgroup label="Worlds Without End speculative genre classifications">
+		<option value="worlds_without_end_fantasy">Fantasy subgenres</option>
+		<option value="worlds_without_end_horror">Horror gubgenres</option>
+		<option value="worlds_without_end_sf">Science Fiction subgenres</option>
+	</optgroup>
 	<optgroup label="Ysabetwordsmith's miscellaneous prompts">
 		<option value="ysabetwordsmith/art_media">Art Media</option>
 		<option value="ysabetwordsmith/asexuality_and_demisexuality">Asexuality &amp; Demisexuality</option>
