@@ -110,6 +110,22 @@
 		<input type="radio" name="card_size" class="card_size" id="card_size_7" value="7"<?php if ($card_size == 7) {echo ' checked="checked"';} ?> /> <span>7x7</span>
 	</p>
 	
+	<p>
+		<label for="center_space">Center space:</label>
+		<input type="radio" name="center_space" class="center_space" id="center_space_free" value="free"<?php
+			if ($center_space == "free") {echo ' checked="checked"';}
+			?> /> <span>FREE SPACE</span> &emsp;&emsp;
+		<input type="radio" name="center_space" class="center_space" id="center_space_wild" value="wild"<?php
+			if ($center_space == "wild") {echo ' checked="checked"';}
+			?> /> <span>WILD CARD</span> &emsp;&emsp;
+		<input type="radio" name="center_space" class="center_space" id="center_space_normal" value="normal"<?php
+			if ($center_space == "normal") {echo ' checked="checked"';}
+			?> /> <span>(Normal prompt)</span> &emsp;&emsp;
+		<input type="radio" name="center_space" class="center_space" id="center_space_other" value="other"<?php
+			if ($center_space == "other") {echo ' checked="checked"';}
+			?> /> <span>(Other):</span> <input type="text" id="center_space_other" name="center_space_other" value="<?php echo $center_space_other; ?>">
+	</p>
+	
 	</fieldset><br />
 		
 	<input type="submit" value="Create a bingo card &raquo;" /><br /><br />
@@ -127,15 +143,24 @@
 		for ($x=1; $x<=$card_size; $x++) {
 			// X-positioning
 			$html_string.= '<td style="'.$border_color.' height:'.$cell_size.'; width:'.$cell_size.'; text-align:center; '.$background_color.' '.$text_color.'">';
-			if ($position == $free_space_square) {
-				$html_string.= "FREE SPACE";
-			} elseif ($position < $free_space_square) {
+			
+			if ( in_array ($center_space, array('free', 'wild', 'other')) ) {
+				// Handle TD generation for cards with special center squares.
+				if ($position == $free_space_square) {
+					$html_string.= $center_space_text;
+				} elseif ($position < $free_space_square) {
+					$index = $position - 1;
+					$html_string.= trim($bingo_squares[$index]);
+				} else {
+					$index = $position - 2;
+					$html_string.= trim($bingo_squares[$index]);
+				}
+			} else {
+				//These cards have normal prompts as their center squares.
 				$index = $position - 1;
 				$html_string.= trim($bingo_squares[$index]);
-			} else {
-				$index = $position - 2;
-				$html_string.= trim($bingo_squares[$index]);
 			}
+			
 			$position++;
 			$html_string.= '</td>'."\r\n";
 		}

@@ -38,6 +38,9 @@ class FunController extends Controller
 		$use_repeat_values = true;
 		// Mechanics done.  Let's look at some aesthetics.
 		$cell_size = '10em';
+		$center_space = 'free';
+		$center_space_other = '';
+		$center_space_text = 'FREE SPACE';
 		$background_color = 'background-color:#FFFFFF;';
 		$background_hex = '#FFFFFF';
 		$text_color = 'color:#000000;';
@@ -54,42 +57,61 @@ class FunController extends Controller
 		}
 		// See if this is a POST request or not.
 		if ( Yii::app()->request->isPostRequest ) {
-			// Any mechanics that need to be handled get handled here. Such as... card size!
+			// Any mechanics that need to be handled get handled here. Such as... center space text! (Impacts number of elements.)
+			if ( in_array($_POST['center_space'], array('free', 'wild', 'normal', 'other')) ) {
+				$center_space = $_POST['center_space'];
+			}
+			switch ($center_space) {
+				case 'wild': $center_space_text = "WILD CARD"; break;
+				case 'other':
+					$center_space_text = strip_tags($_POST['center_space_other'], '<a><i><em><strong><b><u><strike>');
+					$center_space_other = $center_space_text;
+					break;
+				case 'free': default: $center_space_text = "FREE SPACE"; break;
+			}
+			// Card size / number of elements!
+			// // Validate for allowed card sizes.
 			if ( in_array($_POST['card_size'], array(3,5,7)) ) {
 				$card_size = $_POST['card_size'];
 			}
+			// // Reduce cell size for gigantic cards.
 			if ($card_size == 7) { $cell_size = '8em'; }
-			$num_card_elements = pow($card_size, 2)-1; // A square with a free space in the middle.
+			// // Determine how many elements are needed.
+			if ($center_space == 'normal') {
+				$num_card_elements = pow($card_size, 2);
+			} else {
+				$num_card_elements = pow($card_size, 2)-1; // One of the spaces is already provided.
+			}
 			if ( isset($_POST['use_repeat_values']) ) {
 				$use_repeat_values = true;
 			} else {
 				$use_repeat_values = false;
 			}
-			// Background color.
+			// Background color!
 			if ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['background']) ) {
 				$background_color = 'background-color:'.$_POST['background'].';';
 				$background_hex = $_POST['background'];
 			}
-			// Background transparency and CSS attribute.
+			// Background transparency and CSS attribute!
 			if ( $_POST['background'] == 'transparent' ) {
 				$background_color = '';
 				$background_hex = 'transparent';
 			} else {
 				$background_color = 'background-color:'.$background_hex.';';
 			}
-			// Text color.
+			// Text color!
 			if ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['color']) ) {
 				$text_hex = $_POST['color'];
 				$text_color = 'color:'.$_POST['color'].';';
 			}
 			$text_color = 'color:'.$text_hex.';';
-			// Border color.
+			// Border color!
 			if ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['border_color']) ) {
 				$border_hex = $_POST['border_color'];
 				$border_color = 'border:1px solid '.$_POST['border_color'].';';
 			}
 			$border_color = 'border:1px solid '.$border_hex.';';
-			// Now, handle the actual card elements.
+			// Now, we FINALLY handle the actual card elements.
 			$list = strip_tags($_POST['list'], '<a><i><em><strong><b><u><strike>');
 			$list_items = explode(',', $list);
 			$list_items = array_filter(array_map('trim', $list_items));
@@ -137,6 +159,9 @@ class FunController extends Controller
 			'background_hex'=>$background_hex,
 			'text_hex'=>$text_hex,
 			'border_hex'=>$border_hex,
+			'center_space'=>$center_space,
+			'center_space_text'=>$center_space_text,
+			'center_space_other'=>$center_space_other,
 		));
 	} catch(Exception $e) {
 		// Stuff goes here, you know the drill
