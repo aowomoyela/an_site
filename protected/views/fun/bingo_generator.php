@@ -196,9 +196,27 @@ Again, I can't guarantee that all suggestions will be implemented, but I'll do m
 <p>Bug reports, unsurprisingly, should also go there.</p>
 
 <h3>Known bugs:</h3>
-<ul>
+<ul id="bugs_list">
 	<li>Commas inside values of pre-made lists always appear as delimiters when loaded, no matter how well-escaped they are.</li>
 	<li>Custom text colors do not apply to linked text, such as the TV Tropes squares.</li>
+</ul>
+
+<h2 class="section" style="margin-top:3em;">Acknowledgements</h2>
+
+<p>Thanks are owed to the following people, websites, and entities, among others:</p>
+
+<ul id="acknowledgements_list">
+	<li>Wikipedia, for a number of lists, including the <a href="http://en.wikipedia.org/wiki/Aarne%E2%80%93Thompson_classification_system">Aarne-Thompson</a>.</li>
+	<li>Worlds Without End, for <a href="https://www.worldswithoutend.com/resources_sub-genres.asp">their speculative subgenre lists</a>.</li>
+	<li><span style='white-space: nowrap;'><a href='http://ysabetwordsmith.dreamwidth.org/profile'><img src='http://www.dreamwidth.org/img/silk/identity/user.png' alt='[personal profile] ' width='17' height='17' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' /></a><a href='http://ysabetwordsmith.dreamwidth.org/'><b>ysabetwordsmith</b></a></span>,
+		for compiling a ton of lists, for promoting this page to a lot of people, and for creating the community 
+		<span style='white-space: nowrap;'><a href='http://allbingo.dreamwidth.org/profile'><img src='http://www.dreamwidth.org/img/silk/identity/community.png' alt='[community profile] ' width='16' height='16' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' /></a><a href='http://allbingo.dreamwidth.org/'><b>allbingo</b></a></span>
+		to support creative uses of bingo tables.
+	</li>
+	<li>All the people who have pointed out bugs, suggested improvements, donated, and expressed enthusiasm for what was originally just a fun little project
+		to burn some time one evening. This page would have stopped at a 5x5, load-your-own-lists, no-customization widget if not for the infectious excitement
+		of creative folks. &hearts;
+	</li>
 </ul>
 
 <?php

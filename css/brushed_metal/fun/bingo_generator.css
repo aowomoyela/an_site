@@ -35,3 +35,7 @@ label.color_config {
 	text-align:right;
 	width: 10em;
 }
+
+ul#acknowledgements_list li {
+	margin: .75em 0;
+}
