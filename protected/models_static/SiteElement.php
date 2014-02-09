@@ -50,12 +50,19 @@
 					);
 				break;
 				
-				case 'admin':
+				case 'admin_fiction':
 					return array(
 						'items'=>array(
 							array( 'label'=>'Edit Stories', 'url'=>array('/admin/edit_story') ),
 							array( 'label'=>'Manage Submissions', 'url'=>array('/admin/manage_submissions') ),
-							//array( 'label'=>'Patreon', 'url'=>array('/fiction/patreon') ),
+						),
+					);
+				break;
+				
+				case 'admin_fun':
+					return array(
+						'items'=>array(
+							array( 'label'=>'Edit Stories', 'url'=>array('/admin/manage_bingo_lists') ),
 						),
 					);
 				break;

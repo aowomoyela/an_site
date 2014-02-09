@@ -12,7 +12,9 @@
 	}
 	
 	if ( isset($listing) ) {
-		echo '<input type="text" name="listing" value="'.$listing.'" size="50"/>';
+		echo '<h2>Here\'s the option listing: </h2>';
+		echo '<input type="text" name="listing" size="100" value="'.$listing.'" size="50"/>';
+		echo '<br /><hr /><br />';
 	}
 	
 	echo CHtml::beginForm( array('admin/manage_bingo_lists'), 'post', array('id'=>'edit_story_form') );

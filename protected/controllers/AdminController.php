@@ -47,8 +47,12 @@ class AdminController extends Controller {
 
 	public function actionIndex() {
 		// Landing page.
-		$secondary_navigation = SiteElement::get_secondary_nav_array('admin');
-		$this->render('index', array('secondary_navigation'=>$secondary_navigation));
+		$fiction_adm_nav = SiteElement::get_secondary_nav_array('admin_fiction');
+		$fun_adm_nav = SiteElement::get_secondary_nav_array('admin_fun');
+		$this->render('index', array(
+			'fiction_adm_nav'=>$fiction_adm_nav,
+			'fun_adm_nav'=>$fun_adm_nav,
+		));
 	}
 	
 	
