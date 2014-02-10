@@ -199,6 +199,10 @@ div.story_catalog_block {
 		margin:0 0 1em 2.5em;
 	}
 
+	div.story_catalog_block blockquote.story_catalog_pullquote em {
+		text-decoration:none;
+	}
+
 	div.story_catalog_block div.story_link {
 		margin:0 0 .5em 2.5em;
 		padding: 0 0 0 20px;
