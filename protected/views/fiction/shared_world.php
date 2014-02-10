@@ -8,7 +8,7 @@ $baseUrl = Yii::app()->baseUrl;
 	echo '</div>'."\r\n";
 ?>
 
-<blockquote>
+<blockquote class="license">
 	<p>
 		<?php echo SiteElement::get_license('shared_worlds'); ?>
 	</p>

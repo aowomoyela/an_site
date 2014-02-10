@@ -192,8 +192,8 @@ $license = <<<EOT
 		<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_GB">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 	
 		Derivative, <a href="https://transformativeworks.org/what-do-you-mean-transformative-work">transformative</a> creative works, including but not limited to 
-		fanfiction and fanart, are exempt from the non-commercial clause, but must also be licensed 
-		<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_GB">CC BY NC SA</a> <em>and</em> include this exception.
+		fanfiction and fanart, are exempt from the non-commercial clause, <em>provided that</em> they are released under an identical license 
+		(<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_GB">CC-BY-NC-SA</a>) <em>which includes</em> this exception.
 EOT;
 				break;
 				

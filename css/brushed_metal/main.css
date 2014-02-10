@@ -245,6 +245,26 @@ h2.section {
 		border-bottom:1px solid #F00;
 	}
 
+blockquote em {
+	text-decoration:underline;
+}
+
+	blockquote.license {
+
+	}
+
+	blockquote.license a {
+		text-decoration:none;
+	}
+
+	blockquote.license a:hover{
+		text-decoration:underline;
+	}
+
+/*********/
+/* . . . */
+/*********/
+
 div.flash-error, div.flash-notice, div.flash-success {
 	padding:.8em;
 	margin-bottom:1em;
