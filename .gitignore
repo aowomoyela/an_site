@@ -1,3 +1,5 @@
+.htaccess
+.htpasswd
 images/site
 views/admin/debug.php
 error_log
