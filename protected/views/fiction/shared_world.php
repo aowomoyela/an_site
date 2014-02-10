@@ -10,14 +10,7 @@ $baseUrl = Yii::app()->baseUrl;
 
 <blockquote>
 	<p>
-		Merigoa isn’t the America you’re used to. For one thing, New York is New Amsterdam, the FBI is the FIA, and you’re more likely to catch celebrities 
-		singing at the World Series than the Superbowl. For another, there are demons.
-	</p>
-	
-	<p>
-		As one of Merigoa’s most respected, most feared, and most empowered law enforcement agencies, Demonology, Perfidy and Security is tasked with mitigating 
-		the demonic threat and prosecuting those who collude with demons. But the job takes agents of the DPS into close contact with demons, themselves, and to 
-		the ragged edges of law, propriety, and personal conviction.
+		<?php echo SiteElement::get_license('shared_worlds'); ?>
 	</p>
 </blockquote>
 

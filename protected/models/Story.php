@@ -170,7 +170,8 @@ class Story extends CActiveRecord
 		$display_date = date( 'F Y', strtotime($this->publication_date) );
 		if ( isset($this->story_market) ) { $display_market = $this->story_market->title; } else { $display_market = ''; }
 		// Display the actual header.
-		$block.= "<h2>".$display_title.' &mdash; '.$display_market;
+		$block.= "<h2>".$display_title;
+		if ( $display_market != '' && !is_null($display_market) ) { $block.= ' &mdash; '.$display_market; }
 		if ( !is_null($this->publication_date) && $this->publication_date!='0000-00-00' && $this->publication_date!='' ) {
 			$block.= ', '.$display_date;
 		}

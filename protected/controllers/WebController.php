@@ -19,7 +19,10 @@ class WebController extends Controller
 
 
 	public function actionIndex() {
-		$this->render('index');
+		$secondary_navigation = SiteElement::get_secondary_nav_array('web');
+		$this->render('index', array(
+			'secondary_navigation'=>$secondary_navigation,
+		));
 	}
 
 	public function actionResume() {

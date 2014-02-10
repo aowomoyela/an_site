@@ -1,3 +1,9 @@
+<?php
+	echo '<div id="submenu_horizontal">'."\r\n";
+		$this->widget('zii.widgets.CMenu', $secondary_navigation);
+	echo '</div>'."\r\n";
+?>
+
 <p>
 	I got my first-ever job as a web designer, building accessible websites with PHP and CSS. Then I taught myself PHP and MySQL 
 	and built an office intranet, billing system, and project management portal cutom-tailored to my office's needs. 

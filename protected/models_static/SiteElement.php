@@ -12,12 +12,9 @@
 					array('label'=>'Home', 'url'=>array('/home')),
 					array('label'=>'Web', 'url'=>array('/web/index')),
 					array('label'=>'Fiction', 'url'=>array('/fiction/index')),
-					array('label'=>'Web Original Fiction', 'url'=>array('/fiction/web_original')),
+					array('label'=>'Fun', 'url'=>array('/fun/index')),
 					array('label'=>'Blog', 'url'=>'http://magistrate.dreamwidth.org/'),
 					array('label'=>'About', 'url'=>array('/site/about',)),
-					array('label'=>'Resume', 'url'=>array('/web/resume')),
-					array('label'=>'GitHub', 'url'=>'https://github.com/aowomoyela'),
-					array('label'=>'Fun', 'url'=>array('/fun/index')),
 				),
 			);
 			
@@ -40,16 +37,8 @@
 
 		public static function get_secondary_nav_array($section) {
 			switch ($section) {
-				case 'web_original_fiction':
-					return array(
-						'items'=>array(
-							array( 'label'=>'Demonology', 'url'=>array('/fiction/demonology') ),
-							//array( 'label'=>'Pixel-Stained', 'url'=>array('/fiction/pixel') ),
-							array( 'label'=>'Patreon', 'url'=>array('/fiction/patreon') ),
-						),
-					);
-				break;
 				
+				// Admin - Fiction
 				case 'admin_fiction':
 					return array(
 						'items'=>array(
@@ -59,6 +48,7 @@
 					);
 				break;
 				
+				// Admin - Fun
 				case 'admin_fun':
 					return array(
 						'items'=>array(
@@ -67,11 +57,58 @@
 					);
 				break;
 				
+				// Admin - Submissions
 				case 'admin_submissions':
 					return array(
 						'items'=>array(
 							array( 'label'=>'Manage Submissions', 'url'=>array('/admin/manage_submissions') ),
 							array( 'label'=>'Add New Story', 'url'=>array('/admin/edit_story', 'story_id'=>'new') ),
+						),
+					);
+				break;
+				
+				// Fiction
+				case 'fiction':
+					return array(
+						'items'=>array(
+							array('label'=>'Short Stories', 'url'=>array('/fiction/index')),
+							array('label'=>'Web Original Fiction', 'url'=>array('/fiction/web_original')),
+						),
+					);
+				break;
+				
+				// Fiction - Web Original
+				case 'fiction_web_original':
+					return array(
+						'items'=>array(
+							array('label'=>'Web Original Fiction', 'url'=>array('/fiction/web_original')),
+							array( 'label'=>'Demonology', 'url'=>array('/fiction/demonology') ),
+							//array( 'label'=>'Pixel-Stained', 'url'=>array('/fiction/pixel') ),
+							array( 'label'=>'Patreon', 'url'=>array('/fiction/patreon') ),
+							//array( 'label'=>'Pixel-Stained', 'url'=>array('/fiction/shared_worlds') ),
+						),
+					);
+				break;
+				
+				
+				
+				// Fun
+				case 'fun':
+					return array(
+						'items'=>array(
+							array('label'=>'Bingo Card Generator', 'url'=>array('/fun/bingo_generator')),
+							array('label'=>'Demographics Generator', 'url'=>array('/fun/demographics_generator')),
+						),
+					);
+				break;
+				
+				// Web
+				case 'web':
+					return array(
+						'items'=>array(
+							array('label'=>'Web', 'url'=>array('/web/index')),
+							array('label'=>'GitHub', 'url'=>'https://github.com/aowomoyela'),
+							array('label'=>'Resumé', 'url'=>array('/web/resume')),
 						),
 					);
 				break;
@@ -92,7 +129,7 @@
 		/* SLIGHTLY LESS UNIVERSAL CONTENT */
 		/***********************************/
 
-		public static function get_tipjar($type = fiction) {
+		public static function get_tipjar($type = 'fiction') {
 			$tipjar_block  = '';
 			
 			switch($type) {
@@ -140,6 +177,33 @@ EOT;
 
 			echo $tipjar_block;
 		} // END public static function get_tipjar($type = fiction)
+		
+		
+		public static function get_license($type) {
+			switch ($type) {
+				case 'shared_worlds':
+$license = <<<EOT
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_GB">
+			<img alt="Creative Commons Licence" style="border-width:0; float:left; margin: 0 .5em .5em 0;" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+		</a>
+		
+		<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Works in the Shared Worlds series</span> 
+		by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">An Owomoyela</span> are licensed under a 
+		<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_GB">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+	
+		Derivative, <a href="https://transformativeworks.org/what-do-you-mean-transformative-work">transformative</a> creative works, including but not limited to 
+		fanfiction and fanart, are exempt from the non-commercial clause, but must also be licensed 
+		<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_GB">CC BY NC SA</a> <em>and</em> include this exception.
+EOT;
+				break;
+				
+				
+				default:
+					$license = "";
+				break;
+			}
+			return $license;
+		}
 		
 		
 		/****************************************/

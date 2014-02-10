@@ -1,5 +1,5 @@
 <?php
-	echo '<div id="submenu">'."\r\n";
+	echo '<div id="submenu_horizontal">'."\r\n";
 		$this->widget('zii.widgets.CMenu', $secondary_navigation);
 	echo '</div>'."\r\n";
 ?>
