@@ -6,7 +6,6 @@ $(function() {
 		var file_to_load;
 		for (var i = 0; i < $("#list_loader").val().length; i++) {
 			file_to_load = "/js/fun/bingo_generator/resources/"+files_to_load[i]+".csv";
-			//$("#bingo_list").html( file_to_load );
 			$.get( file_to_load, function(data){
 				$("#bingo_list").append( data );
 				if ( $("#list_loader").val().length > 1 && i != $("#list_loader").val().length-1 ) {

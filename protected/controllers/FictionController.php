@@ -155,7 +155,41 @@ class FictionController extends Controller
 	/****************/
 	public function actionShared_worlds() {
 		$this->pageTitle = Yii::app()->name.' - Shared Worlds fiction';
-		$secondary_navigation = SiteElement::get_secondary_nav_array('fiction_web_original');
+		$secondary_navigation = SiteElement::get_secondary_nav_array('fiction_shared_worlds');
+		// Render the page.
+		$this->render('shared_world', array(
+			'secondary_navigation'=>$secondary_navigation,
+		));
+	}
+
+	/* FUNDRAISERS */
+	public function actionShared_worlds_fundraisers() {
+		$this->pageTitle = Yii::app()->name.' - Shared Worlds fundraisers';
+		$fundraiser = false;
+		if ( isset($_GET['fundraiser_title']) ) {
+			$fundraiser_title = $_GET['fundraiser_title'];
+			// Display the requested fundraiser.
+			switch ($fundraiser_title) {
+				default:
+					// Leave $fundraiser false so that the default information displays.
+				break;
+			}
+		} else {
+			// Display an explanation and a list of fundraisers.
+		}
+		$secondary_navigation = SiteElement::get_secondary_nav_array('fiction_shared_worlds_fundraising');
+		// Render the page.
+		$this->render('shared_world_fundraiser', array(
+			'secondary_navigation'=>$secondary_navigation,
+			'fundraiser'=>$fundraiser,
+		));
+	}
+
+
+	/* WORKS */
+	public function actionShared_worlds_works() {
+		$this->pageTitle = Yii::app()->name.' - Shared Worlds – Works';
+		$secondary_navigation = SiteElement::get_secondary_nav_array('fiction_shared_worlds');
 		// Get the story lists for various types of fiction.
 		$short_stories = Story::model()->findAll(array(
 			'select'=>'t.title, wordcount, link, link_active, pullquote, publication_date, available_in_archive, archive_url_title',
@@ -173,7 +207,7 @@ class FictionController extends Controller
 			'condition'=>'published = 1 && publication_category_id = 12 && available_in_archive = 1',
 		));
 		// Render the page.
-		$this->render('shared_world', array(
+		$this->render('shared_world_works', array(
 			'secondary_navigation'=>$secondary_navigation,
 			'short_stories'=>$short_stories,
 			'long_stories'=>$long_stories,

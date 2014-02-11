@@ -264,6 +264,25 @@ blockquote em {
 	blockquote.license a:hover{
 		text-decoration:underline;
 	}
+	
+.asterisked {
+	margin-left: 3em;
+	font-size: .9em;
+	font-style: italic;
+	color:#444;
+}
+
+	.asterisked em {
+		color:#000;
+	}
+	
+	.asterisked a {
+		text-decoration:none;
+	}
+
+	.asterisked a:hover{
+		text-decoration:underline;
+	}
 
 /*********/
 /* . . . */

@@ -21,7 +21,7 @@ $baseUrl = Yii::app()->baseUrl;
 	edges of law, propriety, and personal conviction.
 </p>
 
-<h2 class="right_header"><a href="<?php echo Yii::app()->createUrl('fiction/patreon') ?>">Patreon (coming soon)</a></h2>
+<h2 class="right_header"><a href="<?php echo Yii::app()->createUrl('fiction/patreon') ?>">Patreon</a></h2>
 
 <p>
 	<a href="http://patreon.com/">Patreon</a> is a crowdfunding service which connects creative types and their audiences.  Basically, members of the public (such as yourselves!)
@@ -40,9 +40,23 @@ $baseUrl = Yii::app()->baseUrl;
 	Although this fiction is <em>funded</em> through Patreon, it isn't restricted to Patreon sponsors – it will remain free for anyone to read online. 
 </p>
 
-<!--p>To sponsor me, <a href="http://www.patreon.com/an_owomoyela">visit my Patreon page</a>!</p-->
+<p>To sponsor me, <a href="http://www.patreon.com/an_owomoyela">visit my Patreon page</a>!</p>
 
 <!--p>Many thanks go to <a href="<?php echo Yii::app()->createUrl('fiction/patreon_acknowledgements') ?>">my Patreon sponsors</a>.</p-->
+
+<h2 class="left_header"><a href="<?php echo Yii::app()->createUrl('fiction/shared_worlds') ?>">Shared Worlds</a></h2>
+
+<p>
+	Sandbox worlds with a focus on community engagement. Authors are encouraged to write works in these universes, as engaged fandoms have done with various canons
+	since time immemorial (or at least times pre-internet). However, the canons comprised by these works are released under a Creative Commons + license which allows
+	authors to publish and commercialize their transformative works, so long as they release the same rights to other authors and artists downstream.
+</p>
+
+<p>
+	Because of its focus on community, and because fandom is often at its best when it's supporting its members, one primary source of new Shared Worlds material is 
+	fundraiser challenges, wherein donors purchase prompts, which I write to their specifications. The money raised can be directed to members of the community who are
+	facing financial challenges and have turned to crowdfunding to help.
+</p>
 
 <?php /*
 
