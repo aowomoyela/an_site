@@ -77,6 +77,30 @@
 					);
 				break;
 				
+				// Fiction - Shared Worlds
+				case 'fiction_shared_worlds':
+					return array(
+						'items'=>array(
+							array( 'label'=>'Web Original Fiction', 'url'=>array('/fiction/web_original') ),
+							array( 'label'=>'Shared Worlds', 'url'=>array('/fiction/shared_worlds') ),
+							array( 'label'=>'[SW] Fiction', 'url'=>array('/fiction/shared_worlds/works') ),
+							array( 'label'=>'[SW] Fundraisers', 'url'=>array('/fiction/shared_worlds/fundraisers') ),
+						),
+					);
+				break;
+				
+				// Fiction - Shared Worlds Fundraising
+				case 'fiction_shared_worlds_fundraising':
+					return array(
+						'items'=>array(
+							array( 'label'=>'Shared Worlds', 'url'=>array('/fiction/shared_worlds') ),
+							array( 'label'=>'[SW] Fundraisers', 'url'=>array('/fiction/shared_worlds/fundraisers') ),
+							// Individual fundraiser links here
+							#array( 'label'=>'Feb 2014', 'url'=>array('/fiction/shared_worlds/fundraisers') ),
+						),
+					);
+				break;
+				
 				// Fiction - Web Original
 				case 'fiction_web_original':
 					return array(
@@ -85,7 +109,7 @@
 							array( 'label'=>'Demonology', 'url'=>array('/fiction/demonology') ),
 							//array( 'label'=>'Pixel-Stained', 'url'=>array('/fiction/pixel') ),
 							array( 'label'=>'Patreon', 'url'=>array('/fiction/patreon') ),
-							//array( 'label'=>'Pixel-Stained', 'url'=>array('/fiction/shared_worlds') ),
+							array( 'label'=>'Shared Worlds', 'url'=>array('/fiction/shared_worlds') ),
 						),
 					);
 				break;
