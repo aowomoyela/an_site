@@ -52,7 +52,7 @@
 				case 'admin_fun':
 					return array(
 						'items'=>array(
-							array( 'label'=>'Edit Stories', 'url'=>array('/admin/manage_bingo_lists') ),
+							array( 'label'=>'Upload Bingo Lists', 'url'=>array('/admin/manage_bingo_lists') ),
 						),
 					);
 				break;
