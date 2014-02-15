@@ -1,6 +1,10 @@
 <?php
 	$baseUrl = Yii::app()->baseUrl; 
 	$cs = Yii::app()->getClientScript();
+	// jQuery UI
+	#$cs->registerScriptFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js');
+	#$cs->registerCssFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/smoothness/jquery-ui.css');
+	// Page-specific scripts
 	$cs->registerScriptFile($baseUrl.'/js/colorpicker/js/colorpicker.js');
 	$cs->registerScriptFile($baseUrl.'/js/fun/bingo_generator/list_loader.js');
 	$cs->registerScriptFile($baseUrl.'/js/fun/bingo_generator/color_update.js');
@@ -122,12 +126,16 @@
 	
 	<p style="clear:both;">
 		<label for="card_size">Card size:</label>
+		<input type="radio" name="card_size" class="card_size" id="card_size_1" value="1"<?php if ($card_size == 1) {echo ' checked="checked"';} ?> /> <span>1x1</span> &emsp;&emsp;
+		<input type="radio" name="card_size" class="card_size" id="card_size_3" value="2"<?php if ($card_size == 2) {echo ' checked="checked"';} ?> /> <span>2x2</span> &emsp;&emsp;
 		<input type="radio" name="card_size" class="card_size" id="card_size_3" value="3"<?php if ($card_size == 3) {echo ' checked="checked"';} ?> /> <span>3x3</span> &emsp;&emsp;
+		<input type="radio" name="card_size" class="card_size" id="card_size_3" value="4"<?php if ($card_size == 4) {echo ' checked="checked"';} ?> /> <span>4x4</span> &emsp;&emsp;
 		<input type="radio" name="card_size" class="card_size" id="card_size_5" value="5"<?php if ($card_size == 5) {echo ' checked="checked"';} ?> /> <span>5x5</span> &emsp;&emsp;
+		<input type="radio" name="card_size" class="card_size" id="card_size_6" value="6"<?php if ($card_size == 6) {echo ' checked="checked"';} ?> /> <span>6x6</span> &emsp;&emsp;
 		<input type="radio" name="card_size" class="card_size" id="card_size_7" value="7"<?php if ($card_size == 7) {echo ' checked="checked"';} ?> /> <span>7x7</span>
 	</p>
 	
-	<p>
+	<p id="center_space_handling">
 		<label for="center_space">Center space:</label>
 		<input type="radio" name="center_space" class="center_space" id="center_space_free" value="free"<?php
 			if ($center_space == "free") {echo ' checked="checked"';}

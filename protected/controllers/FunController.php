@@ -58,8 +58,10 @@ class FunController extends Controller
 		// See if this is a POST request or not.
 		if ( Yii::app()->request->isPostRequest ) {
 			// Any mechanics that need to be handled get handled here. Such as... center space text! (Impacts number of elements.)
-			if ( in_array($_POST['center_space'], array('free', 'wild', 'normal', 'other')) ) {
-				$center_space = $_POST['center_space'];
+			if ( isset($_POST['center_space']) ) {
+				if ( in_array($_POST['center_space'], array('free', 'wild', 'normal', 'other')) ) {
+					$center_space = $_POST['center_space'];
+				}
 			}
 			switch ($center_space) {
 				case 'wild': $center_space_text = "WILD CARD"; break;
@@ -71,11 +73,16 @@ class FunController extends Controller
 			}
 			// Card size / number of elements!
 			// // Validate for allowed card sizes.
-			if ( in_array($_POST['card_size'], array(3,5,7)) ) {
+			if ( in_array($_POST['card_size'], array(1,2,3,4,5,6,7)) ) {
 				$card_size = $_POST['card_size'];
 			}
+			// // If the card has even-numbered element sizes, there's no center space.
+			if ( $card_size%2 == 0 || $card_size == 1 ) {
+				$center_space = 'normal';
+			}
 			// // Reduce cell size for gigantic cards.
-			if ($card_size == 7) { $cell_size = '8em'; }
+			if ( $card_size == 6 ) { $cell_size = '9em'; }
+			if ( $card_size == 7 ) { $cell_size = '8em'; }
 			// // Determine how many elements are needed.
 			if ($center_space == 'normal') {
 				$num_card_elements = pow($card_size, 2);
