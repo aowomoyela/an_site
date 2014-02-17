@@ -6,7 +6,24 @@
 ?>
 
 <h2>Character Demographics Randomizer</h2>
-<h3>Here are your results! (<a href="<?php echo Yii::app()->createUrl('fun/demographics_generator'); ?>">Generate more?</a>)</h3>
+<h3>Your results are below!</h3>
+
+<p>What would you like to do now?</p>
+
+<?php echo CHtml::beginForm( array('fun/demographics_generator'), 'post', array('id'=>'reload_option_sets') ); ?>
+	<fieldset><legend>Go back to your demographics options setup</legend>
+		<textarea name="categories" style="display:none;"><?php echo json_encode($categories); ?></textarea>
+		<input type="hidden" name="number" value="<?php echo $number; ?>" />
+		<input type="hidden" name="reload_data" value="true" />
+		<input type="submit" value="Re-load your option sets &raquo;">
+	</fieldset>
+<?php echo CHtml::endForm(); ?><br />
+
+<?php echo CHtml::beginForm( array('fun/bingo_demographics_handler'), 'post', array('id'=>'load_into_bingo') ); ?>
+	<fieldset><legend>Load the generated option sets into the bingo card generator</legend>
+		<p><em>Coming soon...</em></p>
+	</fieldset>
+<?php echo CHtml::endForm(); ?>
 
 <ol>
 <?php

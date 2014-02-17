@@ -185,49 +185,68 @@ class FunController extends Controller
 	try {
 		// See if this is a POST request or not.
 		if ( Yii::app()->request->isPostRequest ) {
-			#new dBug($_POST);
-			// We'll have a number of random mixes to generate, and a superarray of the categories, their options, and the option weights.
-			if ( !is_int($_POST['number']) && !is_numeric($_POST['number']) ) { $number = 10; } else { $number = $_POST['number']; }
-			//Handle each category.
-			$option_bounds = array();
-			foreach ($_POST['categories'] as $category_name => $category) {
-				// Work out what the total weight is.
-				$total_weight = 0;
-				$weight_pointer = 1;
-				foreach ($category as $option => $weight) {
-					$total_weight += $weight;
-					// Work up an array we can compare against an RNG later.
-					$option_bounds[$category_name][$option]['low_bound'] = $weight_pointer;
-					$weight_pointer += $weight-1;
-					$option_bounds[$category_name][$option]['high_bound'] = $weight_pointer;
-					$weight_pointer++;
+			// Are we re-loading data from an earlier generation?
+			if ( !isset($_POST['reload_data']) ) { $_POST['reload_data'] = false; }
+			if ( $_POST['reload_data'] ) {
+				// Here, we just need to display the form with the pre-loaded data lists.
+				// Validate the number.
+				if ( !is_int($_POST['number']) && !is_numeric($_POST['number']) ) { $number = 10; } else { $number = $_POST['number']; }
+				// Get the JSON category string into a usable shape.
+				$categories = json_decode($_POST['categories']);
+				// Render the page.
+				$this->render('demographics_generator', array(
+					'categories'=>$categories,
+					'number'=>$number,
+				));	
+			} else {
+				// Here, we're actually generating the randomized sets.
+				#new dBug($_POST);
+				// We'll have a number of random mixes to generate, and a superarray of the categories, their options, and the option weights.
+				if ( !is_int($_POST['number']) && !is_numeric($_POST['number']) ) { $number = 10; } else { $number = $_POST['number']; }
+				//Handle each category.
+				$option_bounds = array();
+				$categories = $_POST['categories'];
+				foreach ($categories as $category_name => $category) {
+					// Work out what the total weight is.
+					$total_weight = 0;
+					$weight_pointer = 1;
+					foreach ($category as $option => $weight) {
+						$total_weight += $weight;
+						// Work up an array we can compare against an RNG later.
+						$option_bounds[$category_name][$option]['low_bound'] = $weight_pointer;
+						$weight_pointer += $weight-1;
+						$option_bounds[$category_name][$option]['high_bound'] = $weight_pointer;
+						$weight_pointer++;
+					}
+					// Make a note of the total weight. We'll need it to set the bounds of the RNG.
+					$option_bounds[$category_name]['total_weight'] = $total_weight;
 				}
-				// Make a note of the total weight. We'll need it to set the bounds of the RNG.
-				$option_bounds[$category_name]['total_weight'] = $total_weight;
-			}
-			#new dBug($option_bounds);
-			
-			// Now, let's get on with generating $number combinations.
-			$results = array();
-			for ( $i = 0; $i < $number; $i++ ) {
-				// Look at each category...
-				foreach ($_POST['categories'] as $category_name => $category) {
-					// ...and choose a random value from the weighted list. First, generate an index within the weight bounds...
-					$random = rand(1, $option_bounds[$category_name]['total_weight']);
-					// ...then look through the upper and lower bounds until you find a range that fits the number.
-					foreach ($option_bounds[$category_name] as $option_name => $option) {
-						if ( $random >= $option['low_bound'] && $random <= $option['high_bound'] ) {
-							$results[$i][$category_name] = $option_name;
+				#new dBug($option_bounds);
+				
+				// Now, let's get on with generating $number combinations.
+				$results = array();
+				for ( $i = 0; $i < $number; $i++ ) {
+					// Look at each category...
+					foreach ($categories as $category_name => $category) {
+						// ...and choose a random value from the weighted list. First, generate an index within the weight bounds...
+						$random = rand(1, $option_bounds[$category_name]['total_weight']);
+						// ...then look through the upper and lower bounds until you find a range that fits the number.
+						foreach ($option_bounds[$category_name] as $option_name => $option) {
+							if ( $random >= $option['low_bound'] && $random <= $option['high_bound'] ) {
+								$results[$i][$category_name] = $option_name;
+							}
 						}
 					}
 				}
-			}
-			
-			// At this point, we should have $number combinations.  Render the page.
-			#new dBug($results);
-			$this->render('demographics_generated_values', array(
-				'results'=>$results,
-			));	
+				
+				// At this point, we should have $number combinations.  Render the page.
+				#new dBug($results);
+				$this->render('demographics_generated_values', array(
+					'results'=>$results,
+					'number'=>$number,
+					'categories'=>$categories,
+				));	
+			} // End handling for option set generation.
 		} else {
 			// Render the page.
 			$this->render('demographics_generator', array(
@@ -238,6 +257,36 @@ class FunController extends Controller
 	} catch (Exception $e) {
 		
 	}} // END public function actionDemographics_generator()
+	
+	
+	/* Handle porting over randomized values from the demographics generator into the bingo card generator. */
+	public function actionBingo_demographics_handler() {
+	try {
+		
+		// Render the page.
+		$this->render('bingo_generator', array(
+			/*'bingo_squares'=>$bingo_squares,
+			'message'=>$message,
+			'list'=>$list,
+			'card_ready'=>$card_ready,
+			'card_size'=>$card_size,
+			'num_card_elements'=>$num_card_elements,
+			'use_repeat_values'=>$use_repeat_values,
+			'cell_size'=>$cell_size,
+			'background_color'=>$background_color,
+			'text_color'=>$text_color,
+			'border_color'=>$border_color,
+			'background_hex'=>$background_hex,
+			'text_hex'=>$text_hex,
+			'border_hex'=>$border_hex,
+			'center_space'=>$center_space,
+			'center_space_text'=>$center_space_text,
+			'center_space_other'=>$center_space_other,*/
+		));
+	
+	} catch (Exception $e) {
+		
+	}} // END public function actionBingo_demographics_handler()
 
 }
 

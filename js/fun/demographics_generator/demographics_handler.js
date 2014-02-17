@@ -65,4 +65,8 @@ function bindHandlers(root) {
 
 $(function() {
 	bindHandlers(document);
+	
+	$("#rebind").click(function(){
+		bindHandlers(document);
+	});
 });

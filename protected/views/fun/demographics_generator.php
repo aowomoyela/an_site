@@ -29,7 +29,13 @@
 <?php echo CHtml::beginForm( array('fun/demographics_generator'), 'post', array('id'=>'demographics_generator') ); ?>
 	<fieldset id="options" class="meta_options"><legend>Options</legend>
 		<div class="admin">
-			<label for="number">Number to generate:</label> <input name="number" type="text" class="num_only" size="4" maxlength="4" value="10"/>
+			<label for="number">Number to generate:</label> <input name="number" type="text" class="num_only" size="4" maxlength="4" value="<?php
+				if ( isset($number) ) { echo $number; } else { echo "4"; }
+			?>"/>
+		</div>
+		
+		<div class="admin">
+			<label for="number">Links not working?</label> <input id="rebind" name="rebind" type="button" value="fix buttons"/>
 		</div>
 		
 		<div class="admin">
@@ -37,6 +43,33 @@
 		</div>
 	</fieldset>
 
+<?php
+if (isset($categories)) {
+	// Generate fieldsets based on the last loaded options.
+	foreach ($categories as $category_name => $category_values) {
+			// Kludge to clean out extra 's until I work out what's causing them.
+			$category_name = preg_replace("/^'/", "", $category_name);
+			$category_name = preg_replace("/'$/", "", $category_name);
+			$category_name = str_replace('_', ' ', $category_name);
+			
+			
+		echo '<fieldset id="'.$category_name.'" class="demographic_category"><legend>'.$category_name.' <a class="delete_category">[delete]</a></legend>';
+			echo '<a class="add_option">[Add Option]</a>';
+			foreach ($category_values as $value_name => $value_weight) {
+				$value_name = preg_replace("/^'/", "", $value_name);
+				$value_name = preg_replace("/'$/", "", $value_name);
+				$value_name = str_replace('_', ' ', $value_name);
+				echo '<div class="'.$category_name.' demographic_option">';
+				echo '<label for="categories[\''.$category_name.'\'][\''.$value_name.'\']">'.$value_name.'</label> <input name="categories[\''.$category_name.'\'][\''.$value_name.'\']" type="text" class="option_weight num_only" size="4" maxlength="4" value="'.$value_weight.'" />';
+				echo '<a class="delete_option">[delete]</a> ';
+				echo '</div>';
+			}
+		echo '</fieldset>';
+	}
+	
+} else {
+	// Give the users a default fieldset as an example.
+?>
 	<fieldset id="Gender" class="demographic_category"><legend>Gender <a class="delete_category">[delete]</a></legend>
 		<a class="add_option">[Add Option]</a>
 		<div class="Gender demographic_option">
@@ -60,6 +93,7 @@
 			<a class="delete_option">[delete]</a> 
 		</div>
 	</fieldset>
+<?php } /* End default fieldset display. */ ?>
 <?php echo CHtml::endForm(); ?>
 
 <div style="margin-top:1em;"><a class="add_category">[Add Category]</a></div>
