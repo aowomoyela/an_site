@@ -36,7 +36,7 @@
 					// Commas to... something not-comma.
 					$category_name = str_replace(',', '-', $category_name);
 					$category_value = str_replace(',', '-', $category_value);
-					$list_csv.=$category_name.' = '.$category_value."\r\n";
+					$list_csv.=$category_name.': '.$category_value."\r\n";
 				}
 				$list_csv.= ', '."\r\n\r\n";
 			}
