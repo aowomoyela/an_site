@@ -26,6 +26,10 @@ label {
 	width: 10em;
 }
 
+.demographic_option {
+	clear:both;
+}
+
 li.individual_listing {
 	margin-top:1.5em;
 }

@@ -73,8 +73,10 @@ class FunController extends Controller
 			}
 			// Card size / number of elements!
 			// // Validate for allowed card sizes.
-			if ( in_array($_POST['card_size'], array(1,2,3,4,5,6,7)) ) {
-				$card_size = $_POST['card_size'];
+			if ( isset($_POST['card_size']) ) {
+				if ( in_array($_POST['card_size'], array(1,2,3,4,5,6,7)) ) {
+					$card_size = $_POST['card_size'];
+				}
 			}
 			// // If the card has even-numbered element sizes, there's no center space.
 			if ( $card_size%2 == 0 || $card_size == 1 ) {
@@ -95,29 +97,38 @@ class FunController extends Controller
 				$use_repeat_values = false;
 			}
 			// Background color!
-			if ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['background']) ) {
-				$background_color = 'background-color:'.$_POST['background'].';';
-				$background_hex = $_POST['background'];
-			}
-			// Background transparency and CSS attribute!
-			if ( $_POST['background'] == 'transparent' ) {
-				$background_color = '';
-				$background_hex = 'transparent';
-			} else {
-				$background_color = 'background-color:'.$background_hex.';';
+			if ( isset($_POST['background']) ) {
+				if ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['background']) ) {
+					$background_color = 'background-color:'.$_POST['background'].';';
+					$background_hex = $_POST['background'];
+				}
+			
+				// Background transparency and CSS attribute!
+				if ( $_POST['background'] == 'transparent' ) {
+					$background_color = '';
+					$background_hex = 'transparent';
+				} else {
+					$background_color = 'background-color:'.$background_hex.';';
+				}
 			}
 			// Text color!
-			if ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['color']) ) {
-				$text_hex = $_POST['color'];
-				$text_color = 'color:'.$_POST['color'].';';
+			if ( isset($_POST['color']) ) {
+				if ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['color']) ) {
+					$text_hex = $_POST['color'];
+					$text_color = 'color:'.$_POST['color'].';';
+				}
+				$text_color = 'color:'.$text_hex.';';
 			}
-			$text_color = 'color:'.$text_hex.';';
 			// Border color!
-			if ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['border_color']) ) {
-				$border_hex = $_POST['border_color'];
-				$border_color = 'border:1px solid '.$_POST['border_color'].';';
+			if ( isset($_POST['border_color']) ) {
+				if ( $_POST['border_color'] ) {
+					if ( preg_match("/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/", $_POST['border_color']) ) {
+						$border_hex = $_POST['border_color'];
+						$border_color = 'border:1px solid '.$_POST['border_color'].';';
+					}
+					$border_color = 'border:1px solid '.$border_hex.';';
+				}
 			}
-			$border_color = 'border:1px solid '.$border_hex.';';
 			// Now, we FINALLY handle the actual card elements.
 			$list = strip_tags($_POST['list'], '<a><i><em><strong><b><u><strike>');
 			$list_items = explode(',', $list);
@@ -183,6 +194,7 @@ class FunController extends Controller
 	/************************************************************************************************/
 	public function actionDemographics_generator() {
 	try {
+		$this->pageTitle = Yii::app()->name.' - Demographics (Random Sets) Generator';
 		// See if this is a POST request or not.
 		if ( Yii::app()->request->isPostRequest ) {
 			// Are we re-loading data from an earlier generation?

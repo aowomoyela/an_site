@@ -175,15 +175,15 @@
 					$html_string.= $center_space_text;
 				} elseif ($position < $free_space_square) {
 					$index = $position - 1;
-					$html_string.= trim($bingo_squares[$index]);
+					$html_string.= nl2br(trim($bingo_squares[$index]));
 				} else {
 					$index = $position - 2;
-					$html_string.= trim($bingo_squares[$index]);
+					$html_string.= nl2br(trim($bingo_squares[$index]));
 				}
 			} else {
 				//These cards have normal prompts as their center squares.
 				$index = $position - 1;
-				$html_string.= trim($bingo_squares[$index]);
+				$html_string.= nl2br(trim($bingo_squares[$index]));
 			}
 			
 			$position++;
