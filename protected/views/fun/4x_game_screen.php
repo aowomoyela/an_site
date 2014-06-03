@@ -37,16 +37,21 @@
 		
 		<h3>Game Stats</h3>
 		<ul>
-			<li class="4x_stat stat_population_listing">
-				<strong>Population:</strong> <span id="4x_stat_population">loading...</span>
-			</li>
-			
 			<li class="4x_stat stat_money_listing">
 				<strong>Money:</strong> <span id="4x_stat_money">loading...</span>
 			</li>
 
 			<li class="4x_stat stat_social_listing">
 				<strong>Social Score:</strong> <span id="4x_stat_social">loading...</span>
+			</li>
+			
+			
+			<li class="4x_stat stat_population_listing">
+				<strong>Population:</strong> <span id="4x_stat_population">loading...</span>
+			</li>
+			
+			<li class="4x_stat stat_max_population_listing">
+				<strong>Maximum Population:</strong> <span id="4x_stat_max_population">loading...</span>
 			</li>
 		</ul>
 		

@@ -14,6 +14,7 @@ Game.newGame = function() {
 	Game.money = 100;
 	Game.social = 0;
 	Game.techLevel = 1;
+	Game.maxPopulation = 10000000000;
 	
 	// Starting infrastructure
 	Game.infrastructure = {};
@@ -62,6 +63,9 @@ Game.getRealEconomy = function() {
 	realEconomy = Game.economy;
 	// Base effect of banks on economy
 	realEconomy += .1 * Game.infrastructure.banks;
+	// Base effect of population on economy
+	ecnPopulationBonus = (Game.population/1000000000);
+	realEconomy *= ecnPopulationBonus;
 	// Return calculated economy score.
 	return realEconomy;
 }
@@ -70,6 +74,9 @@ Game.getRealIndustry = function() {
 	realIndustry = Game.industry;
 	// Base effect of factories on industry
 	realIndustry += .1 * Game.infrastructure.factories;
+	// Base effect of population on industry
+	indPopulationBonus = (Game.population/1000000000);
+	realIndustry *= indPopulationBonus;
 	// Return calculated industry score.
 	return realIndustry;
 }
@@ -78,8 +85,16 @@ Game.getRealScience = function() {
 	realScience = Game.science;
 	// Base effect of labs on science
 	realScience += .1 * Game.infrastructure.labs;
+	// Base effect of population on science
+	sciPopulationBonus = (Game.population/1000000000);
+	realScience *= sciPopulationBonus;
 	// Return calculated industry score.
 	return realScience;
+}
+
+Game.getRealMaxPopulation = function() {
+	realMaxPopulation = Game.maxPopulation;
+	return realMaxPopulation;
 }
 
 
@@ -95,6 +110,12 @@ Game.getDisplayPopulation = function() {
 	return displayPopulation;
 }
 
+Game.getDisplayMaxPopulation = function() {
+	displayMaxPopulation = Game.maxPopulation/1000000000;
+	displayMaxPopulation = displayMaxPopulation.toFixed(3) + ' billion';
+	return displayMaxPopulation;
+}
+
 Game.getDisplayMoney = function() {
 	displayMoney = Game.money.toFixed(1).toString() + ' credits';
 	return displayMoney;
@@ -106,17 +127,17 @@ Game.getDisplayGrowth = function() {
 }
 
 Game.getDisplayIndustry = function() {
-	displayIndustry = Game.getRealIndustry().toString();
+	displayIndustry = Game.getRealIndustry().toFixed(1).toString();
 	return displayIndustry;
 }
 
 Game.getDisplayEconomy = function() {
-	displayEconomy = Game.getRealEconomy().toString();
+	displayEconomy = Game.getRealEconomy().toFixed(1).toString();
 	return displayEconomy;
 }
 
 Game.getDisplayScience = function() {
-	displayScience = Game.getRealScience().toString();
+	displayScience = Game.getRealScience().toFixed(1).toString();
 	return displayScience;
 }
 
@@ -124,6 +145,7 @@ Game.getDisplayScience = function() {
 
 Game.updateTurnStatDisplay = function() {
 	$("#4x_stat_population").html( Game.getDisplayPopulation() );
+	$("#4x_stat_max_population").html( Game.getDisplayMaxPopulation() );
 	$("#4x_stat_money").html( Game.getDisplayMoney() );
 }
 
@@ -160,6 +182,7 @@ Game.buy = function(infrastructure) {
 				Game.money -= Game.prices.factories;
 				Game.infrastructure.factories++;
 				Game.prices.factories *= Game.priceGrowth.factories;
+				Game.prices.factories = Game.prices.factories.toFixed(0);
 				// Update the factory price and factory number in the infrastructure list.
 				Game.updateInfrastructureDisplay();
 				Game.updateGameStatDisplay();
@@ -178,6 +201,7 @@ Game.buy = function(infrastructure) {
 				Game.money -= Game.prices.labs;
 				Game.infrastructure.labs++;
 				Game.prices.labs *= Game.priceGrowth.labs;
+				Game.prices.labs = Game.prices.labs.toFixed(0);
 				// Update the lab price and lab number in the infrastructure list.
 				Game.updateInfrastructureDisplay();
 				Game.updateGameStatDisplay();
@@ -196,8 +220,10 @@ Game.buy = function(infrastructure) {
 				Game.money -= Game.prices.banks;
 				Game.infrastructure.banks++;
 				Game.prices.banks *= Game.priceGrowth.banks;
+				Game.prices.banks = Game.prices.banks.toFixed(0);
 				// Update the bank price and bank number in the infrastructure list.
 				Game.updateInfrastructureDisplay();
+				Game.updateTurnStatDisplay();
 				Game.updateGameStatDisplay();
 				// Update the economy stat.
 				
@@ -225,7 +251,9 @@ Game.buy = function(infrastructure) {
 // A turn is hereby declared to be 1 second because YOLO
 
 Game.nextTurn = function() {
-	Game.population += Game.population*Game.growth/100;
+	if (Game.population < Game.getRealMaxPopulation()) {
+		Game.population += Game.population*Game.growth/100;
+	}
 	Game.money += Game.getRealEconomy();
 }
 
