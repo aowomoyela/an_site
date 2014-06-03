@@ -1,0 +1,66 @@
+#game_header {
+	border-bottom:2px solid #00F;
+	padding-bottom:.25em;
+	margin-bottom:2.5em;
+}
+
+	h2 {
+		clear:both;
+		text-align: center;
+		margin: 0 0 .5em 0;
+		padding: 0;
+		border:none;
+	}
+	
+	#flavor_text {
+		height:3em;
+		text-align:center;
+		color:#333;
+		font-size:.9em;
+		font-style:italic;
+	}
+
+#game_window {
+	clear:both;
+	margin: 0 0 2em 0;
+}
+
+	#stats_pane {
+		width:20%;
+		float:left;
+		clear:left;
+		border:2px solid #000;
+	}
+	
+	#planet_pane {
+		border: 2px solid #00F;
+		background-color:#000;
+		clear:none;
+		width: 55%;
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center;
+		padding:2em .5em;
+	}
+	
+	#upgrade_pane {
+		width:20%;
+		float:right;
+		clear:right;
+		border:2px solid #000;
+	}
+	
+	#stats_pane h3, #upgrade_pane h3 {
+		margin: 0;
+		padding: .25em 0;
+		text-align: center;
+		font-size:1.25em;
+		border-bottom: 1px solid #00F;
+	}
+	
+	#stats_pane hr, #upgrade_pane hr {
+		height:2px;
+		background-color:#000;
+		margin:0;
+		padding:0;
+	}

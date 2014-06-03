@@ -299,6 +299,21 @@ class FunController extends Controller
 	} catch (Exception $e) {
 		
 	}} // END public function actionBingo_demographics_handler()
+	
+	
+	
+	/**********************************************************************/
+	/* A 4X game vaguely inspired by Cookie Clicker.  Just... go with it. */
+	/**********************************************************************/
+	public function action4x() {
+	try {
+		// Render the page.
+		$this->render('4x_game_screen', array(
+			// Variables go here.
+		));	
+	} catch (Exception $e) {
+		
+	}} // END public function action4x()
 
 }
 
