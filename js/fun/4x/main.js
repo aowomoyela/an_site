@@ -5,6 +5,24 @@
 Game={};
 
 Game.newGame = function() {
+	// Starting base stats.
+	Game.baseStat = {};
+	Game.baseStat.industry = .1;
+	Game.baseStat.economy = .1;
+	Game.baseStat.science = .1;
+	Game.baseStat.growth = .05;
+	Game.baseStat.population = 1000000000;
+	Game.baseStat.money = 100;
+	Game.baseStat.social = 0;
+	Game.baseStat.techLevel = 1;
+	Game.baseStat.maxPopulation = 10000000000;
+	
+	// Starting multipliers
+	Game.multipliers = {};
+	Game.multipliers.industry = 1;
+	Game.multipliers.science = 1;
+	Game.multipliers.economy = 1;
+	
 	// Starting stats.
 	Game.industry = 0;
 	Game.economy = .1;
@@ -20,13 +38,7 @@ Game.newGame = function() {
 	Game.infrastructure = {};
 	Game.infrastructure.factories = 0;
 	Game.infrastructure.labs = 0;
-	Game.infrastructure.banks = 0;
-	
-	// Starting bonuses
-	Game.bonuses = {};
-	Game.bonuses.factories = .1;
-	Game.bonuses.labs = .1;
-	Game.bonuses.banks = .1;
+	Game.infrastructure.banks = 1;
 	
 	// Starting prices
 	Game.prices = {};
@@ -35,13 +47,9 @@ Game.newGame = function() {
 	Game.prices.banks = 100;
 	
 	Game.priceGrowth = {};
-	Game.priceGrowth.factories = 1.05;
-	Game.priceGrowth.labs = 1.05;
-	Game.priceGrowth.banks = 1.05;
-	
-	
-	// Starting upgrades
-	Game.upgrades = {};
+	Game.priceGrowth.factories = 1.15;
+	Game.priceGrowth.labs = 1.15;
+	Game.priceGrowth.banks = 1.15;
 }
 
 Game.loadGame = function() {
@@ -52,49 +60,6 @@ Game.loadGame = function() {
 	} else {
 		Game.newGame();
 	}
-}
-
-
-/*****************/
-/* Stat handling */
-/*****************/
-
-Game.getRealEconomy = function() {
-	realEconomy = Game.economy;
-	// Base effect of banks on economy
-	realEconomy += .1 * Game.infrastructure.banks;
-	// Base effect of population on economy
-	ecnPopulationBonus = (Game.population/1000000000);
-	realEconomy *= ecnPopulationBonus;
-	// Return calculated economy score.
-	return realEconomy;
-}
-
-Game.getRealIndustry = function() {
-	realIndustry = Game.industry;
-	// Base effect of factories on industry
-	realIndustry += .1 * Game.infrastructure.factories;
-	// Base effect of population on industry
-	indPopulationBonus = (Game.population/1000000000);
-	realIndustry *= indPopulationBonus;
-	// Return calculated industry score.
-	return realIndustry;
-}
-
-Game.getRealScience = function() {
-	realScience = Game.science;
-	// Base effect of labs on science
-	realScience += .1 * Game.infrastructure.labs;
-	// Base effect of population on science
-	sciPopulationBonus = (Game.population/1000000000);
-	realScience *= sciPopulationBonus;
-	// Return calculated industry score.
-	return realScience;
-}
-
-Game.getRealMaxPopulation = function() {
-	realMaxPopulation = Game.maxPopulation;
-	return realMaxPopulation;
 }
 
 
@@ -127,17 +92,17 @@ Game.getDisplayGrowth = function() {
 }
 
 Game.getDisplayIndustry = function() {
-	displayIndustry = Game.getRealIndustry().toFixed(1).toString();
+	displayIndustry = Game.industry.toFixed(1).toString();
 	return displayIndustry;
 }
 
 Game.getDisplayEconomy = function() {
-	displayEconomy = Game.getRealEconomy().toFixed(1).toString();
+	displayEconomy = Game.economy.toFixed(1).toString();
 	return displayEconomy;
 }
 
 Game.getDisplayScience = function() {
-	displayScience = Game.getRealScience().toFixed(1).toString();
+	displayScience = Game.science.toFixed(1).toString();
 	return displayScience;
 }
 
@@ -183,11 +148,11 @@ Game.buy = function(infrastructure) {
 				Game.infrastructure.factories++;
 				Game.prices.factories *= Game.priceGrowth.factories;
 				Game.prices.factories = Game.prices.factories.toFixed(0);
+				// Update the industry stat.
+				Game.recalculateStat("industry");
 				// Update the factory price and factory number in the infrastructure list.
 				Game.updateInfrastructureDisplay();
 				Game.updateGameStatDisplay();
-				// Update the industry stat.
-				
 			} else {
 				// No can buy. THERE IS NO NATIONAL DEBT.
 				alert("You don't have the money for that!");
@@ -202,11 +167,11 @@ Game.buy = function(infrastructure) {
 				Game.infrastructure.labs++;
 				Game.prices.labs *= Game.priceGrowth.labs;
 				Game.prices.labs = Game.prices.labs.toFixed(0);
+				// Update the science stat.
+				Game.recalculateStat("science");
 				// Update the lab price and lab number in the infrastructure list.
 				Game.updateInfrastructureDisplay();
 				Game.updateGameStatDisplay();
-				// Update the science stat.
-				
 			} else {
 				// No can buy. THERE IS NO NATIONAL DEBT.
 				alert("You don't have the money for that!");
@@ -221,12 +186,12 @@ Game.buy = function(infrastructure) {
 				Game.infrastructure.banks++;
 				Game.prices.banks *= Game.priceGrowth.banks;
 				Game.prices.banks = Game.prices.banks.toFixed(0);
+				// Update the economy stat.
+				Game.recalculateStat("economy");
 				// Update the bank price and bank number in the infrastructure list.
 				Game.updateInfrastructureDisplay();
 				Game.updateTurnStatDisplay();
 				Game.updateGameStatDisplay();
-				// Update the economy stat.
-				
 			} else {
 				// No can buy. THERE IS NO NATIONAL DEBT.
 				alert("You don't have the money for that!");
@@ -238,11 +203,47 @@ Game.buy = function(infrastructure) {
 }
 
 
+// Recalculate "real" stat levels. Call this after every relevant purchase.
+Game.recalculateStat = function(stat) {
+	switch (stat) {
+		case "industry":
+			indPopulationBonus = (Game.population/1000000000);
+			Game.industry = Game.infrastructure.factories * Game.baseStat.industry * Game.multipliers.industry * indPopulationBonus;
+		break;
+		
+		case "science":
+			sciPopulationBonus = (Game.population/1000000000);
+			Game.science = Game.infrastructure.labs * Game.baseStat.science * Game.multipliers.science * sciPopulationBonus;
+		break;
+		
+		case "economy":
+			ecnPopulationBonus = (Game.population/1000000000);
+			Game.economy = Game.infrastructure.banks * Game.baseStat.economy * Game.multipliers.economy * ecnPopulationBonus;
+		break;
+	} // END switch (stat)
+}
+
+
 /********************/
 /* Upgrade Handling */
 /********************/
 
-// STUFF.
+/*Game.upgrades = {};
+Game.upgrades.available = {};
+Game.upgrades.unavailable = {};
+Game.upgrades.purchased = {};
+
+// Break up upgrades depending on what unlocks them, so iteration can happen in chunks.
+// These happen when you purchase infrastructure.
+Game.upgrades.unavailable.banksUnlock = {};
+Game.upgrades.unavailable.factoriesUnlock = {};
+Game.upgrades.unavailable.labsUnlock = {};
+// These happen every minute.
+Game.upgrades.unavailable.techLevelUnlock = {};
+Game.upgrades.unavailable.scienceUnlock = {};
+Game.upgrades.unavailable.industryUnlock = {};
+Game.upgrades.unavailable.moneyUnlock = {};
+Game.upgrades.unavailable.socialUnlock = {};*/
 
 
 /*****************/
@@ -251,10 +252,10 @@ Game.buy = function(infrastructure) {
 // A turn is hereby declared to be 1 second because YOLO
 
 Game.nextTurn = function() {
-	if (Game.population < Game.getRealMaxPopulation()) {
+	if (Game.population < Game.maxPopulation) {
 		Game.population += Game.population*Game.growth/100;
 	}
-	Game.money += Game.getRealEconomy();
+	Game.money += Game.economy;
 }
 
 
