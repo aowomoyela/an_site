@@ -4,3 +4,4 @@ images/site
 views/admin/debug.php
 error_log
 protected/runtime/application.log
+protected/runtime/*
