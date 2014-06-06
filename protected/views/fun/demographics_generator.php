@@ -42,6 +42,20 @@
 			<label for="number">Generate!</label> <input name="submit" type="submit" value="&raquo;"/>
 		</div>
 	</fieldset>
+	
+	<fieldset id="options" class="comma_value_loading"><legend>Options</legend>
+		<h4>Add a new category manually...</h4>
+		
+		<div style="margin-top:1em;"><a class="add_category">[Add Category]</a></div><br />
+		
+		<h4>...or enter a comma-delimited list of values:</h4>
+
+		<label for="comma_list_label">Category Name:</label> <input type="text" name="comma_list_label" id="comma_list_label" /><br /><br />
+		
+		<label for="comma_delimited_list">Comma-Delimited Options:</label> <textarea cols="60" rows="10" name="comma_delimited_list" id="comma_delimited_list"></textarea><br /><br />
+		
+		<button type="button" name="submit_comma_list" id="submit_comma_list" onclick="import_comma_list()">Generate category from values &raquo;</button>
+	</fieldset>
 
 <?php
 if (isset($categories)) {
@@ -95,8 +109,6 @@ if (isset($categories)) {
 	</fieldset>
 <?php } /* End default fieldset display. */ ?>
 <?php echo CHtml::endForm(); ?>
-
-<div style="margin-top:1em;"><a class="add_category">[Add Category]</a></div>
 
 </div>
 

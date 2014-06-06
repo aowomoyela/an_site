@@ -63,6 +63,58 @@ function bindHandlers(root) {
 	});
 };
 
+function import_comma_list() {
+	var comma_list_label = $("#comma_list_label").val();
+	var comma_delimited_list = $("#comma_delimited_list").val();
+	var list_values = comma_delimited_list.split(",");
+	
+	/* Add the new category. */
+	// Trim, replace inner whitespace with underscores, and get rid of non-alpha chars
+	category_name = comma_list_label.trim().replace(/\s/g, "_").replace(/[^a-zA-Z_]/g, "");
+	// Get the HTML for the category listing.
+	var category_listing = "/js/fun/demographics_generator/resources/demographics_category.inc";
+	$.get(category_listing, function(data){
+		// Replace the appropriate values.
+		var category_block = data.toString().replace(/{CATEGORY}/g, category_name);
+		// Append the new fieldset to the form.
+		$("#demographics_generator").append( category_block );
+	}, 'text' );
+	
+	/* Fix element binding. */
+	setTimeout(function(){
+		$("*").unbind();
+		bindHandlers(document);
+	}, 100);
+	
+	/* Add the new options. */
+	setTimeout(function(){
+		// Get the category name from the category we've just created.
+		var category_id = "#" + category_name;
+		var parent_fieldset = $(category_id);
+		// Get the HTML for the option listing.	
+		var option_listing = "/js/fun/demographics_generator/resources/demographics_option.inc";
+		// Get the basic HTML block.
+		$.ajaxVars = {};
+		$.ajax({
+			async: false,
+			type: 'GET',
+			url: option_listing,
+			success: function(data) {
+				$.ajaxVars.optionBlock = data.toString();
+			}
+		});
+		
+		// Loop to create option listings.
+		for (var i=0; i < list_values.length; i++) {
+			// Grab the new option name.
+			var option_name = list_values[i];
+			// Append the new fieldset to the form.
+			var option_block = $.ajaxVars.optionBlock.replace(/{CATEGORY}/g, category_name).replace(/{OPTION}/g, option_name);
+			parent_fieldset.append( option_block );
+		}
+	}, 200);
+}
+
 $(function() {
 	bindHandlers(document);
 	
