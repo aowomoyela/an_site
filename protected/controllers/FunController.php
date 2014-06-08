@@ -246,13 +246,39 @@ class FunController extends Controller
 						foreach ($option_bounds[$category_name] as $option_name => $option) {
 							if ( $random >= $option['low_bound'] && $random <= $option['high_bound'] ) {
 								$results[$i][$category_name] = $option_name;
+								break;
 							}
+						}
+						
+						// If the category is set to only use values from it once, we need to take this into account.
+						// TODO: Make this less kludgetacular.
+						if ( array_key_exists($category_name, $_POST['use_values_only_once']) ) {
+							// Get rid of the selected value so it can't be selected later.
+							unset($categories[$category_name][$option_name]);
+							// If there are no more options left, generate a dummy option.
+							if (count($categories[$category_name]) == 0) {
+								$categories[$category_name]['(no unique options remaining)'] = 1;
+							}
+							// Regenerate the weighting. First, get rid of the old weighting.
+							unset($option_bounds[$category_name]);
+							// Work out what the total weight is.
+							$total_weight = 0;
+							$weight_pointer = 1;
+							foreach ($categories[$category_name] as $option => $weight) {
+								$total_weight += $weight;
+								// Work up an array we can compare against an RNG later.
+								$option_bounds[$category_name][$option]['low_bound'] = $weight_pointer;
+								$weight_pointer += $weight-1;
+								$option_bounds[$category_name][$option]['high_bound'] = $weight_pointer;
+								$weight_pointer++;
+							}
+							// Make a note of the total weight. We'll need it to set the bounds of the RNG.
+							$option_bounds[$category_name]['total_weight'] = $total_weight;
 						}
 					}
 				}
 				
 				// At this point, we should have $number combinations.  Render the page.
-				#new dBug($results);
 				$this->render('demographics_generated_values', array(
 					'results'=>$results,
 					'number'=>$number,

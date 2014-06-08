@@ -33,3 +33,19 @@ label {
 li.individual_listing {
 	margin-top:1.5em;
 }
+
+label.nostyle {
+	display:inline;
+	width: auto;
+	margin: auto;
+	padding: auto;
+	color:#000;
+	border: none;
+	font-weight:regular;
+	float: none;
+}
+
+fieldset.demographic_category hr {
+	color:#06C;
+	margin: 1em 0;
+}

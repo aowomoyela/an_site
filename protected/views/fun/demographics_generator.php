@@ -86,6 +86,11 @@ if (isset($categories)) {
 ?>
 	<fieldset id="Gender" class="demographic_category"><legend>Gender <a class="delete_category">[delete]</a></legend>
 		<a class="add_option">[Add Option]</a>
+		&emsp; | &emsp; 
+		<input type="checkbox" name="use_values_only_once['{CATEGORY}']" id="use_values_only_once['{CATEGORY}']" value="true" /> 
+		<label class="nostyle" for="use_values_only_once['Gender']">Use each option only once per generated set</label>
+		<hr />
+		
 		<div class="Gender demographic_option">
 			<label for="categories['Gender']['male']">Male</label> <input name="categories['Gender']['Male']" type="text" class="option_weight num_only" size="4" maxlength="4" value="45" />
 			<a class="delete_option">[delete]</a> 
