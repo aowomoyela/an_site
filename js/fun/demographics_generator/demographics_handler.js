@@ -80,6 +80,9 @@ function import_comma_list() {
 		$("#demographics_generator").append( category_block );
 	}, 'text' );
 	
+	// Get the category name from the category we've just created.
+	var category_id = "#" + category_name;
+	
 	/* Fix element binding. */
 	setTimeout(function(){
 		$("*").unbind();
@@ -88,8 +91,6 @@ function import_comma_list() {
 	
 	/* Add the new options. */
 	setTimeout(function(){
-		// Get the category name from the category we've just created.
-		var category_id = "#" + category_name;
 		var parent_fieldset = $(category_id);
 		// Get the HTML for the option listing.	
 		var option_listing = "/js/fun/demographics_generator/resources/demographics_option.inc";
@@ -112,7 +113,13 @@ function import_comma_list() {
 			var option_block = $.ajaxVars.optionBlock.replace(/{CATEGORY}/g, category_name).replace(/{OPTION}/g, option_name);
 			parent_fieldset.append( option_block );
 		}
+		
+		// Scroll to the new option set.
+		$('html, body').animate({
+			'scrollTop':   $(category_id).offset().top
+		}, 500);
 	}, 200);
+	
 }
 
 $(function() {
