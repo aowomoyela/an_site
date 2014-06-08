@@ -28,9 +28,10 @@
 <p>(You can also edit these lists in the editor above, after loading them.)</p>
 <p><select name="list_loader" id="list_loader" multiple="multiple" size="10">
 	<option value="empty">(empty)</option>
-	<optgroup label="Historical fiction-writing prompts">
+	<optgroup label="Historical and miscellaneous fiction-writing prompts">
 		<option value="aarne-thompson_fairytale_classification_1">Aarne-Thompson fairytale classification (with numbers &amp; examples)</option>
 		<option value="polti_dramatic_situations">Georges Polti's 19th-century list of 36 dramatic situations</option>
+		<option value="mcgraw-hill_dramatic_terms">McGraw-Hill list of dramatic terms</option>
 		<option value="robert_plutchik_emotion_list">Robert Plutchik's 1980 list of emotions</option>
 	</optgroup>
 	<optgroup label="Hurt/Comfort Bingo community prompts">
@@ -228,6 +229,7 @@ Again, I can't guarantee that all suggestions will be implemented, but I'll do m
 <ul id="acknowledgements_list">
 	<li>Wikipedia, for a number of lists, including the <a href="http://en.wikipedia.org/wiki/Aarne%E2%80%93Thompson_classification_system">Aarne-Thompson</a>.</li>
 	<li>Worlds Without End, for <a href="https://www.worldswithoutend.com/resources_sub-genres.asp">their speculative subgenre lists</a>.</li>
+	<li>McGraw Hill, for their <a href="http://highered.mcgraw-hill.com/sites/0072405228/student_view0/drama_glossary.html">glossary of dramatic terms</a>.</li>
 	<li><span style='white-space: nowrap;'><a href='http://ysabetwordsmith.dreamwidth.org/profile'><img src='http://www.dreamwidth.org/img/silk/identity/user.png' alt='[personal profile] ' width='17' height='17' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' /></a><a href='http://ysabetwordsmith.dreamwidth.org/'><b>ysabetwordsmith</b></a></span>,
 		for compiling a ton of lists, for promoting this page to a lot of people, and for creating the community 
 		<span style='white-space: nowrap;'><a href='http://allbingo.dreamwidth.org/profile'><img src='http://www.dreamwidth.org/img/silk/identity/community.png' alt='[community profile] ' width='16' height='16' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' /></a><a href='http://allbingo.dreamwidth.org/'><b>allbingo</b></a></span>
