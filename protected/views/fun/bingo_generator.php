@@ -34,11 +34,15 @@
 		<option value="mcgraw-hill_dramatic_terms">McGraw-Hill list of dramatic terms</option>
 		<option value="robert_plutchik_emotion_list">Robert Plutchik's 1980 list of emotions</option>
 	</optgroup>
+	<optgroup label="Fanfiction Cliche Bingo community prompts">
+		<option value="fanfic_cliche">Fanfic cliches</option>
+	</optgroup>
 	<optgroup label="Hurt/Comfort Bingo community prompts">
 		<option value="hurt_comfort_bingo_round_01">H/C Bingo (round one, 2010)</option>
 		<option value="hurt_comfort_bingo_round_02">H/C Bingo (round two, 2011)</option>
 		<option value="hurt_comfort_bingo_round_03">H/C Bingo (round three, 2012)</option>
 		<option value="hurt_comfort_bingo_round_04">H/C Bingo (round four, 2013)</option>
+		<option value="hurt_comfort_bingo_round_05">H/C Bingo (round five, 2014)</option>
 	</optgroup>
 	<optgroup label="Tarot Cards">
 		<option value="tarot_rider-waite-smith_major_arcana">Rider-Waite-Smith (major arcana)</option>
@@ -235,13 +239,17 @@ Again, I can't guarantee that all suggestions will be implemented, but I'll do m
 		<span style='white-space: nowrap;'><a href='http://allbingo.dreamwidth.org/profile'><img src='http://www.dreamwidth.org/img/silk/identity/community.png' alt='[community profile] ' width='16' height='16' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' /></a><a href='http://allbingo.dreamwidth.org/'><b>allbingo</b></a></span>
 		to support creative uses of bingo tables.
 	</li>
-	<li>The moderators of the <img class="i-ljuser-userhead ContextualPopup ContextualPopup" src="http://l-stat.livejournal.com/img/community.gif?v=556?v=111.8"></a><a href="http://hc-bingo.livejournal.com/" class="i-ljuser-username"><b>hc_bingo</b> /
+	<li>The moderators of the <img class="i-ljuser-userhead ContextualPopup ContextualPopup" src="http://l-stat.livejournal.com/img/community.gif?v=556?v=111.8"></a><a href="http://hc-bingo.livejournal.com/" class="i-ljuser-username"><b>hc_bingo</b></a> /
 		<span style='white-space: nowrap;'><a href='http://hc-bingo.dreamwidth.org/profile'><img src='http://www.dreamwidth.org/img/silk/identity/community.png' alt='[community profile] ' width='16' height='16' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' /></a><a href='http://hc-bingo.dreamwidth.org/'><b>hc_bingo</b></a></span>
-		community, who have kindly given permission for their lists to be reprinted here.
+		communities, who have kindly given permission for their lists to be reprinted here.
 		
 	</li>
 	<li><span style='white-space: nowrap;'><a href='http://sashataakheru.dreamwidth.org/profile'><img src='http://www.dreamwidth.org/img/silk/identity/user.png' alt='[personal profile] ' width='17' height='17' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' /></a><a href='http://sashataakheru.dreamwidth.org/'><b>sashataakheru</b></a></span>,
 		for compiling the Rider-Waite-Smith and Wildwood Tarot lists.	
+	</li>
+	<li><span style='white-space: nowrap;'><a href='http://gigglingkat.dreamwidth.org/profile'><img src='http://www.dreamwidth.org/img/silk/identity/user.png' alt='[personal profile] ' width='17' height='17' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' /></a><a href='http://gigglingkat.dreamwidth.org/'><b>gigglingkat</b></a></span>
+		and <span style="white-space: nowrap;" class="ljuser"><a href="http://cliche-bingo.livejournal.com/profile"><img src="http://www.dreamwidth.org/img/external/lj-community.gif" alt="[livejournal.com profile] " style="vertical-align: bottom; border: 0; padding-right: 1px;" height="16" width="16"></a><a href="http://cliche-bingo.livejournal.com/"><b>cliche_bingo</b></a>,
+		for the list of fanfiction cliches.
 	</li>
 	<li>All the people who have pointed out bugs, suggested improvements, donated, and expressed enthusiasm for what was originally just a fun little project
 		to burn some time one evening. This page would have stopped at a 5x5, load-your-own-lists, no-customization widget if not for the infectious excitement
