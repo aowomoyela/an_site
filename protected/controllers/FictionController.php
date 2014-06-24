@@ -41,13 +41,14 @@ class FictionController extends Controller
 		if ( isset($_GET['archive_url_title']) ) {
 			// A title was specified; try to find it in the database.
 			$story = Story::model()->find( array(
-				'select' => 'title, wordcount, available_in_archive, story_text',
+				'select' => 'title, wordcount, available_in_archive, story_text, publication_category_id',
 				'condition' => 'archive_url_title=:archive_url_title && available_in_archive = 1',
 				'params' => array( ':archive_url_title' => $_GET['archive_url_title'] ),
 			));
 			$this->render('archive_story', array(
 				'title' => $story->get('title'),
 				'story_text'=>$story->get_archive_story_text(),
+				'publication_category_id'=>$story->get('publication_category_id'),
 			));
 		} else {
 			// If no URL title is set, list stories available in the archive.
