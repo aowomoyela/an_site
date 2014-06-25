@@ -49,7 +49,7 @@ $baseUrl = Yii::app()->baseUrl;
 <p>
 	Sandbox worlds with a focus on community engagement. Authors are encouraged to write works in these universes, as engaged fandoms have done with various canons
 	since time immemorial (or at least times pre-internet). However, the canons comprised by these works are released under a Creative Commons + license which allows
-	authors to publish and commercialize their transformative works, so long as they release the same rights to other authors and artists downstream.
+	authors to publish and commercialize their transformative works, so long as they release the same rights to other creators downstream.
 </p>
 
 <p>

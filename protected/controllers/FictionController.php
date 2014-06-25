@@ -162,6 +162,7 @@ class FictionController extends Controller
 			'secondary_navigation'=>$secondary_navigation,
 		));
 	}
+	
 
 	/* FUNDRAISERS */
 	public function actionShared_worlds_fundraisers() {
@@ -183,6 +184,18 @@ class FictionController extends Controller
 		$this->render('shared_world_fundraiser', array(
 			'secondary_navigation'=>$secondary_navigation,
 			'fundraiser'=>$fundraiser,
+		));
+	}
+
+
+	/* FAQ */
+	public function actionShared_worlds_faq() {
+		$this->pageTitle = Yii::app()->name.' - Shared Worlds FAQ';
+
+		$secondary_navigation = SiteElement::get_secondary_nav_array('fiction_shared_worlds');
+		// Render the page.
+		$this->render('shared_worlds_faq', array(
+			'secondary_navigation'=>$secondary_navigation,
 		));
 	}
 

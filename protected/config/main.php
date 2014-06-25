@@ -48,6 +48,7 @@ return array(
 				'about' => 'site/about',
 				'fiction' => 'fiction/index',
 				'fiction/archive/<archive_url_title:\w+>'=>'fiction/archive',
+				'fiction/shared_worlds/faq/'=>'fiction/shared_worlds_faq',
 				'fiction/shared_worlds/fundraisers'=>'fiction/shared_worlds_fundraisers',
 				'fiction/shared_worlds/fundraisers/<fundraiser_title:\w+>'=>'fiction/shared_worlds_fundraisers',
 				'fiction/shared_worlds/works/'=>'fiction/shared_worlds_works',

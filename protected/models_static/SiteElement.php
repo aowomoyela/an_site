@@ -85,6 +85,7 @@
 							array( 'label'=>'Shared Worlds', 'url'=>array('/fiction/shared_worlds') ),
 							array( 'label'=>'[SW] Fiction', 'url'=>array('/fiction/shared_worlds/works') ),
 							array( 'label'=>'[SW] Fundraisers', 'url'=>array('/fiction/shared_worlds/fundraisers') ),
+							array( 'label'=>'[SW] FAQ', 'url'=>array('/fiction/shared_worlds/faq') ),
 						),
 					);
 				break;

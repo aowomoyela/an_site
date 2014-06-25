@@ -249,6 +249,12 @@ h2.section {
 		border-bottom:1px solid #F00;
 	}
 
+h3 {}
+
+	p~h3 {
+		margin-top:3em;
+	}
+
 blockquote em {
 	text-decoration:underline;
 }
