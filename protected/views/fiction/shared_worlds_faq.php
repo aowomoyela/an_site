@@ -81,6 +81,13 @@ $baseUrl = Yii::app()->baseUrl;
 <p>Basically, I don't know to what extent traditional publishing markets will be open to Shared Worlds works. At novel lengths, especially, I imagine that a number of
 	publishing houses would look askanse at publishing a universe whose brand identity they couldn't control.</p>
 	
+	
+	
+<h3>I wrote something in a Shared Worlds universe! Will you host it on your site?</h3>
+
+<p>That sounds like an administrative headache. Maybe try <a href="https://archiveofourown.org/">Archive of Our Own</a>? It's a project by the 
+	<a href="http://transformativeworks.org/">Organization for Transformative Works</a>, so you know it's good.</p>
+	
 
 
 <h3>What if I write something in one of the Shared Worlds universes, make a whole ton of money, and rocket to everlasting fame? Will I have to pay you royalties or something?</h3>
