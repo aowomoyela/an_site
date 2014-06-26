@@ -116,6 +116,12 @@ class AdminController extends Controller {
 				$story->save(); // Yii is trying to use INSERT on all save queries for some reason. >_<
 
 				// Return the admin to a meaningful page.
+				// // First, we have to make sure the story object has actual null values, not CDbExpression null objects.
+				$cdbnull = new CDbExpression('NULL');
+				foreach($story as $property => $value) {
+					if ($value == $cdbnull) { $story->set($property, null); }
+				}
+				// // Then we can actually render the page.
 				$this->layout = "main";
 				$this->render('edit_story', array("story"=>$story, "message"=>"Story updated.", 'publication_categories'=>$publication_categories, 'story_markets'=>$story_markets));
 			}
