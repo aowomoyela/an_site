@@ -84,21 +84,21 @@ class FictionController extends Controller
 		$this->pageTitle = Yii::app()->name.' - Demonology';
 		$secondary_navigation = SiteElement::get_secondary_nav_array('fiction_web_original');
 		// Get the story lists for various types of fiction.
-		$short_stories = Story::model()->findAll(array(
-			'select'=>'t.title, wordcount, link, link_active, pullquote, publication_date, available_in_archive, archive_url_title',
-			'order'=>'t.title',
-			'condition'=>'published = 1 && publication_category_id = 5 && available_in_archive = 1',
-		));
-		$long_stories = Story::model()->findAll(array(
-			'select'=>'t.title, wordcount, link, link_active, pullquote, publication_date, available_in_archive, archive_url_title',
-			'order'=>'t.title',
-			'condition'=>'published = 1 && publication_category_id = 6 && available_in_archive = 1',
-		));
-		$prompt_stories = Story::model()->findAll(array(
-			'select'=>'t.title, wordcount, link, link_active, pullquote, publication_date, available_in_archive, archive_url_title',
-			'order'=>'t.title',
-			'condition'=>'published = 1 && publication_category_id = 7 && available_in_archive = 1',
-		));
+		$short_stories = Story::model()->findAllBySql("select story.title, story.wordcount, story.link, story.link_active, story.pullquote, story.publication_date,"
+			. " story.available_in_archive, story.archive_url_title"
+			. " from story_universe, story "
+			. " where story_universe.universe_id = '1' && story_universe.story_id = story.story_id && published = 1 && publication_category_id = 5 && available_in_archive = 1"
+			. " order by story.title");
+		$long_stories = Story::model()->findAllBySql("select story.title, story.wordcount, story.link, story.link_active, story.pullquote, story.publication_date,"
+			. " story.available_in_archive, story.archive_url_title"
+			. " from story_universe, story "
+			. " where story_universe.universe_id = '1' && story_universe.story_id = story.story_id && published = 1 && publication_category_id = 6 && available_in_archive = 1"
+			. " order by story.title");
+		$prompt_stories = Story::model()->findAllBySql("select story.title, story.wordcount, story.link, story.link_active, story.pullquote, story.publication_date,"
+			. " story.available_in_archive, story.archive_url_title"
+			. " from story_universe, story "
+			. " where story_universe.universe_id = '1' && story_universe.story_id = story.story_id && published = 1 && publication_category_id = 7 && available_in_archive = 1"
+			. " order by story.title");
 		// Render the view.
 		$this->render('demonology', array(
 			'secondary_navigation'=>$secondary_navigation,
