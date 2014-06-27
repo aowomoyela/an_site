@@ -145,8 +145,19 @@ class AdminController extends Controller {
 			if ( is_null($story) ) {
 				throw new Exception('That story was not found in the database.');
 			} else {
+				// Get a list of the story's links.
+				$story_links = StoryLink::model()->findAll(array(
+					'select'=>'*',
+					'condition'=>'story_id=:story_id',
+					'params'=>array(':story_id'=>$story_id),
+				));
 				// Render the view with all the appropriate resources.
-				$this->render('edit_story', array('story'=>$story, 'publication_categories'=>$publication_categories, 'story_markets'=>$story_markets));
+				$this->render('edit_story', array(
+					'story'=>$story,
+					'publication_categories'=>$publication_categories,
+					'story_markets'=>$story_markets,
+					'story_links'=>$story_links,
+				));
 			}
 		} else {
 			// Determine category ID.
@@ -174,6 +185,39 @@ class AdminController extends Controller {
 		echo "<p>".$e->getMessage()."</p>"; // Temporary.
 	} } // END public function actionEdit_story()
 
+
+	public function actionEdit_story_links() {
+	try {
+		// This is just a processing page. We need POST data in order to do anything.
+		if ( !Yii::app()->request->isPostRequest ) { throw new Exception("No data sent."); }
+		if ( !isset( $_POST["StoryLink"] ) ) { throw new Exception("No StoryLink data sent."); }
+		// Okay, we've got POST data.  Let's... do... stuff.
+		// Is this a new link or an update to an existing link?
+		if ( $_POST["StoryLink"]['link_id'] == 'new' || $_POST["StoryLink"]['link_id'] == '' || is_null($_POST["StoryLink"]['link_id']) ) {
+			// New link.  Create a new StoryLink object for it.
+			$story_link = new StoryLink();
+		} else {
+			// Existing link. Find it in the database.
+			$story_link = StoryLink::model()->findByPk( $_POST["StoryLink"]['link_id'] );
+		}
+		
+		foreach ( $_POST['StoryLink'] as $pslkey => $pslval ) {
+			if ($pslval == '' || is_null($pslval)) {
+				$story_link->set($pslkey, new CDbExpression('NULL'));
+			} else {
+				$story_link->set($pslkey, $pslval);
+			}
+		}
+
+		$story_link->save();
+		
+		// Once that's done, we can go back to the edit_story page.
+		$this->redirect( array('admin/edit_story', 'story_id'=>$story_link->get('story_id'), '#'=>'story_links') );
+		
+		
+	} catch (Exception $e) {
+			
+	} } // END 	public function actionEdit_story_links()
 
 
 	public function actionManage_submissions() {

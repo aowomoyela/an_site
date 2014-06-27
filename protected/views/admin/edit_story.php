@@ -39,6 +39,7 @@
 	/********************/
 
 	elseif ( isset($story) ) {
+		echo "<h2>Edit Story Information</h2>";
 		// Give us the WYSIWYG editing form.
 		echo CHtml::beginForm( array('admin/edit_story'), 'post', array('id'=>'edit_story_form') );
 		echo CHtml::activeHiddenField( $story, 'story_id' );
@@ -121,6 +122,58 @@
 		echo CHtml::endForm();
 	}
 ?>
+
+<!-- Story link management -->
+
+<h2>Edit Story Links</h2><a name="story_links"></a>
+
+<h3>Current Links</h3>
+
+<?php
+	foreach ($story_links as $story_link) {
+		
+		echo CHtml::beginForm( array('admin/edit_story_links'), 'post', array('id'=>'edit_story_link_form_'.$story_link->get('link_id')) );
+		echo CHtml::activeHiddenField( $story_link, 'link_id' );
+		echo CHtml::activeHiddenField( $story_link, 'story_id' );
+?>
+	<div class="form_row">
+		<?php echo CHtml::activeTextField($story_link, 'link_text', array("size"=>"75")); ?>
+		&emsp;
+		<?php echo CHtml::activeLabel($story_link, 'link_active'); ?>
+		<?php echo CHtml::activeCheckBox($story_link, 'link_active'); ?>
+		&emsp; &emsp;
+		<input type="submit" value="save changes &raquo;" class="form_submit">
+	</div>
+		
+<?php	
+		echo CHtml::endForm();
+		echo "<hr />";	
+	} // END foreach ($story_links as $story_link)
+?>
+
+<h3>New Link</h3>
+<?php
+	$new_link = new StoryLink();
+	$new_link->set_id_to_new();
+	$new_link->set('link_active', '1');
+	$new_link->set('story_id', $story->get('story_id'));
+	echo CHtml::beginForm( array('admin/edit_story_links'), 'post', array('id'=>'edit_story_link_form_new') );
+		echo CHtml::activeHiddenField( $new_link, 'link_id' );
+		echo CHtml::activeHiddenField( $new_link, 'story_id' );
+?>
+	<div class="form_row">
+		<?php echo CHtml::activeTextField($new_link, 'link_text', array("size"=>"75")); ?>
+		&emsp;
+		<?php echo CHtml::activeLabel($new_link, 'link_active'); ?>
+		<?php echo CHtml::activeCheckBox($new_link, 'link_active'); ?>
+		&emsp; &emsp;
+		<input type="submit" value="add link &raquo;" class="form_submit">
+	</div>
+		
+<?php	
+		echo CHtml::endForm();	
+?>
+
 
 <script type="text/javascript">
 	// See: http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Toolbar

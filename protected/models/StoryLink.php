@@ -10,6 +10,31 @@
  */
 class StoryLink extends CActiveRecord
 {
+	public function set_id_to_new() {
+		if ( $this->story_id == '' || is_null($this->story_id) ) {
+			$this->story_id = 'new';
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public function get($var) {
+		if ( in_array($var, array('link_id', 'story_id', 'link_text', 'link_active')) ) {
+			return $this->$var;
+		} else {
+			return NULL;
+		}
+	}
+
+	public function set($var, $value) {
+		if ( in_array($var, array( 'link_id', 'story_id', 'link_text', 'link_active' )) ) {
+			$this->$var = $value;
+		} else {
+			return false;
+		}
+	}
+	
 	/**
 	 * @return string the associated database table name
 	 */
