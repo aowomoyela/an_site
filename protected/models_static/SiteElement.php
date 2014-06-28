@@ -212,7 +212,8 @@ $license = <<<EOT
 			<img alt="Creative Commons Licence" style="border-width:0; float:left; margin: 0 .5em .5em 0;" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
 		</a>
 		
-		<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Works in the Shared Worlds series</span> 
+		<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Works in the 
+		<a href="http://an.owomoyela.net/fiction/shared_worlds">Shared Worlds</a> series</span> 
 		by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">An Owomoyela</span> are licensed under a 
 		<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_GB">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 	
