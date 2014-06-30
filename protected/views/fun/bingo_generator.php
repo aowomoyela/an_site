@@ -65,6 +65,7 @@
 		<option value="ysabetwordsmith/childhood_experiences">Childhood Experiences</option>
 		<option value="ysabetwordsmith/chromatic_character">Chromatic Characters</option>
 		<option value="ysabetwordsmith/death">Death</option>
+		<option value="ysabetwordsmith/demifiction">Demifiction</option>
 		<option value="ysabetwordsmith/desperate_situations">Desperate Situations</option>
 		<option value="ysabetwordsmith/emotions">Emotions</option>
 		<option value="ysabetwordsmith/end_of_the_world">End of the World</option>
@@ -80,11 +81,13 @@
 		<option value="ysabetwordsmith/motif_tropes">Motif Tropes</option>
 		<option value="ysabetwordsmith/music">Music</option>
 		<option value="ysabetwordsmith/negative_coping_techniques">Negative Coping Techniques</option>
+		<option value="ysabetwordsmith/people_watching">People-watching</option>
 		<option value="ysabetwordsmith/disabilities">People with Disabilities</option>
 		<option value="ysabetwordsmith/plot_tropes">Plot Tropes</option>
 		<option value="ysabetwordsmith/poetic_forms">Poetic Forms</option>
 		<option value="ysabetwordsmith/poetic_terms_and_techniques">Poetic Terms &amp; Techniques</option>
 		<option value="ysabetwordsmith/positive_coping_techniques">Positive Coping Techniques</option>
+		<option value="ysabetwordsmith/problems_hitting_does_not_solve">Problems That Can't Be Solved By Hitting</option>
 		<option value="ysabetwordsmith/setting_tropes">Setting Tropes</option>
 		<option value="ysabetwordsmith/sex_and_romance">Sex &amp; Romance</option>
 		<option value="ysabetwordsmith/superpowers">Superpowers</option>
