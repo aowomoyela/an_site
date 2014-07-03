@@ -1,23 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "story_publication_category".
+ * This is the model class for table "link_story_universe".
  *
- * The followings are the available columns in table 'story_publication_category':
- * @property integer $publication_category_id
- * @property string $title
- * @property string $notes
- * @property string $created
- * @property string $modified
+ * The followings are the available columns in table 'link_story_universe':
+ * @property integer $story_universe_id
+ * @property integer $story_id
+ * @property integer $universe_id
  */
-class StoryPublicationCategory extends CActiveRecord
+class LinkStoryUniverse extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'story_publication_category';
+		return 'link_story_universe';
 	}
 
 	/**
@@ -28,11 +26,11 @@ class StoryPublicationCategory extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title', 'length', 'max'=>100),
-			array('notes, created, modified', 'safe'),
+			array('story_id, universe_id', 'required'),
+			array('story_id, universe_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('publication_category_id, title, notes, created, modified', 'safe', 'on'=>'search'),
+			array('story_universe_id, story_id, universe_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -44,8 +42,6 @@ class StoryPublicationCategory extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'story' => array(self::MANY_MANY, 'Story', 'link_story_publication_category(publication_category_id, story_id)'),
-			#'story' => array(self::HAS_MANY, 'Story', 'story_id', 'through' => 'link_story_publication_category'),
 		);
 	}
 
@@ -55,11 +51,9 @@ class StoryPublicationCategory extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'publication_category_id' => 'Publication Category',
-			'title' => 'Title',
-			'notes' => 'Notes',
-			'created' => 'Created',
-			'modified' => 'Modified',
+			'story_universe_id' => 'Story Universe',
+			'story_id' => 'Story',
+			'universe_id' => 'Universe',
 		);
 	}
 
@@ -81,11 +75,9 @@ class StoryPublicationCategory extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('publication_category_id',$this->publication_category_id);
-		$criteria->compare('title',$this->title,true);
-		$criteria->compare('notes',$this->notes,true);
-		$criteria->compare('created',$this->created,true);
-		$criteria->compare('modified',$this->modified,true);
+		$criteria->compare('story_universe_id',$this->story_universe_id);
+		$criteria->compare('story_id',$this->story_id);
+		$criteria->compare('universe_id',$this->universe_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -96,7 +88,7 @@ class StoryPublicationCategory extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return StoryPublicationCategory the static model class
+	 * @return StoryUniverse the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

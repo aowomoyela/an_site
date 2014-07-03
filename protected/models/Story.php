@@ -29,8 +29,19 @@ class Story extends CActiveRecord
 	}
 
 	public function get($var) {
-		if ( in_array($var, array('story_id', 'title', 'wordcount', 'link', 'link_active', 'pullquote', 'available_in_archive', 'publication_category_id', 'publication_market_id')) ) {
+		if ( in_array($var, array('story_id', 'title', 'wordcount', 'link', 'link_active', 'pullquote', 'available_in_archive', 'publication_category_id', 'publication_market_id', )) ) {
 			return $this->$var;
+		} elseif ( in_array($var, array('publication_category')) ) {
+			switch($var) {
+				case 'publication_category':
+					return SiteUtility::querySingleColumn("select publication_category_id from link_story_publication_category where story_id = '".$this->story_id."'");
+				break;
+				
+				default:
+					// This should never fire.
+					return NULL;
+				break;
+			}
 		} else {
 			return NULL;
 		}
@@ -84,6 +95,8 @@ class Story extends CActiveRecord
 			'story_market' => array(self::BELONGS_TO, 'StoryMarket', 'publication_market_id'),
 			'story_link' => array(self::HAS_MANY, 'StoryLink', 'story_id'),
 			'story_submission' => array(self::HAS_MANY, 'StorySubmission', 'story_id'),
+			'story_publication_category' => array(self::MANY_MANY, 'StoryPublicationCategory', 'link_story_publication_category(story_id, publication_category_id)'),
+			#'story_publication_category' => array(self::HAS_MANY, 'StoryPublicationCategory', 'publication_category_id', 'through' => 'link_story_publication_category'),
 		);
 	}
 
@@ -178,6 +191,10 @@ class Story extends CActiveRecord
 		$block.= "</h2>\r\n";
 		// Pullquote.
 		$block.= "<blockquote class='story_catalog_pullquote'>".trim($this->pullquote)."</blockquote>\r\n";
+		// If it's available in the archive and the archive hasn't been linked above, let people know.
+		if ( $this->available_in_archive == 1 && $this->link != '' && !is_null($this->link) && $this->link_active == 1 ) {
+			$block.= '<div class="story_link"><a href="'.Yii::app()->createUrl('fiction/archive').'/'.$this->archive_url_title.'">Read it on-site</a> in the archive.</div>'."\r\n";
+		}
 		// Any additional links, such as interviews and anthologies.
 		if (count($this->story_link) > 0) {
 			// Sort the links.
