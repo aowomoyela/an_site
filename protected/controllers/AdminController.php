@@ -101,6 +101,7 @@ class AdminController extends Controller {
 			if ( is_null($story) ) {
 				throw new Exception('That story was not found in the database.');
 			} else {
+				// Set everything in the Story model.
 				foreach ( $_POST as $pkey => $pval ) {
 					$story->set($pkey, $pval);
 				}
@@ -113,7 +114,24 @@ class AdminController extends Controller {
 					}
 				}
 
-				$story->save(); // Yii is trying to use INSERT on all save queries for some reason. >_<
+				$story->save(false); // Yii is trying to use INSERT on all save queries for some reason. >_<
+				$story_id = $story->getPrimaryKey();
+			
+				// Handle the publication categories.
+				if ( isset($_POST['Story']['publication_categories']) ) {
+					// Remove all the old publication categories from the database.
+					$clear_categories_query = "delete from link_story_publication_category where story_id = '$story_id'";
+					SiteUtility::queryDo($clear_categories_query);
+					// Add all the current publication categories to the database.
+					$set_categories_query = "insert into link_story_publication_category (story_id, publication_category_id) values ";
+					$set_categories_order = 1; // Track if we need a comma.
+					foreach ($_POST['Story']['publication_categories'] as $category_id) {
+						if ($set_categories_order > 1) { $set_categories_query.= ', '; }
+						$set_categories_query.= "('$story_id', '$category_id')";
+						$set_categories_order++;
+					}
+					SiteUtility::queryDo($set_categories_query);
+				}
 
 				// Return the admin to a meaningful page.
 				// // First, we have to make sure the story object has actual null values, not CDbExpression null objects.
@@ -121,9 +139,21 @@ class AdminController extends Controller {
 				foreach($story as $property => $value) {
 					if ($value == $cdbnull) { $story->set($property, null); }
 				}
+				// // Then, we have to provide story links so the page won't throw an error on rendering.
+				$story_links = StoryLink::model()->findAll(array(
+					'select'=>'*',
+					'condition'=>'story_id=:story_id',
+					'params'=>array(':story_id'=>$story_id),
+				));
 				// // Then we can actually render the page.
 				$this->layout = "main";
-				$this->render('edit_story', array("story"=>$story, "message"=>"Story updated.", 'publication_categories'=>$publication_categories, 'story_markets'=>$story_markets));
+				$this->render('edit_story', array(
+					"story"=>$story, 
+					"message"=>"Story updated.", 
+					'publication_categories'=>$publication_categories, 
+					'story_markets'=>$story_markets, 
+					'story_links'=>$story_links
+				));
 			}
 
 		} elseif ( isset($_GET['story_id']) ) {
@@ -171,10 +201,15 @@ class AdminController extends Controller {
 				}
 			}
 			// Load up a list of stories.
-			$stories = Story::model()->findAllByAttributes(
+			/*$stories = Story::model()->with('story_publication_category')->findAllByAttributes(
 				array('publication_category_id'=>$publication_category_id), 
 				array('order'=>'title')
-			);
+			);*/
+			$stories = Story::model()->with('story_market', 'story_link', 'story_publication_category')->findAll( array(
+				#'select'=>'t.title, wordcount, link, link_active, pullquote, story_market.title, publication_date, available_in_archive, archive_url_title',
+				'order'=>'t.title',
+				'condition'=>'story_publication_category.publication_category_id = '.$publication_category_id,
+			));
 			// Grab a list of publication categories.
 			$pub_cat_query = "select publication_category_id, title from story_publication_category order by title";
 			$publication_categories = SiteUtility::queryFull($pub_cat_query);

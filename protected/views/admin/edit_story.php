@@ -80,12 +80,20 @@
 	</div>
 
 	<div class="form_row">
-		<?php echo CHtml::activeLabel($story, 'publication_category_id'); ?>
+		<?php
+			#$options = array('12' => 'Twelve', '10' => 'Ten'); // Example
+			echo CHtml::label('Publication Categories', "Story[publication_categories]");
+			echo CHtml::dropDownList("Story[publication_categories]", $story->get('publication_category'), $publication_categories, array(
+				'multiple'=>'multiple',
+				'size'=>'6'
+			));
+		?>
+		<?/*php echo CHtml::activeLabel($story, 'publication_category_id'); ?>
 		<?php echo CHtml::activeDropDownList($story, 'publication_category_id', $publication_categories, array(
 			'options'=>array(
 				#$story->get('publication_category_id') => array('selected'=>true),
 			),
-		)); ?>
+		)); */?>
 	</div>
 
 	<div class="form_row">
