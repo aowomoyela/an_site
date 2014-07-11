@@ -174,21 +174,23 @@ class AdminController extends Controller {
 			// If the story is found, allow editing.
 			if ( is_null($story) ) {
 				throw new Exception('That story was not found in the database.');
-			} else {
+			} elseif ( $story->get('story_id') != 'new') {
 				// Get a list of the story's links.
 				$story_links = StoryLink::model()->findAll(array(
 					'select'=>'*',
 					'condition'=>'story_id=:story_id',
 					'params'=>array(':story_id'=>$story_id),
 				));
-				// Render the view with all the appropriate resources.
-				$this->render('edit_story', array(
-					'story'=>$story,
-					'publication_categories'=>$publication_categories,
-					'story_markets'=>$story_markets,
-					'story_links'=>$story_links,
-				));
+			} else {
+				$story_links = array();
 			}
+			// Render the view with all the appropriate resources.
+			$this->render('edit_story', array(
+				'story'=>$story,
+				'publication_categories'=>$publication_categories,
+				'story_markets'=>$story_markets,
+				'story_links'=>$story_links,
+			));
 		} else {
 			// Determine category ID.
 			if ( !isset( $_GET["publication_category_id"] ) ) {
