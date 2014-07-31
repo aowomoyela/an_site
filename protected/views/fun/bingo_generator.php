@@ -34,6 +34,9 @@
 		<option value="mcgraw-hill_dramatic_terms">McGraw-Hill list of dramatic terms</option>
 		<option value="robert_plutchik_emotion_list">Robert Plutchik's 1980 list of emotions</option>
 	</optgroup>
+	<optgroup label="Allbingo Community Prompts ">
+		<option value="allbingo_august_2014_birthday">Birthdays (August 2014)</option>
+	</optgroup>
 	<optgroup label="Fanfiction Cliche Bingo community prompts">
 		<option value="fanfic_cliche">Fanfic cliches</option>
 	</optgroup>
