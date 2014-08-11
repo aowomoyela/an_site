@@ -262,9 +262,10 @@ class AdminController extends Controller {
 		// Provide secondary navigation.
 		$secondary_navigation = SiteElement::get_secondary_nav_array('admin_submissions');
 		// Get stories for dropdown list.
-		$stories_query = 'select s.story_id, s.title, s.publication_category_id, spc.title as category_type from story s, story_publication_category spc '; 
-		$stories_query.= 'where s.publication_category_id = spc.publication_category_id ';
-		$stories_query.= 'order by s.publication_category_id, s.title';
+		$stories_query = 'select s.story_id, s.title, lspc.publication_category_id, spc.title as category_type ';
+		$stories_query.= 'from story s, story_publication_category spc, link_story_publication_category lspc '; 
+		$stories_query.= 'where lspc.publication_category_id = spc.publication_category_id && s.story_id = lspc.story_id ';
+		$stories_query.= 'order by lspc.publication_category_id, s.title';
 		$stories = Story::model()->findAllBySql($stories_query);
 		$stories = CHtml::listData( $stories, 'story_id', 'title', 'category_type' );
 		// Get publication markets for dropdown list.
