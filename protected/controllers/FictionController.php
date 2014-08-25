@@ -232,4 +232,14 @@ class FictionController extends Controller
 		));
 	}
 
+	/*****************/
+	/* MISCELLANEOUS */
+	/*****************/
+	
+	public function actionStandard_disclaimer() {
+		$page = Page::model()->findByAttributes(array('url_short_title' => 'standard_disclaimer'));
+		$content = $page->content_html;
+		$this->render('/site/page', array('content'=>$content));
+	}
+
 }
