@@ -30,12 +30,18 @@
 	<option value="empty">(empty)</option>
 	<optgroup label="Historical and miscellaneous fiction-writing prompts">
 		<option value="aarne-thompson_fairytale_classification_1">Aarne-Thompson fairytale classification (with numbers &amp; examples)</option>
+		<option value="caroline-myss-archetypes">Caroline Myss's partial list of archetypes</option>
 		<option value="polti_dramatic_situations">Georges Polti's 19th-century list of 36 dramatic situations</option>
 		<option value="mcgraw-hill_dramatic_terms">McGraw-Hill list of dramatic terms</option>
 		<option value="robert_plutchik_emotion_list">Robert Plutchik's 1980 list of emotions</option>
 	</optgroup>
 	<optgroup label="Allbingo Community Prompts ">
 		<option value="allbingo_august_2014_birthday">Birthdays (August 2014)</option>
+		<option value="allbingo_november_2014_science">Science (November 2014)</option>
+		<option value="allbingo_january_2015_rites_of_passage">Rites of Passage (January 2015)</option>
+	</optgroup>
+	<optgroup label="Community-Contributed Lists">
+		<option value="guinevak_supernatural_creatures">Supernatural Creatures (by guinevak)</option>
 	</optgroup>
 	<optgroup label="Fanfiction Cliche Bingo community prompts">
 		<option value="fanfic_cliche">Fanfic cliches</option>
@@ -257,6 +263,7 @@ Again, I can't guarantee that all suggestions will be implemented, but I'll do m
 		and <span style="white-space: nowrap;" class="ljuser"><a href="http://cliche-bingo.livejournal.com/profile"><img src="http://www.dreamwidth.org/img/external/lj-community.gif" alt="[livejournal.com profile] " style="vertical-align: bottom; border: 0; padding-right: 1px;" height="16" width="16"></a><a href="http://cliche-bingo.livejournal.com/"><b>cliche_bingo</b></a>,
 		for the list of fanfiction cliches.
 	</li>
+	<li>Caroline Myss for her <a href="http://www.myss.com/library/contracts/determine.asp">list of archetypes</a>.</li>
 	<li>All the people who have pointed out bugs, suggested improvements, donated, and expressed enthusiasm for what was originally just a fun little project
 		to burn some time one evening. This page would have stopped at a 5x5, load-your-own-lists, no-customization widget if not for the infectious excitement
 		of creative folks. &hearts;
