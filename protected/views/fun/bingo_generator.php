@@ -5,7 +5,6 @@
 	#$cs->registerScriptFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js');
 	#$cs->registerCssFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/smoothness/jquery-ui.css');
 	// Page-specific scripts
-	$cs->registerScriptFile($baseUrl.'/js/colorpicker/js/colorpicker.js');
 	$cs->registerScriptFile($baseUrl.'/js/fun/bingo_generator/list_loader.js');
 	$cs->registerScriptFile($baseUrl.'/js/fun/bingo_generator/color_update.js');
 	$cs->registerScriptFile($baseUrl.'/js/fun/bingo_generator/size_update.js');
