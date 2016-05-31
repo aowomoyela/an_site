@@ -4,7 +4,7 @@ $(function() {
 	if (start_card_size == 1 || start_card_size % 2 == 0) {
 			$("#center_space_handling").css("color", "#CCC");
 			$("input:radio[name=center_space]").attr('disabled','disabled');
-		}
+	}
 	
 	// Check everything again when card size or free space options are changed.
 	$("input[name=card_size]:radio, input[name=center_space]:radio").change(function() {
