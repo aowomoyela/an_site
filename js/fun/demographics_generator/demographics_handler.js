@@ -1,6 +1,6 @@
 // Event binding as per http://stackoverflow.com/questions/3686809/how-do-i-bind-appended-html-with-jquery :
 function bindHandlers(root) {
-		// Delete the selected category.
+	// Delete the selected category.
 	$(".delete_category", root).click(function() {
 		$(this).parents(".demographic_category").remove();
 	});

@@ -20,7 +20,9 @@
 <p>If one of your values needs a comma, use the HTML code <strong>&amp;#44;</strong> in place of the comma <em>within</em> the value.</p>
 
 <?php echo CHtml::beginForm( array('fun/bingo_generator', '#'=>'generated_card'), 'post', array('id'=>'bingo_generator') ); ?>
-	<textarea id="bingo_list" name="list" cols="94" rows="10"><?php echo $list; ?></textarea><br /><br />
+	<textarea id="bingo_list" name="list" cols="94" rows="10"><?php echo $list; ?></textarea>
+
+<!--p><strong><span id="current_items_listed">#</span> items currently in list.</strong></p-->
 	
 
 <fieldset><legend>Or choose one or more of these:</legend>
@@ -42,6 +44,9 @@
 	<optgroup label="Community-Contributed Lists">
 		<option value="an_owomoyela_culturebuilding">Culturebuilding Considerations (by An)</option>
 		<option value="guinevak_supernatural_creatures">Supernatural Creatures (by guinevak)</option>
+	</optgroup>
+	<optgroup label="Cotton Candy Bingo community prompts">
+		<option value="cottoncandy_bingo">Cottoncandy Bingo</option>
 	</optgroup>
 	<optgroup label="Fanfiction Cliche Bingo community prompts">
 		<option value="fanfic_cliche">Fanfic cliches</option>
@@ -90,6 +95,7 @@
 		<option value="ysabetwordsmith/motif_tropes">Motif Tropes</option>
 		<option value="ysabetwordsmith/music">Music</option>
 		<option value="ysabetwordsmith/negative_coping_techniques">Negative Coping Techniques</option>
+		<option value="ysabetwordsmith/nonviolent_resistance">Nonviolent Resistance</option>
 		<option value="ysabetwordsmith/people_watching">People-watching</option>
 		<option value="ysabetwordsmith/disabilities">People with Disabilities</option>
 		<option value="ysabetwordsmith/plot_tropes">Plot Tropes</option>
@@ -251,8 +257,11 @@ Again, I can't guarantee that all suggestions will be implemented, but I'll do m
 		<span style='white-space: nowrap;'><a href='http://allbingo.dreamwidth.org/profile'><img src='http://www.dreamwidth.org/img/silk/identity/community.png' alt='[community profile] ' width='16' height='16' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' /></a><a href='http://allbingo.dreamwidth.org/'><b>allbingo</b></a></span>
 		to support creative uses of bingo tables.
 	</li>
-	<li>The moderators of the <img class="i-ljuser-userhead ContextualPopup ContextualPopup" src="http://l-stat.livejournal.com/img/community.gif?v=556?v=111.8"></a><a href="http://hc-bingo.livejournal.com/" class="i-ljuser-username"><b>hc_bingo</b></a> /
+	<li>The moderators of the 
+		<img class="i-ljuser-userhead ContextualPopup ContextualPopup" src="http://l-stat.livejournal.com/img/community.gif?v=556?v=111.8"></a><a href="http://hc-bingo.livejournal.com/" class="i-ljuser-username"><b>hc_bingo</b></a> /
 		<span style='white-space: nowrap;'><a href='http://hc-bingo.dreamwidth.org/profile'><img src='http://www.dreamwidth.org/img/silk/identity/community.png' alt='[community profile] ' width='16' height='16' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' /></a><a href='http://hc-bingo.dreamwidth.org/'><b>hc_bingo</b></a></span>
+		and 
+		<span style='white-space: nowrap;'><a href='https://cottoncandy-bingo.dreamwidth.org/profile'><img src='https://s.dreamwidth.org/img/silk/identity/community.png' alt='[community profile] ' width='16' height='16' style='vertical-align: text-bottom; border: 0; padding-right: 1px;' /></a><a href='https://cottoncandy-bingo.dreamwidth.org/'><b>cottoncandy_bingo</b></a></span> 
 		communities, who have kindly given permission for their lists to be reprinted here.
 		
 	</li>
