@@ -42,7 +42,9 @@
 		<option value="allbingo_january_2015_rites_of_passage">Rites of Passage (January 2015)</option>
 	</optgroup>
 	<optgroup label="Community-Contributed Lists">
+		<option value="an_owomoyela_characterbuilding">Characterbuilding Considerations (by An)</option>
 		<option value="an_owomoyela_culturebuilding">Culturebuilding Considerations (by An)</option>
+		<option value="an_owomoyela_groupdynamics">Group Dynamics Considerations (by An)</option>
 		<option value="guinevak_supernatural_creatures">Supernatural Creatures (by guinevak)</option>
 	</optgroup>
 	<optgroup label="Cotton Candy Bingo community prompts">
