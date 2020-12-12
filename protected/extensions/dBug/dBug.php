@@ -3,6 +3,10 @@
  * LAST UPDATE
  * ============
  * March 22, 2007
+ * 
+ * HOTFIX BY AOWOMOYELA 2020-12-12:
+ * Renamed method dBug() to __construct()
+ * PHP7: Methods with the same name as their class will not be constructors in a future version of PHP
  *
  *
  * AUTHOR
@@ -61,7 +65,7 @@ class dBug {
 	var $arrHistory = array();
 	
 	//constructor
-	function dBug($var,$forceType="",$bCollapsed=false) {
+	function __construct($var,$forceType="",$bCollapsed=false) {
 		//include js and css scripts
 		if(!defined('BDBUGINIT')) {
 			define("BDBUGINIT", TRUE);

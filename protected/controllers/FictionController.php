@@ -25,7 +25,14 @@ class FictionController extends Controller
 			'order'=>'t.title',
 			'condition'=>'published = 1 && story_publication_category.publication_category_id = 1'
 		));*/
-                $stories = array();
+                $kludgeQuery  = "SELECT s.story_id, s.title, s.wordcount, s.link, s.link_active, s.pullquote, s.published, s.publication_date";
+                $kludgeQuery .= ", s.available_in_archive, s.archive_url_title";
+                $kludgeQuery .= ", sm.title as publication_market";
+                $kludgeQuery .= " FROM story as s, story_market as sm";
+                $kludgeQuery .= " WHERE s.published = 1 AND s.publication_market_id = sm.market_id";
+                $kludgeQuery .= " ORDER BY s.title";
+                $stories = SiteUtility::queryFull($kludgeQuery);
+                #new dBug($stories);
 		$secondary_navigation = SiteElement::get_secondary_nav_array('fiction');
 		$this->render('index', array(
 			'stories'=>$stories,
