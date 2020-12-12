@@ -418,3 +418,10 @@ div.search-form {
 .operations li a:hover {
 	background: #80CFFF;
 }
+
+div.error_notice {
+    padding: 1em;
+    text-align: center;
+    border: 3px solid #FF0000;
+    font-weight: bold;
+}

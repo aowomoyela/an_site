@@ -20,11 +20,12 @@ class FictionController extends Controller
 
 	public function actionIndex() {
 		$this->pageTitle = Yii::app()->name.' - Fiction';
-		$stories = Story::model()->with('story_market', 'story_link', 'story_publication_category')->findAll( array(
+		/*$stories = Story::model()->with('story_market', 'story_link', 'story_publication_category')->findAll( array(
 			'select'=>'t.title, wordcount, link, link_active, pullquote, story_market.title, publication_date, available_in_archive, archive_url_title',
 			'order'=>'t.title',
 			'condition'=>'published = 1 && story_publication_category.publication_category_id = 1'
-		));
+		));*/
+                $stories = array();
 		$secondary_navigation = SiteElement::get_secondary_nav_array('fiction');
 		$this->render('index', array(
 			'stories'=>$stories,

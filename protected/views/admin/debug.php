@@ -7,7 +7,8 @@
 <p>Debug page. Nothing to see here.</p><hr />
 
 <?php
-	$story = Story::model()->findByPk(27);
-
-	new dBug( $story->get('publication_category') );
+#	phpinfo();
+#	$story = Story::model()->findByPk(27);
+#
+#	new dBug( $story->get('publication_category') );
 ?>

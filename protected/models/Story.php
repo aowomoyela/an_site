@@ -19,6 +19,11 @@
  */
 class Story extends CActiveRecord
 {
+
+        public function primaryKey() {
+            return 'story_id';
+        }
+    
 	public function set_id_to_new() {
 		if ( $this->story_id == '' || is_null($this->story_id) ) {
 			$this->story_id = 'new';

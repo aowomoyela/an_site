@@ -12,6 +12,10 @@ $baseUrl = Yii::app()->baseUrl;
 	}
 ?>
 
+<div class="error_notice">
+    <em>We're experiencing technical difficulties.  Some parts of this site may not work as expected.</em>
+</div>
+
 <?php
 	/***********************/
 	/* PAGE FINAL - Tipjar */
